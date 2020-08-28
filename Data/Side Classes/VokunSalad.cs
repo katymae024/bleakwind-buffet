@@ -70,6 +70,10 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        public override string ToString()
+        {
+            return Size.ToString() + "Vokun Salad";
+        }
 
 
     }
