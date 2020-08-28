@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entrée classes\" />
     <Folder Include="Drink Classes\" />
     <Folder Include="Side Classes\" />
   </ItemGroup>
