@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Katayoun Katy Davoudi
+* Class name: GardenOrcOmelette.cs
+* Purpose: Offering an item of the menu 
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

@@ -1,4 +1,8 @@
-﻿
+﻿/*
+* Author: Katayoun Katy Davoudi
+* Class name: FriedMiraak.cs
+* Purpose: Offering an item of the menu 
+*/
 using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
