@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    class MarkarthMilk
+    public class MarkarthMilk
     {
 
     }

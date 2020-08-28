@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Sides
 {
-    class FriedMiraak
+    public class FriedMiraak
     {
 
     }
