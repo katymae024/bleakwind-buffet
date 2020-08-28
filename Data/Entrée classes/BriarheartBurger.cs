@@ -19,7 +19,7 @@ namespace BleakwindBuffet.Data.Entrees
         //gets price of the burger
         public double Price =>  6.32;
 
-        public uint Calories => 732;
+        public uint Calories => 743;
 
         
         public bool Ketchup

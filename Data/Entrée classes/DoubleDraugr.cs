@@ -16,10 +16,16 @@ namespace BleakwindBuffet.Data.Entrees
 
         private bool pickle = true;
 
-        //gets price of the burger
-        public double Price => 6.32;
+        private bool tomato = true;
 
-        public uint Calories => 732;
+        private bool lettuce = true;
+
+        private bool mayo = true;
+
+        //gets price of the burger
+        public double Price => 7.32;
+
+        public uint Calories => 843;
 
 
         public bool Ketchup
@@ -87,6 +93,46 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
 
+        public bool Tomato
+        {
+            get
+            {
+                return tomato;
+            }
+            set
+            {
+
+                tomato = value;
+            }
+        }
+
+        public bool Lettuce
+        {
+            get
+            {
+                return lettuce;
+            }
+            set
+            {
+
+                lettuce = value;
+            }
+        }
+
+        public bool Mayo
+        {
+            get
+            {
+                return mayo;
+            }
+            set
+            {
+
+                mayo = value;
+            }
+        }
+
+
 
 
         public List<string> SpecialInstructions
@@ -99,13 +145,16 @@ namespace BleakwindBuffet.Data.Entrees
                 if (!Cheese) instruction.Add("Hold cheese");
                 if (!Pickle) instruction.Add("Hold pickle");
                 if (!Mustard) instruction.Add("Hold mustard");
+                if (!Lettuce) instruction.Add("Hold lettuce");
+                if (!Mayo) instruction.Add("Hold mayo");
+                if (!Tomato) instruction.Add("Hold tomato");
                 return instruction;
             }
         }
 
         public override string ToString()
         {
-            return "Briarheart Burger";
+            return "Double Draugr";
         }
 
 
