@@ -4,9 +4,4 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Drink Classes\" />
-    <Folder Include="Side Classes\" />
-  </ItemGroup>
-
 </Project>
