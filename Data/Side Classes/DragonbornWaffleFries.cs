@@ -10,10 +10,18 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Sides
 {
+    /// <summary>
+    /// Containing a specific side with its properties
+    /// </summary>
     public class DragonbornWaffleFries
     {
+        /// <summary>
+        /// private property for size
+        /// </summary>
         private Size size = Size.Small;
-
+        /// <summary>
+        /// property for size
+        /// </summary>
         public Size Size
         {
             get
@@ -25,7 +33,9 @@ namespace BleakwindBuffet.Data.Sides
                 size = value;
             }
         }
-
+        /// <summary>
+        /// gets price
+        /// </summary>
         public double Price
         {
             get
@@ -44,7 +54,9 @@ namespace BleakwindBuffet.Data.Sides
                 }
             }
         }
-
+        /// <summary>
+        /// gets calories
+        /// </summary>
         public uint Calories
         {
             get
@@ -63,7 +75,9 @@ namespace BleakwindBuffet.Data.Sides
                 }
             }
         }
-
+        /// <summary>
+        /// whether someone wants everything being offered or wants to exclude certain items
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -73,7 +87,10 @@ namespace BleakwindBuffet.Data.Sides
                 return instruction;
             }
         }
-
+        /// <summary>
+        /// prints the name of the side
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return Size.ToString() + "Dragonborn Waffle Fries";

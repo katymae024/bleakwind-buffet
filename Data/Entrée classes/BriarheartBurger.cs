@@ -9,24 +9,44 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// Containing a specific entree with its properties
+    /// </summary>
     public class BriarheartBurger
     {
+        /// <summary>
+        /// private property for ketchup
+        /// </summary>
         private bool ketchup = true;
-
+        /// <summary>
+        /// private property for bun
+        /// </summary>
         private bool bun = true;
-
+        /// <summary>
+        /// private property for mustard
+        /// </summary>
         private bool mustard = true;
-
+        /// <summary>
+        /// private property for cheese
+        /// </summary>
         private bool cheese = true;
-
+        /// <summary>
+        /// private property for pickle
+        /// </summary>
         private bool pickle = true;
 
-        //gets price of the burger
+        /// <summary>
+        ///gets price of the burger
+        /// </summary>
         public double Price =>  6.32;
-
+        /// <summary>
+        /// //gets calories of the burger
+        /// </summary>
         public uint Calories => 743;
 
-        
+        /// <summary>
+        /// boolean property of ketchup
+        /// </summary>
         public bool Ketchup
         {
             get
@@ -40,7 +60,9 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
 
-        
+        /// <summary>
+        /// boolean property of bun
+        /// </summary>
         public bool Bun
         {
             get
@@ -53,7 +75,9 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
 
-        
+        /// <summary>
+        /// boolean property of mustard
+        /// </summary>
         public bool Mustard
         {
             get
@@ -65,7 +89,9 @@ namespace BleakwindBuffet.Data.Entrees
                 mustard = value;
             }
         }
-
+        /// <summary>
+        /// boolean property of pickle
+        /// </summary>
         public bool Pickle
         {
             get
@@ -78,7 +104,9 @@ namespace BleakwindBuffet.Data.Entrees
                 pickle = value;
             }
         }
-
+        /// <summary>
+        /// boolean property of cheese
+        /// </summary>
         public bool Cheese
         {
             get
@@ -93,7 +121,9 @@ namespace BleakwindBuffet.Data.Entrees
         }
 
 
-
+        /// <summary>
+        /// whether someone wants everything being offered or wants to exclude certain items
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -107,7 +137,10 @@ namespace BleakwindBuffet.Data.Entrees
                 return instruction;
             }
         }
-
+        /// <summary>
+        /// printing the name of the entree
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return "Briarheart Burger";

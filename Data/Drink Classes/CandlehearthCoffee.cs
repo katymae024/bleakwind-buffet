@@ -10,16 +10,30 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
+    /// <summary>
+    /// Containing a specific drink with its properties
+    /// </summary>
     public class CandlehearthCoffee
     {
+        /// <summary>
+        /// private property for ice
+        /// </summary>
         private bool ice = false;
-
+        /// <summary>
+        /// private property for decaf
+        /// </summary>
         private bool decaf = false;
-
+        /// <summary>
+        /// private property for room for cream
+        /// </summary>
         private bool roomForCream = false;
-
+        /// <summary>
+        /// private property for size
+        /// </summary>
         private Size size = Size.Small;
-
+        /// <summary>
+        /// boolean property for ice 
+        /// </summary>
         public bool Ice
         {
             get
@@ -31,7 +45,9 @@ namespace BleakwindBuffet.Data.Drinks
                 ice = value;
             }
         }
-
+        /// <summary>
+        /// boolean property for decaf
+        /// </summary>
         public bool Decaf
         {
             get
@@ -43,7 +59,9 @@ namespace BleakwindBuffet.Data.Drinks
                 decaf = value;
             }
         }
-
+        /// <summary>
+        /// boolean property for room for cream
+        /// </summary>
         public bool RoomForCream
         {
             get
@@ -55,7 +73,9 @@ namespace BleakwindBuffet.Data.Drinks
                 roomForCream = value;
             }
         }
-
+        /// <summary>
+        /// boolean property for size
+        /// </summary>
         public Size Size
         {
             get
@@ -67,7 +87,9 @@ namespace BleakwindBuffet.Data.Drinks
                 size = value;
             }
         }
-
+        /// <summary>
+        /// boolean property for price
+        /// </summary>
         public double Price
         {
             get
@@ -86,7 +108,9 @@ namespace BleakwindBuffet.Data.Drinks
                 }
             }
         }
-
+        /// <summary>
+        ///  boolean property for calories
+        /// </summary>
         public uint Calories
         {
             get
@@ -105,7 +129,9 @@ namespace BleakwindBuffet.Data.Drinks
                 }
             }
         }
-
+        /// <summary>
+        /// whether someone wants everything being offered or wants to exclude certain items
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -117,7 +143,10 @@ namespace BleakwindBuffet.Data.Drinks
                 return instruction;
             }
         }
-
+        /// <summary>
+        /// printing size of coffee and name of drink
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             if(decaf == true)

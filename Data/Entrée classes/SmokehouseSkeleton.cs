@@ -9,20 +9,38 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// Containing a specific entree with its properties
+    /// </summary>
     public class SmokehouseSkeleton
     {
+        /// <summary>
+        /// private property for sausage links
+        /// </summary>
         private bool sausageLink = true;
-
+        /// <summary>
+        /// private property for egg
+        /// </summary>
         private bool egg = true;
-
+        /// <summary>
+        /// private property for hash browns
+        /// </summary>
         private bool hashBrowns = true;
-
+        /// <summary>
+        /// private property for pancake
+        /// </summary>
         private bool pancake = true;
-
+        /// <summary>
+        /// gets price
+        /// </summary>
         public double Price => 5.62;
-
+        /// <summary>
+        /// gets calories
+        /// </summary>
         public uint Calories => 602;
-
+        /// <summary>
+        /// boolean property for sausage link
+        /// </summary>
         public bool SausageLink
         {
             get
@@ -35,7 +53,9 @@ namespace BleakwindBuffet.Data.Entrees
                 sausageLink = value;
             }
         }
-
+        /// <summary>
+        /// boolean property for eggs
+        /// </summary>
         public bool Egg
         {
             get
@@ -48,7 +68,9 @@ namespace BleakwindBuffet.Data.Entrees
                 egg = value;
             }
         }
-
+        /// <summary>
+        /// boolean property for hash browns
+        /// </summary>
         public bool HashBrowns
         {
             get
@@ -61,7 +83,9 @@ namespace BleakwindBuffet.Data.Entrees
                 hashBrowns = value;
             }
         }
-
+        /// <summary>
+        /// boolean property for pancake
+        /// </summary>
         public bool Pancake
         {
             get
@@ -74,7 +98,9 @@ namespace BleakwindBuffet.Data.Entrees
                 pancake = value;
             }
         }
-
+        /// <summary>
+        /// whether someone wants everything being offered or wants to exclude certain items
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -90,7 +116,10 @@ namespace BleakwindBuffet.Data.Entrees
                 return instruction;
             }
         }
-
+        /// <summary>
+        /// prints name of entree
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return "Smokehouse Skeleton";

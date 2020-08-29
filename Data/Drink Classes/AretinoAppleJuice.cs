@@ -10,12 +10,22 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
+    /// <summary>
+    /// Containing a specific drink with its properties
+    /// </summary>
     public class AretinoAppleJuice
     {
+        /// <summary>
+        /// private property for ice
+        /// </summary>
         private bool ice = true;
-
+        /// <summary>
+        /// private property for size of drink
+        /// </summary>
         private Size size = Size.Small;
-
+        /// <summary>
+        /// boolean property for ice
+        /// </summary>
         public bool Ice
         {
             get
@@ -27,6 +37,9 @@ namespace BleakwindBuffet.Data.Drinks
                 ice = value;
             }
         }
+        /// <summary>
+        /// boolean property for size
+        /// </summary>
         public Size Size
         {
             get
@@ -38,7 +51,9 @@ namespace BleakwindBuffet.Data.Drinks
                 size = value;
             }
         }
-
+        /// <summary>
+        /// boolean property for price as far as sizes
+        /// </summary>
         public double Price
         {
             get
@@ -57,7 +72,9 @@ namespace BleakwindBuffet.Data.Drinks
                 }
             }
         }
-
+        /// <summary>
+        /// boolean property for calories as far as sizes
+        /// </summary>
         public uint Calories
         {
             get
@@ -76,7 +93,9 @@ namespace BleakwindBuffet.Data.Drinks
                 }
             }
         }
-
+        /// <summary>
+        /// whether someone wants everything being offered or wants to exclude certain items
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -87,7 +106,10 @@ namespace BleakwindBuffet.Data.Drinks
                 return instruction;
             }
         }
-
+        /// <summary>
+        /// converts to the name of the drink
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return Size.ToString() + "Aretino Apple Juice";
