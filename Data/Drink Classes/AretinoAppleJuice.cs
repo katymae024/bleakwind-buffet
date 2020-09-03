@@ -18,7 +18,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// private property for ice
         /// </summary>
-        private bool ice = true;
+        private bool ice = false;
         /// <summary>
         /// private property for size of drink
         /// </summary>
@@ -101,7 +101,7 @@ namespace BleakwindBuffet.Data.Drinks
             get
             {
                 List<string> instruction = new List<string>();
-                if (Ice) instruction.Add("Add Ice");
+                if (Ice) instruction.Add("Add ice");
                 
                 return instruction;
             }
@@ -112,7 +112,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns></returns>
         public override string ToString()
         {
-            return Size.ToString() + "Aretino Apple Juice";
+            return Size.ToString() + " Aretino Apple Juice";
         }
 
     }

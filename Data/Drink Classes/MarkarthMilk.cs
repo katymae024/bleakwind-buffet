@@ -102,7 +102,7 @@ namespace BleakwindBuffet.Data.Drinks
             get
             {
                 List<string> instruction = new List<string>();
-                if (!Ice) instruction.Add("Add Ice");
+                if (!Ice) instruction.Add("Add ice");
        
 
                 return instruction;
@@ -114,7 +114,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns></returns>
         public override string ToString()
         {
-            return Size.ToString() + "Markarth Milk";
+            return Size.ToString() + " Markarth Milk";
         }
 
 

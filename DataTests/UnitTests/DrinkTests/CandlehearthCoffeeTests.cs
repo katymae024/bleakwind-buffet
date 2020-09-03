@@ -23,11 +23,15 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [Fact]
         public void ShouldNotBeDecafByDefault()
         {
+            CandlehearthCoffee cc = new CandlehearthCoffee();
+            Assert.False(cc.Decaf);
         }
 
         [Fact]
         public void ShouldNotHaveRoomForCreamByDefault()
         {
+            CandlehearthCoffee cc = new CandlehearthCoffee();
+            Assert.False(cc.RoomForCream);
         }
 
         [Fact]
@@ -50,6 +54,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [Fact]
         public void ShouldBeAbleToSetDecaf()
         {
+            CandlehearthCoffee cc = new CandlehearthCoffee();
+            cc.Decaf = true;
+            Assert.True(cc.Decaf);
+            cc.Decaf = false;
+            Assert.False(cc.Decaf);
         }
 
         [Fact]
@@ -98,6 +107,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [InlineData(false, false)]
         public void ShouldHaveCorrectSpecialInstructions(bool includeIce, bool includeCream)
         {
+            CandlehearthCoffee cc = new CandlehearthCoffee();
+            cc.Ice = includeIce;
+            if (includeIce) Assert.Contains("Add ice", cc.SpecialInstructions);
+            else Assert.Empty(cc.SpecialInstructions);
+            cc.RoomForCream = includeCream;
+            if (includeCream) Assert.Contains("Add cream", cc.SpecialInstructions);
+            else Assert.Empty(cc.SpecialInstructions);
+
         }
 
         [Theory]

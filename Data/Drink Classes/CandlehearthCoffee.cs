@@ -137,8 +137,8 @@ namespace BleakwindBuffet.Data.Drinks
             get
             {
                 List<string> instruction = new List<string>();
-                if (!Ice) instruction.Add("Add Ice");
-                if (!RoomForCream) instruction.Add("Add Cream");
+                if (!Ice) instruction.Add("Add ice");
+                if (!RoomForCream) instruction.Add("Add cream");
 
                 return instruction;
             }
@@ -151,11 +151,11 @@ namespace BleakwindBuffet.Data.Drinks
         {
             if(decaf == true)
             {
-                return Size.ToString() + "Decaf Candlehearth Coffee";
+                return Size.ToString() + " Decaf Candlehearth Coffee";
             }
             else
             {
-                return Size.ToString() + "Candlehearth Coffee";
+                return Size.ToString() + " Candlehearth Coffee";
             }
             
         }

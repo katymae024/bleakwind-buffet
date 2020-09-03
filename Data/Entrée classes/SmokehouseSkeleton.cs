@@ -109,7 +109,7 @@ namespace BleakwindBuffet.Data.Entrees
 
                 if (!SausageLink) instruction.Add("Hold sausage");
                 if (!Egg) instruction.Add("Hold egg");
-                if (!HashBrowns) instruction.Add("Hold hash browns");
+                if (!HashBrowns) instruction.Add("Hold hashbrowns");
                 if (!Pancake) instruction.Add("Hold pancake");
                
 

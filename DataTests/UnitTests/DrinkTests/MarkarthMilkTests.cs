@@ -7,6 +7,7 @@ using Xunit;
 
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
+using BleakwindBuffet.Data.Drinks;
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
@@ -15,16 +16,21 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [Fact]
         public void ShouldNotIncludeIceByDefault()
         {
+            MarkarthMilk mm = new MarkarthMilk();
+            Assert.False(mm.Ice);
         }
 
         [Fact]
         public void ShouldBySmallByDefault()
         {
+            MarkarthMilk mm = new MarkarthMilk();
+            Assert.Equal(Size.Small, mm.Size);
         }
 
         [Fact]
         public void ShouldByAbleToSetIce()
         {
+
         }
 
         [Fact]
