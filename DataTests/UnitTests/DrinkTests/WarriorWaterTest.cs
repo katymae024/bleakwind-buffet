@@ -104,9 +104,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [InlineData(Size.Large, "Large Warrior Water")]
         public void ShouldReturnCorrectToStringBasedOnSize(Size size, string name)
         {
-            AretinoAppleJuice aj = new AretinoAppleJuice();
-            aj.Size = size;
-            Assert.Equal(name, aj.ToString());
+            WarriorWater ww = new WarriorWater();
+            ww.Size = size;
+            Assert.Equal(name, ww.ToString());
         }
     }
 }
