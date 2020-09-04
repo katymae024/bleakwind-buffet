@@ -6,6 +6,7 @@
 using Xunit;
 
 using BleakwindBuffet.Data;
+using BleakwindBuffet.Data.Entrees;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
@@ -15,6 +16,8 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldIncludeBunByDefault()
         {
+            BriarheartBurger bb = new BriarheartBurger();
+            
         }
 
         [Fact]
