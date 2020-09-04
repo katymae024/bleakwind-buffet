@@ -82,6 +82,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldBeAbleToSetPickle()
         {
+            BriarheartBurger bb = new BriarheartBurger();
+            bb.Pickle = true;
+            Assert.True(bb.Pickle);
+            bb.Pickle = false;
+            Assert.False(bb.Pickle);
         }
 
         [Fact]
