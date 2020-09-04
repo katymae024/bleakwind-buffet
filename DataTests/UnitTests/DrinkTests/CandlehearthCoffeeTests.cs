@@ -64,6 +64,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [Fact]
         public void ShouldBeAbleToSetRoomForCream()
         {
+            CandlehearthCoffee cc = new CandlehearthCoffee();
+            cc.RoomForCream = true;
+            Assert.True(cc.RoomForCream);
+            cc.RoomForCream = false;
+            Assert.False(cc.RoomForCream);
         }
 
         [Fact]
@@ -114,6 +119,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             cc.RoomForCream = includeCream;
             if (includeCream) Assert.Contains("Add cream", cc.SpecialInstructions);
             else Assert.Empty(cc.SpecialInstructions);
+            //not right
 
         }
 
@@ -126,7 +132,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         [InlineData(false, Size.Large, "Large Candlehearth Coffee")]
         public void ShouldReturnCorrectToStringBasedOnSize(bool decaf, Size size, string name)
         {
-            
+            CandlehearthCoffee cc = new CandlehearthCoffee();
+            cc.Size = size;
+            Assert.Equal(name, cc.ToString());
+            cc.Decaf = decaf;
+            Assert.False(decaf, cc.ToString());
+            //not right
+
+
         }
     }
 }
