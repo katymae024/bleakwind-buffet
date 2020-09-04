@@ -121,26 +121,45 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldBeAbleToSetTomato()
         {
+            DoubleDraugr dd = new DoubleDraugr();
+            dd.Tomato = true;
+            Assert.True(dd.Tomato);
+            dd.Tomato = false;
+            Assert.False(dd.Tomato);
         }
 
         [Fact]
         public void ShouldBeAbleToSetLettuce()
         {
+            DoubleDraugr dd = new DoubleDraugr();
+            dd.Lettuce = true;
+            Assert.True(dd.Lettuce);
+            dd.Lettuce = false;
+            Assert.False(dd.Lettuce);
         }
 
         [Fact]
         public void ShouldBeAbleToSetMayo()
         {
+            DoubleDraugr dd = new DoubleDraugr();
+            dd.Mayo = true;
+            Assert.True(dd.Mayo);
+            dd.Mayo = false;
+            Assert.False(dd.Mayo);
         }
 
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
+            DoubleDraugr dd = new DoubleDraugr();
+            Assert.Equal(7.32, dd.Price);
         }
 
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
+            DoubleDraugr dd = new DoubleDraugr();
+            Assert.Equal((uint) 843, dd.Calories);
         }
 
         [Theory]
@@ -150,11 +169,33 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
                                                                     bool includePickle, bool includeCheese, bool includeTomato,
                                                                     bool includeLettuce, bool includeMayo)
         {
+
+            DoubleDraugr dd = new DoubleDraugr();
+            dd.Bun = includeBun;
+            dd.Ketchup = includeKetchup;
+            dd.Mustard = includeMustard;
+            dd.Pickle = includePickle;
+            dd.Cheese = includeCheese;
+            dd.Tomato = includeTomato;
+            dd.Lettuce = includeLettuce;
+            dd.Mayo = includeMayo;
+
+
+            if (!includeBun) Assert.Contains("Hold bun", dd.SpecialInstructions);
+            else if (!includeKetchup) Assert.Contains("Hold ketchup", dd.SpecialInstructions);
+            else if (!includeMustard) Assert.Contains("Hold mustard", dd.SpecialInstructions);
+            else if (!includePickle) Assert.Contains("Hold pickle", dd.SpecialInstructions);
+            else if (!includeCheese) Assert.Contains("Hold cheese", dd.SpecialInstructions);
+            else if (!includeTomato) Assert.Contains("Hold tomato", dd.SpecialInstructions);
+            else if (!includeLettuce) Assert.Contains("Hold lettuce", dd.SpecialInstructions);
+            else if (!includeMayo) Assert.Contains("Hold mayo", dd.SpecialInstructions);
         }
 
         [Fact]
         public void ShouldReturnCorrectToString()
         {
+            DoubleDraugr dd = new DoubleDraugr();
+            Assert.Equal("Double Draugr", dd.ToString());
         }
     }
 }
