@@ -37,7 +37,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         public void ShouldReturnCorrectSpecialInstructions()
         {
             VokunSalad vs = new VokunSalad();
-            //how to do
+            Assert.Empty(vs.SpecialInstructions);
         }
 
         [Theory]

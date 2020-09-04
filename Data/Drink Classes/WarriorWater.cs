@@ -120,7 +120,7 @@ namespace BleakwindBuffet.Data.Drinks
             {
                 List<string> instruction = new List<string>();
                 if (!Ice) instruction.Add("Hold ice");
-                if (!Lemon) instruction.Add("Add lemon");
+                if (Lemon) instruction.Add("Add lemon");
 
 
                 return instruction;

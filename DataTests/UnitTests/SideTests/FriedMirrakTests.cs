@@ -36,7 +36,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         public void ShouldReturnCorrectSpecialInstructions()
         {
             FriedMiraak fm = new FriedMiraak();
-            //how to do
+            Assert.Empty(fm.SpecialInstructions);
         }
 
         [Theory]

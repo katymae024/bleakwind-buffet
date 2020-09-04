@@ -36,7 +36,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         public void ShouldReturnCorrectStringOnSpecialInstructions()
         {
             MadOtarGrits mg = new MadOtarGrits();
-            //how to do
+            Assert.Empty(mg.SpecialInstructions);
         }
 
         [Theory]

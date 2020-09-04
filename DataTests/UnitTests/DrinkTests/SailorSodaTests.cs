@@ -19,7 +19,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         public void ShouldIncludeIceByDefault()
         {
             SailorSoda ss = new SailorSoda();
-            Assert.False(ss.Ice);
+            Assert.True(ss.Ice);
         }
 
         [Fact]
@@ -107,9 +107,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         {
             SailorSoda ss = new SailorSoda();
             ss.Ice = includeIce;
-            if (includeIce) Assert.Contains("Add ice", ss.SpecialInstructions);
-            else Assert.Empty(ss.SpecialInstructions);
+            //if (includeIce) Assert.Contains("Add ice", ss.SpecialInstructions);
+            //else Assert.Empty(ss.SpecialInstructions);
             //not right
+            if (includeIce == false) Assert.Contains("Hold ice", ss.SpecialInstructions);
+            
+            else Assert.Empty(ss.SpecialInstructions);
         }
         
         [Theory]
@@ -131,7 +134,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 
         [InlineData(SodaFlavor.Peach, Size.Small, "Small Peach Sailor Soda")]
         [InlineData(SodaFlavor.Peach, Size.Medium, "Medium Peach Sailor Soda")]
-        [InlineData(SodaFlavor.Peach, Size.Large, "Small Peach Sailor Soda")]
+        [InlineData(SodaFlavor.Peach, Size.Large, "Large Peach Sailor Soda")]
 
         [InlineData(SodaFlavor.Watermelon, Size.Small, "Small Watermelon Sailor Soda")]
         [InlineData(SodaFlavor.Watermelon, Size.Medium, "Medium Watermelon Sailor Soda")]
@@ -140,20 +143,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         {
             SailorSoda ss = new SailorSoda();
             ss.Size = size;
+            ss.Flavor = flavor;
             Assert.Equal(name, ss.ToString());
-            ss.Flavor = SodaFlavor.Peach;
-            Assert.Equal(name, ss.ToString());
-            ss.Flavor = SodaFlavor.Blackberry;
-            Assert.Equal(name, ss.ToString());
-            ss.Flavor = SodaFlavor.Lemon;
-            Assert.Equal(name, ss.ToString());
-            ss.Flavor = SodaFlavor.Watermelon;
-            Assert.Equal(name, ss.ToString());
-            ss.Flavor = SodaFlavor.Cherry;
-            Assert.Equal(name, ss.ToString());
-            ss.Flavor = SodaFlavor.Grapefruit;
-            Assert.Equal(name, ss.ToString());
-            //not right
+           
 
         }
     }

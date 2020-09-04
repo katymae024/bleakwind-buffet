@@ -36,7 +36,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
         public void ShouldReturnCorrectSpecialInstructions()
         {
             DragonbornWaffleFries dw = new DragonbornWaffleFries();
-            //how to do
+            Assert.Empty(dw.SpecialInstructions);
         }
 
         [Theory]

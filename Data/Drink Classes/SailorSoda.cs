@@ -131,7 +131,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns></returns>
         public override string ToString()
         {
-            return Size.ToString() + Flavor.ToString() + " Sailor Soda" ;
+            return Size.ToString() +" " + Flavor.ToString() + " Sailor Soda" ;
         }
 
 
