@@ -1,7 +1,7 @@
 ﻿/*
- * Author: Zachery Brunner
+ * Author: Katayoun Katy Davoudi
  * Class: AretinoAppleJuiceTests.cs
- * Purpose: Test the AretinoAppleJuice.cs class in the Data library
+ * Purpose: Test the AretinoAppleJuice.cs class in the Data Folder
  */
 using Xunit;
 
@@ -12,8 +12,14 @@ using BleakwindBuffet.Data.Drinks;
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
+    /// <summary>
+    /// methods provided checks size, price, calories, special instructions, etc.
+    /// </summary>
     public class AretinoAppleJuiceTests
     {
+        /// <summary>
+        /// Makes sure as set in the class (in Data Folder) the ice is not included
+        /// </summary>
         [Fact]
         public void ShouldNotIncludeIceByDefault()
         {
@@ -21,6 +27,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.False(aj.Ice);
         }
 
+        /// <summary>
+        /// Makes sure as set in the class (in Data Folder) the size is small
+        /// </summary>
         [Fact]
         public void ShouldBeSmallByDefault()
         {
@@ -28,6 +37,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.Equal(Size.Small, aj.Size);
         }
 
+        /// <summary>
+        /// Sets ice, checks if statement is true then false
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetIce()
         {
@@ -38,6 +50,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.False(aj.Ice);
         }
 
+        /// <summary>
+        /// Sets size, checks if size statement is true  
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetSize()
         {
@@ -50,6 +65,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.Equal(Size.Small, aj.Size);
         }
 
+        /// <summary>
+        /// makes sure the <paramref name="size"/> of the drinks gets the correct <paramref name="price"/>
+        /// </summary>
+        /// <param name="size"> parameter for sizes of the drink</param>
+        /// <param name="price">parameter for prices of the drink</param>
         [Theory]
         [InlineData(Size.Small, 0.62)]
         [InlineData(Size.Medium, 0.87)]
@@ -61,6 +81,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.Equal(price, aj.Price);
         }
 
+        /// <summary>
+        /// makes sure the <paramref name="size"/> of the drinks gets the correct <paramref name="cal"/>
+        /// </summary>
+        /// <param name="size">parameter for <paramref name="size"/> of the drink</param>
+        /// <param name="cal">parameter for <paramref name="cal"/> of the drink</param>
         [Theory]
         [InlineData(Size.Small, 44)]
         [InlineData(Size.Medium, 88)]
@@ -72,6 +97,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.Equal(cal, aj.Calories);
         }
 
+        /// <summary>
+        /// Makes sure if special instruction has been met, for example whether to include ice or not
+        /// </summary>
+        /// <param name="includeIce">parameter for including ice or not</param>
         [Theory]
         [InlineData(true)]
         [InlineData(false)]
@@ -84,6 +113,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 
         }
 
+        /// <summary>
+        /// Returns the <paramref name="name"/> of the drink along with the <paramref name="size"/>
+        /// </summary>
+        /// <param name="size">parameter for the size of the drink</param>
+        /// <param name="name">parameter for the name of the drink</param>
         [Theory]
         [InlineData(Size.Small, "Small Aretino Apple Juice")]
         [InlineData(Size.Medium, "Medium Aretino Apple Juice")]
