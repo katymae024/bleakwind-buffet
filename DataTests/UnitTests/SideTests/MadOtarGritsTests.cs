@@ -1,7 +1,7 @@
 ﻿/*
- * Author: Zachery Brunner
+ * Author: Katayoun Katy Davoudi
  * Class: MadOtarGritsTests.cs
- * Purpose: Test the MadOtarGrits.cs class in the Data library
+ * Purpose: Test the MadOtarGrits.cs class in the Data Folder
  */
 using Xunit;
 
@@ -11,15 +11,23 @@ using BleakwindBuffet.Data.Sides;
 
 namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
+    /// <summary>
+    /// methods provided checks price, calories, special instructions, etc.
+    /// </summary>
     public class MadOtarGritsTests
     {
+        /// <summary>
+        /// Makes sure as set in the class (in Data Folder) the size is small
+        /// </summary>
         [Fact]
         public void ShouldBeSmallByDefault()
         {
             MadOtarGrits mg = new MadOtarGrits();
             Assert.Equal(Size.Small, mg.Size);
         }
-                
+        /// <summary>
+        /// Sets size, checks if size statement is true  
+        /// </summary>        
         [Fact]
         public void ShouldBeAbleToSetSize()
         {
@@ -31,14 +39,20 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             mg.Size = Size.Small;
             Assert.Equal(Size.Small, mg.Size);
         }
-
+        /// <summary>
+        /// returns empty special instructions because there is none
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectStringOnSpecialInstructions()
         {
             MadOtarGrits mg = new MadOtarGrits();
             Assert.Empty(mg.SpecialInstructions);
         }
-
+        /// <summary>
+        /// makes sure the correct <paramref name="price"/> is shown based on <paramref name="size"/>
+        /// </summary>
+        /// <param name="size">parameter for size</param>
+        /// <param name="price">parameter for price</param>
         [Theory]
         [InlineData(Size.Small, 1.22)]
         [InlineData(Size.Medium, 1.58)]
@@ -49,7 +63,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             mg.Size = size;
             Assert.Equal(price, mg.Price);
         }
-
+        /// <summary>
+        ///  makes sure the correct <paramref name="calories"/> is shown based on <paramref name="size"/>
+        /// </summary>
+        /// <param name="size">parameter for size</param>
+        /// <param name="calories">parameter for calories</param>
         [Theory]
         [InlineData(Size.Small, 105)]
         [InlineData(Size.Medium, 142)]
@@ -60,7 +78,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             mg.Size = size;
             Assert.Equal(calories, mg.Calories);
         }
-
+        /// <summary>
+        /// Returns the <paramref name="name"/> of the side along with the <paramref name="size"/>
+        /// </summary>
+        /// <param name="size">parameter for the size of the side</param>
+        /// <param name="name">parameter for the name of the side</param>
         [Theory]
         [InlineData(Size.Small, "Small Mad Otar Grits")]
         [InlineData(Size.Medium, "Medium Mad Otar Grits")]

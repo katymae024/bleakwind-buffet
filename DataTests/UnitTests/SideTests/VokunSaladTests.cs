@@ -1,7 +1,7 @@
 ﻿/*
- * Author: Zachery Brunner
+ * Author: Katayoun Katy Davoudi
  * Class: VokunSaladTests.cs
- * Purpose: Test the VokunSalad.cs class in the Data library
+ * Purpose: Test the VokunSalad.cs class in the Data Folder
  */
 using Xunit;
 
@@ -11,8 +11,14 @@ using BleakwindBuffet.Data.Sides;
 
 namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
+    /// <summary>
+    /// methods provided checks price, calories, special instructions, etc.
+    /// </summary>
     public class VokunSaladTests
     {
+        /// <summary>
+        /// Makes sure as set in the class (in Data Folder) the size is small
+        /// </summary>
         [Fact]
         public void ShouldBeSmallByDefault()
         {
@@ -20,7 +26,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             Assert.Equal(Size.Small, vs.Size);
 
         }
-
+        /// <summary>
+        /// Sets size, checks if size statement is true  
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetSize()
         {
@@ -32,14 +40,20 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             vs.Size = Size.Small;
             Assert.Equal(Size.Small, vs.Size);
         }
-
+        /// <summary>
+        /// returns empty special instructions because there is none
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectSpecialInstructions()
         {
             VokunSalad vs = new VokunSalad();
             Assert.Empty(vs.SpecialInstructions);
         }
-
+        /// <summary>
+        /// makes sure the correct <paramref name="price"/> is shown based on <paramref name="size"/>
+        /// </summary>
+        /// <param name="size">parameter for size</param>
+        /// <param name="price">parameter for price</param>
         [Theory]
         [InlineData(Size.Small, 0.93)]
         [InlineData(Size.Medium, 1.28)]
@@ -50,7 +64,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             vs.Size = size;
             Assert.Equal(price, vs.Price);
         }
-
+        /// <summary>
+        ///  makes sure the correct <paramref name="calories"/> is shown based on <paramref name="size"/>
+        /// </summary>
+        /// <param name="size">parameter for size</param>
+        /// <param name="calories">parameter for calories</param>
         [Theory]
         [InlineData(Size.Small, 41)]
         [InlineData(Size.Medium, 52)]
@@ -61,7 +79,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             vs.Size = size;
             Assert.Equal(calories, vs.Calories);
         }
-
+        /// <summary>
+        /// Returns the <paramref name="name"/> of the side along with the <paramref name="size"/>
+        /// </summary>
+        /// <param name="size">parameter for the size of the side</param>
+        /// <param name="name">parameter for the name of the side</param>
         [Theory]
         [InlineData(Size.Small, "Small Vokun Salad")]
         [InlineData(Size.Medium, "Medium Vokun Salad")]
