@@ -1,7 +1,7 @@
 ﻿/*
- * Author: Zachery Brunner
+ * Author: Katayoun Katy Davoudi
  * Class: PhillyPoacherTests.cs
- * Purpose: Test the PhillyPoacher.cs class in the Data library
+ * Purpose: Test the PhillyPoacher.cs class in the Data Folder
  */
 using Xunit;
 
@@ -10,29 +10,41 @@ using BleakwindBuffet.Data.Entrees;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
+    /// <summary>
+    /// methods provided checks price, calories, special instructions, etc.
+    /// </summary>
     public class PhillyPoacherTests
     {
+        /// <summary>
+        /// Makes sure as set in the class (in Data Folder) the sirloin is included
+        /// </summary>
         [Fact]
         public void ShouldIncludeSirloinByDefault()
         {
             PhillyPoacher pp = new PhillyPoacher();
             Assert.True(pp.Sirloin);
         }
-
+        /// <summary>
+        /// Makes sure as set in the class (in Data Folder) the onion is included
+        /// </summary>
         [Fact]
         public void ShouldIncludeOnionByDefault()
         {
             PhillyPoacher pp = new PhillyPoacher();
             Assert.True(pp.Onion);
         }
-
+        /// <summary>
+        /// Makes sure as set in the class (in Data Folder) the roll is included
+        /// </summary>
         [Fact]
         public void ShouldIncludeRollByDefault()
         {
             PhillyPoacher pp = new PhillyPoacher();
             Assert.True(pp.Roll);
         }
-
+        /// <summary>
+        /// Sets sirloin, checks if statement is true then false
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetSirloin()
         {
@@ -42,7 +54,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             pp.Sirloin = false;
             Assert.False(pp.Sirloin);
         }
-
+        /// <summary>
+        /// Sets onion, checks if statement is true then false
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetOnions()
         {
@@ -52,7 +66,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             pp.Onion = false;
             Assert.False(pp.Onion);
         }
-
+        /// <summary>
+        /// Sets roll, checks if statement is true then false
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetRoll()
         {
@@ -62,21 +78,30 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             pp.Roll = false;
             Assert.False(pp.Roll);
         }
-
+        /// <summary>
+        /// Makes sure the correct price is returned
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
             PhillyPoacher pp = new PhillyPoacher();
             Assert.Equal(7.23, pp.Price);
         }
-
+        /// <summary>
+        /// Makes sure the correct calories is returned
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
             PhillyPoacher pp = new PhillyPoacher();
             Assert.Equal((uint)784, pp.Calories);
         }
-
+        /// <summary>
+        /// Makes sure if special instruction has been met, for example whether to include sirloin or not, etc. 
+        /// </summary>
+        /// <param name="includeSirloin">parameter for the sirloin</param>
+        /// <param name="includeOnion">parameter for the onion</param>
+        /// <param name="includeRoll">parameter for the roll</param>
         [Theory]
         [InlineData(true, true, true)]
         [InlineData(false, false, false)]
@@ -93,7 +118,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             else if (!includeRoll) Assert.Contains("Hold roll", pp.SpecialInstructions);
 
         }
-
+        /// <summary>
+        /// returns the correct name of the entree
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectToString()
         {

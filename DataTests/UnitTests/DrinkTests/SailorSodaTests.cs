@@ -1,7 +1,7 @@
 ﻿/*
- * Author: Zachery Brunner
+ * Author: Katayoun Katy Davoudi
  * Class: SailorSodaTests.cs
- * Purpose: Test the SailorSoda.cs class in the Data library
+ * Purpose: Test the SailorSoda.cs class in the Data Folder
  */
 using System;
 
@@ -13,30 +13,42 @@ using BleakwindBuffet.Data.Drinks;
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
+    /// <summary>
+    /// methods provided checks size, price, calories, special instructions, etc.
+    /// </summary>
     public class SailorSodaTests
     {
+        /// <summary>
+        /// Makes sure as set in the class (in Data Folder) the ice is included
+        /// </summary>
         [Fact]
         public void ShouldIncludeIceByDefault()
         {
             SailorSoda ss = new SailorSoda();
             Assert.True(ss.Ice);
         }
-
+        /// <summary>
+        /// Makes sure as set in the class (in Data Folder) the size is small
+        /// </summary>
         [Fact]
         public void ShouldBeSmallByDefault()
         {
             SailorSoda ss = new SailorSoda();
             Assert.Equal(Size.Small, ss.Size);
         }
-
+        /// <summary>
+        /// Makes sure as set in the class (in Data Folder) the default is cherry flavor
+        /// </summary>
         [Fact]
         public void FlavorShouldBeCherryByDefault()
         {
             SailorSoda ss = new SailorSoda();
             Assert.Equal(ss.Flavor, SodaFlavor.Cherry);
-            //check
+            
         }
-
+        /// <summary>
+        /// Sets ice, checks if statement is true then false
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetIce()
         {
@@ -46,7 +58,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             ss.Ice = false;
             Assert.False(ss.Ice);
         }
-
+        /// <summary>
+        /// Sets size, checks if size statement is true  
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetSize()
         {
@@ -58,7 +72,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             ss.Size = Size.Small;
             Assert.Equal(Size.Small, ss.Size);
         }
-
+        /// <summary>
+        /// Sets flavor, checks if flavor statement is true  
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetFlavor()
         {
@@ -77,7 +93,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.Equal(SodaFlavor.Peach, ss.Flavor);
 
         }
-
+        /// <summary>
+        /// makes sure the <paramref name="size"/> of the drinks gets the correct <paramref name="price"/>
+        /// </summary>
+        /// <param name="size"> parameter for sizes of the drink</param>
+        /// <param name="price">parameter for prices of the drink</param>
         [Theory]
         [InlineData(Size.Small, 1.42)]
         [InlineData(Size.Medium, 1.74)]
@@ -88,7 +108,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             ss.Size = size;
             Assert.Equal(price, ss.Price);
         }
-
+        /// <summary>
+        /// makes sure the <paramref name="size"/> of the drinks gets the correct <paramref name="cal"/>
+        /// </summary>
+        /// <param name="size">parameter for <paramref name="size"/> of the drink</param>
+        /// <param name="cal">parameter for <paramref name="cal"/> of the drink</param>
         [Theory]
         [InlineData(Size.Small, 117)]
         [InlineData(Size.Medium, 153)]
@@ -99,7 +123,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             ss.Size = size;
             Assert.Equal(cal, ss.Calories);
         }
-
+        /// <summary>
+        /// Makes sure if special instruction has been met, for example whether to include ice or not
+        /// </summary>
+        /// <param name="includeIce">parameter for including ice or not</param>
         [Theory]
         [InlineData(true)]
         [InlineData(false)]
@@ -107,14 +134,18 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         {
             SailorSoda ss = new SailorSoda();
             ss.Ice = includeIce;
-            //if (includeIce) Assert.Contains("Add ice", ss.SpecialInstructions);
-            //else Assert.Empty(ss.SpecialInstructions);
-            //not right
+            
             if (includeIce == false) Assert.Contains("Hold ice", ss.SpecialInstructions);
             
             else Assert.Empty(ss.SpecialInstructions);
         }
-        
+        /// <summary>
+        /// Returns the <paramref name="name"/> of the drink along with the <paramref name="size"/>
+        /// and <paramref name="flavor"/>
+        /// </summary>
+        /// <param name="size">parameter for the size of the drink</param>
+        /// <param name="name">parameter for the name of the drink</param>
+        /// <param name="flavor">parameter for the flavor of the drink</param>
         [Theory]
         [InlineData(SodaFlavor.Cherry, Size.Small, "Small Cherry Sailor Soda")]
         [InlineData(SodaFlavor.Cherry, Size.Medium, "Medium Cherry Sailor Soda")]
