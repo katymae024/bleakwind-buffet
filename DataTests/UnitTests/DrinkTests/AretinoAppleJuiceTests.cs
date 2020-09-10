@@ -17,6 +17,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     /// </summary>
     public class AretinoAppleJuiceTests
     {
+        [Fact]
+        public void ShouldBeADrink()
+        {
+            AretinoAppleJuice aj = new AretinoAppleJuice();
+            Assert.IsAssignableFrom<Drink>(aj);
+        }
         /// <summary>
         /// Makes sure as set in the class (in Data Folder) the ice is not included
         /// </summary>
