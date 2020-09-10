@@ -7,13 +7,14 @@ using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using BleakwindBuffet.Data.Drinks;
 
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
     /// Containing a specific drink with its properties
     /// </summary>
-    public class CandlehearthCoffee
+    public class CandlehearthCoffee : Drink
     {
         /// <summary>
         /// private property for ice
@@ -73,24 +74,11 @@ namespace BleakwindBuffet.Data.Drinks
                 roomForCream = value;
             }
         }
-        /// <summary>
-        /// boolean property for size
-        /// </summary>
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
+        
         /// <summary>
         /// boolean property for price
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -111,7 +99,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         ///  boolean property for calories
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -132,7 +120,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// whether someone wants everything being offered or wants to exclude certain items
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

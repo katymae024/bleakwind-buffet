@@ -6,13 +6,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using BleakwindBuffet.Data.Entrée_classes;
 
 namespace BleakwindBuffet.Data.Entrees
 {
     /// <summary>
     /// Containing a specific entree with its properties
     /// </summary>
-    public class GardenOrcOmelette
+    public class GardenOrcOmelette : Entree
     {
         /// <summary>
         /// private property broccoli
@@ -33,11 +34,11 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// gets the price
         /// </summary>
-        public double Price => 4.57;
+        public override double Price => 4.57;
         /// <summary>
         /// gets the calories
         /// </summary>
-        public uint Calories => 404;
+        public override uint Calories => 404;
         /// <summary>
         /// boolean property for broccoli
         /// </summary>
@@ -102,7 +103,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// whether someone wants everything being offered or wants to exclude certain items
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

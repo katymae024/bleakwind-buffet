@@ -7,12 +7,14 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using BleakwindBuffet.Data.Entrée_classes;
+
 namespace BleakwindBuffet.Data.Entrees
 {
     /// <summary>
     /// Containing a specific entree with its properties
     /// </summary>
-    public class DoubleDraugr
+    public class DoubleDraugr : Entree
     {
         /// <summary>
         /// private property of ketchup
@@ -50,11 +52,11 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// gets price of the burger
         /// </summary>
-        public double Price => 7.32;
+        public override double Price => 7.32;
         /// <summary>
         /// gets calorie of burger
         /// </summary>
-        public uint Calories => 843;
+        public override uint Calories => 843;
 
         /// <summary>
         /// boolean property of ketchup
@@ -182,7 +184,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// whether someone wants everything being offered or wants to exclude certain items
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using BleakwindBuffet.Data.Entrée_classes;
 
 
 namespace BleakwindBuffet.Data.Entrees
@@ -13,20 +14,20 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Containing a specific entree with its properties
     /// </summary>
-    public class ThugsTBone
+    public class ThugsTBone : Entree
     {
         /// <summary>
         /// gets price
         /// </summary>
-        public double Price => 6.44;
+        public override double Price => 6.44;
         /// <summary>
         /// gets calories
         /// </summary>
-        public uint Calories => 982;
+        public override uint Calories => 982;
         /// <summary>
         /// whether someone wants everything being offered or wants to exclude certain items
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

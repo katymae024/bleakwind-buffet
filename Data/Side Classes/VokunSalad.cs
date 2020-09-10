@@ -7,36 +7,24 @@ using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using BleakwindBuffet.Data.Side_Classes;
 
 namespace BleakwindBuffet.Data.Sides
 {
     /// <summary>
     /// Containing a specific side with its properties
     /// </summary>
-    public class VokunSalad
+    public class VokunSalad : Side
     {
        /// <summary>
        /// private property for size
        /// </summary>
         private Size size = Size.Small;
-        /// <summary>
-        /// property for size
-        /// </summary>
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
+        
         /// <summary>
         /// gets price
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -57,7 +45,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// gets calories
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -78,7 +66,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// whether someone wants everything being offered or wants to exclude certain items
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

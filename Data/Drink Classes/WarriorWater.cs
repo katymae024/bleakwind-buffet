@@ -8,12 +8,13 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
     /// Containing a specific drink with its properties
     /// </summary>
-    public class WarriorWater
+    public class WarriorWater : Drink
     {
         /// <summary>
         /// private property for ice
@@ -41,20 +42,7 @@ namespace BleakwindBuffet.Data.Drinks
                 ice = value;
             }
         }
-        /// <summary>
-        /// boolean property for size
-        /// </summary>
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
+        
         /// <summary>
         /// boolean property for lemon
         /// </summary>
@@ -72,7 +60,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// price based on size
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -93,7 +81,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// calories based on size
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -114,7 +102,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// whether someone wants everything being offered or wants to exclude certain items
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

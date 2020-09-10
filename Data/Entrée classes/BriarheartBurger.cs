@@ -6,13 +6,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using BleakwindBuffet.Data.Entrée_classes;
 
 namespace BleakwindBuffet.Data.Entrees
 {
     /// <summary>
     /// Containing a specific entree with its properties
     /// </summary>
-    public class BriarheartBurger
+    public class BriarheartBurger : Entree
     {
         /// <summary>
         /// private property for ketchup
@@ -38,11 +39,11 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         ///gets price of the burger
         /// </summary>
-        public double Price =>  6.32;
+        public override double Price =>  6.32;
         /// <summary>
         /// //gets calories of the burger
         /// </summary>
-        public uint Calories => 743;
+        public override uint Calories => 743;
 
         /// <summary>
         /// boolean property of ketchup
@@ -124,7 +125,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// whether someone wants everything being offered or wants to exclude certain items
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

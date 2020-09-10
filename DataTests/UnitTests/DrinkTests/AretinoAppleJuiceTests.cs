@@ -17,6 +17,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     /// </summary>
     public class AretinoAppleJuiceTests
     {
+        /// <summary>
+        /// Makes sure it runs through Drink
+        /// </summary>
         [Fact]
         public void ShouldBeADrink()
         {

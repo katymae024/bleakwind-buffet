@@ -8,6 +8,7 @@ using Xunit;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Sides;
+using BleakwindBuffet.Data.Side_Classes;
 
 namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
@@ -16,6 +17,15 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
     /// </summary>
     public class DragonbornWaffleFriesTests
     {
+        /// <summary>
+        /// Makes sure it runs through Side
+        /// </summary>
+        [Fact]
+        public void ShouldBeASide()
+        {
+            DragonbornWaffleFries dw = new DragonbornWaffleFries();
+            Assert.IsAssignableFrom<Side>(dw);
+        }
         /// <summary>
         /// Makes sure as set in the class (in Data Folder) the size is small
         /// </summary>

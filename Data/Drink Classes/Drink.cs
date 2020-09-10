@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
+using BleakwindBuffet.Data.Interfaces;
 
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
     /// a base class representing the common properties of drinks
     /// </summary>
-    public abstract class Drink
+    public abstract class Drink : IOrderItem
     {
         /// <summary>
         /// The size of the drink
