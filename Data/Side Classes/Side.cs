@@ -3,24 +3,22 @@ using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
 
-namespace BleakwindBuffet.Data.Drinks
+namespace BleakwindBuffet.Data.Side_Classes
 {
-    /// <summary>
-    /// a base class representing the common properties of drinks
-    /// </summary>
-    public abstract class Drink
+    public abstract class Side
     {
         /// <summary>
         /// The size of the drink
         /// </summary>
         public virtual Size Size { get; set; }
+
         /// <summary>
         /// Price of the drink
         /// </summary>
         /// <value>
         /// in the US Dollars
         /// </value>
-        public abstract double Price { get;}
+        public abstract double Price { get; }
         /// <summary>
         /// Calories of the drink
         /// </summary>
@@ -29,8 +27,5 @@ namespace BleakwindBuffet.Data.Drinks
         /// special instruction to prepare the drink
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
-
-
-
     }
 }
