@@ -8,6 +8,7 @@ using Xunit;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Entrée_classes;
+using BleakwindBuffet.Data.Interfaces;
 
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
@@ -160,6 +161,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             GardenOrcOmelette go = new GardenOrcOmelette();
             Assert.Equal("Garden Orc Omelette", go.ToString());
+        }
+
+        [Fact]
+        public void GardenOrcOmletteImplementsTheIOrderItemClass()
+        {
+            var GardenOrcOmelette = new GardenOrcOmelette();
+            Assert.IsAssignableFrom<IOrderItem>(GardenOrcOmelette);
         }
     }
 }

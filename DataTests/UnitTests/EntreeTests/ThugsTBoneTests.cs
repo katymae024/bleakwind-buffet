@@ -8,6 +8,7 @@ using Xunit;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Entrée_classes;
+using BleakwindBuffet.Data.Interfaces;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
@@ -60,6 +61,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             ThugsTBone tb = new ThugsTBone();
             Assert.Equal("Thugs T-Bone", tb.ToString());
+        }
+
+        [Fact]
+        public void ThugsTBoneImplementsTheIOrderItemClass()
+        {
+            var ThugsTBone = new ThugsTBone();
+            Assert.IsAssignableFrom<IOrderItem>(ThugsTBone);
         }
     }
 }

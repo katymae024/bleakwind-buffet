@@ -8,6 +8,7 @@ using Xunit;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Entrée_classes;
+using BleakwindBuffet.Data.Interfaces;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
@@ -136,6 +137,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             PhillyPoacher pp = new PhillyPoacher();
             Assert.Equal("Philly Poacher", pp.ToString());
+        }
+
+        [Fact]
+        public void PhillyPoacherImplementsTheIOrderItemClass()
+        {
+            var PhillyPoacher = new PhillyPoacher();
+            Assert.IsAssignableFrom<IOrderItem>(PhillyPoacher);
         }
     }
 }

@@ -8,6 +8,7 @@ using Xunit;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Entrée_classes;
+using BleakwindBuffet.Data.Interfaces;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
@@ -306,6 +307,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             ThalmorTriple tt = new ThalmorTriple();
             Assert.Equal("Thalmor Triple", tt.ToString());
+        }
+
+        [Fact]
+        public void ThalmorTripleImplementsTheIOrderItemClass()
+        {
+            var ThalmorTriple = new ThalmorTriple();
+            Assert.IsAssignableFrom<IOrderItem>(ThalmorTriple);
         }
     }
 }

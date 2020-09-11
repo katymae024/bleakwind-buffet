@@ -8,6 +8,7 @@ using Xunit;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Entrée_classes;
+using BleakwindBuffet.Data.Interfaces;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
@@ -160,6 +161,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             SmokehouseSkeleton ss = new SmokehouseSkeleton();
             Assert.Equal("Smokehouse Skeleton", ss.ToString());
+        }
+
+        [Fact]
+        public void SmokehouseSkeletonImplementsTheIOrderItemClass()
+        {
+            var SmokehouseSkeleton = new SmokehouseSkeleton();
+            Assert.IsAssignableFrom<IOrderItem>(SmokehouseSkeleton);
         }
     }
 }
