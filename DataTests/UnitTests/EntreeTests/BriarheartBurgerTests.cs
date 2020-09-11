@@ -8,6 +8,8 @@ using Xunit;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Entrée_classes;
+using BleakwindBuffet.Data.Interfaces;
+
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
@@ -187,6 +189,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             BriarheartBurger bb = new BriarheartBurger();
             Assert.Equal("Briarheart Burger", bb.ToString());
+        }
+
+        [Fact]
+        public void BriarheartBurgerImplementsTheIOrderItemClass()
+        {
+            var BriarheartBurger = new BriarheartBurger();
+            Assert.IsAssignableFrom<IOrderItem>(BriarheartBurger);
         }
     }
 }
