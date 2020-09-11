@@ -53,17 +53,27 @@ namespace BleakwindBuffet.Data
                 a.Size = s;
                 drinkList.Add(a);
 
-                SailorSoda ss = new SailorSoda();
-                ss.Size = s;
+                
+                
                 foreach (SodaFlavor f in Enum.GetValues(typeof(SodaFlavor)))
                 {
+                    SailorSoda ss = new SailorSoda();
+                    ss.Size = s;
                     ss.Flavor = f;
+
                     drinkList.Add(ss);
                 }
 
                 CandlehearthCoffee c = new CandlehearthCoffee();
+
                 c.Size = s;
                 drinkList.Add(c);
+
+                CandlehearthCoffee cDecaf = new CandlehearthCoffee();
+                cDecaf.Size = s;
+                cDecaf.Decaf = true;
+                drinkList.Add(cDecaf);
+
 
                 MarkarthMilk m = new MarkarthMilk();
                 m.Size = s;

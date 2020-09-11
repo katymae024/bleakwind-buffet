@@ -6,6 +6,7 @@ using BleakwindBuffet.Data;
 using Xunit;
 using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data.Enums;
 
 
 namespace BleakwindBuffet.DataTests
@@ -42,24 +43,70 @@ namespace BleakwindBuffet.DataTests
         {
             IEnumerable<IOrderItem> d = Menu.Drinks();
             List<IOrderItem> drinks = (List<IOrderItem>)d;
-            Assert.Equal(5, drinks.Count);
+            Assert.Equal(33, drinks.Count);
         }
 
         [Fact]
         public void CheckingEachDrinkToMakeSureItIsThere()
         {
+            IEnumerable<IOrderItem> drinks = Menu.Drinks();
+            foreach (Size s in Enum.GetValues(typeof(Size)))
+            {
+                Assert.Contains(drinks,
+                    item => item.ToString().Equals(s.ToString() + " Aretino Apple Juice")
+                    );
+                Assert.Contains(drinks,
+                    item => item.ToString().Equals(s.ToString() + " Candlehearth Coffee")
+                    );
+                Assert.Contains(drinks,
+                    item => item.ToString().Equals(s.ToString() + " Markarth Milk"));
+
+                foreach (SodaFlavor f in Enum.GetValues(typeof(SodaFlavor)))
+                {
+                    Assert.Contains(drinks,
+                        item => item.ToString().Equals(s.ToString() + " " + f.ToString() + " Sailor Soda"));
+
+
+
+
+                }
+
+                Assert.Contains(drinks,
+                    item => item.ToString().Equals(s.ToString() + " Warrior Water"));
+
+            }
 
         }
 
-
-
-
+        [Fact]
+        public void CheckingNumbersOfSides()
+        {
+            IEnumerable<IOrderItem> s = Menu.Sides();
+            List<IOrderItem> sides = (List<IOrderItem>)s;
+            Assert.Equal(12, sides.Count);
+        }
 
         [Fact]
-        public void BriarheartBurgerImplementsTheIOrderItemClass()
+        public void CheckingEachSideToMakeSureItIsThere()
         {
-            var BriarheartBurger = new BriarheartBurger();
-            Assert.IsAssignableFrom<IOrderItem>(BriarheartBurger);
+            IEnumerable<IOrderItem> sides = Menu.Sides();
+            foreach (Size s in Enum.GetValues(typeof(Size)))
+            {
+                Assert.Contains(sides,
+                    item => item.ToString().Equals(s.ToString() + " Dragonborn Waffle Fries")
+                    );
+                Assert.Contains(sides,
+                    item => item.ToString().Equals(s.ToString() + " Fried Miraak")
+                    );
+                Assert.Contains(sides,
+                    item => item.ToString().Equals(s.ToString() + " Mad Otar Grits")
+                    );
+                Assert.Contains(sides,
+                    item => item.ToString().Equals(s.ToString() + " Vokun Salad")
+                    );
+
+
+            }
         }
     }
 }
