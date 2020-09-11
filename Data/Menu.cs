@@ -116,5 +116,12 @@ namespace BleakwindBuffet.Data
             }
             return sideList;
         }
+
+        public static IEnumerable<IOrderItem> FullMenu()
+        {
+            List<IOrderItem> fullList = new List<IOrderItem>();
+
+            return fullList;
+        }
     }
 }
