@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Katayoun Katy Davoudi
+* Class name: Drink.cs
+* Purpose: All drinks derive from this class
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;

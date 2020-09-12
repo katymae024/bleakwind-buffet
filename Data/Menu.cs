@@ -1,10 +1,15 @@
-﻿using System;
+﻿/*
+* Author: Katayoun Katy Davoudi
+* Class name: Menu.cs
+* Purpose: This class implements all of the items on the menu
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Interfaces;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Drinks;
-//using BleakwindBuffet.Data.Entrée_classes;
+
 using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Sides;
 
@@ -13,8 +18,15 @@ using BleakwindBuffet.Data.Sides;
 
 namespace BleakwindBuffet.Data
 {
+    /// <summary>
+    /// a base class representing the menu containing all of the entrees, drinks and sides
+    /// </summary>
     public static class Menu
     {
+        /// <summary>
+        /// method containing the entrees
+        /// </summary>
+        /// <returns>the entree</returns>
         public static IEnumerable<IOrderItem> Entrees()
         {
             List<IOrderItem> entreeList = new List<IOrderItem>();
@@ -43,7 +55,10 @@ namespace BleakwindBuffet.Data
 
             return entreeList;
         }
-
+        /// <summary>
+        /// method containing the drinks
+        /// </summary>
+        /// <returns>the drink, size of the drink and flavor</returns>
         public static IEnumerable<IOrderItem> Drinks()
         {
             List<IOrderItem> drinkList = new List<IOrderItem>();
@@ -53,8 +68,8 @@ namespace BleakwindBuffet.Data
                 a.Size = s;
                 drinkList.Add(a);
 
-                
-                
+
+
                 foreach (SodaFlavor f in Enum.GetValues(typeof(SodaFlavor)))
                 {
                     SailorSoda ss = new SailorSoda();
@@ -89,7 +104,10 @@ namespace BleakwindBuffet.Data
 
 
         }
-
+        /// <summary>
+        /// method containing the sides
+        /// </summary>
+        /// <returns>the side and the size</returns>
         public static IEnumerable<IOrderItem> Sides()
         {
             List<IOrderItem> sideList = new List<IOrderItem>();
@@ -116,7 +134,10 @@ namespace BleakwindBuffet.Data
             }
             return sideList;
         }
-
+        /// <summary>
+        ///  contains all of the items in menu
+        /// </summary>
+        /// <returns>items on menu</returns>
         public static IEnumerable<IOrderItem> FullMenu()
         {
             List<IOrderItem> fullList = new List<IOrderItem>();

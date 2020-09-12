@@ -308,7 +308,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             ThalmorTriple tt = new ThalmorTriple();
             Assert.Equal("Thalmor Triple", tt.ToString());
         }
-
+        /// <summary>
+        /// checks if entree is implemented in the IOrderItem Class
+        /// </summary>
         [Fact]
         public void ThalmorTripleImplementsTheIOrderItemClass()
         {

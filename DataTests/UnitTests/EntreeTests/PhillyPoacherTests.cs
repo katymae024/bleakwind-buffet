@@ -138,7 +138,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             PhillyPoacher pp = new PhillyPoacher();
             Assert.Equal("Philly Poacher", pp.ToString());
         }
-
+        /// <summary>
+        /// checks if entree is implemented in the IOrderItem Class
+        /// </summary>
         [Fact]
         public void PhillyPoacherImplementsTheIOrderItemClass()
         {

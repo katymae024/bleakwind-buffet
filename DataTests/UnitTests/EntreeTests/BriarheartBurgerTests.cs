@@ -190,7 +190,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             BriarheartBurger bb = new BriarheartBurger();
             Assert.Equal("Briarheart Burger", bb.ToString());
         }
-
+        /// <summary>
+        /// checks if entree is implemented in the IOrderItem Class
+        /// </summary>
         [Fact]
         public void BriarheartBurgerImplementsTheIOrderItemClass()
         {

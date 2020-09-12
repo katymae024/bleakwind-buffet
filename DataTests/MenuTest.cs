@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Katayoun Katy Davoudi
+ * Class: MenuTest.cs
+ * Purpose: Test the Menu.cs class in the Data Folder
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Interfaces;
@@ -11,9 +16,14 @@ using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.DataTests
 {
+    /// <summary>
+    /// Class for providing methods in order to check the menu class
+    /// </summary>
     public class MenuTest
     {
-        //number of items there
+        /// <summary>
+        /// If number of items are there
+        /// </summary>
         [Fact]
         public void CheckingNumbersOfEntrees()
         {
@@ -21,7 +31,9 @@ namespace BleakwindBuffet.DataTests
             List<IOrderItem> entrees = (List<IOrderItem>)e;
             Assert.Equal(7, entrees.Count);
         }
-
+        /// <summary>
+        /// Checking each entree making sure the item is there and correct
+        /// </summary>
         [Fact]
         public void CheckingEachEntreeToMakeSureItIsThere()
         {
@@ -37,7 +49,9 @@ namespace BleakwindBuffet.DataTests
                     item => item.ToString().Contains("Thugs T-Bone")
                 );
         }
-
+        /// <summary>
+        /// If number of items are there
+        /// </summary>
         [Fact]
         public void CheckingNumbersOfDrinks()
         {
@@ -45,7 +59,9 @@ namespace BleakwindBuffet.DataTests
             List<IOrderItem> drinks = (List<IOrderItem>)d;
             Assert.Equal(33, drinks.Count);
         }
-
+        /// <summary>
+        /// Checking each drink making sure the item is there and correct
+        /// </summary>
         [Fact]
         public void CheckingEachDrinkToMakeSureItIsThere()
         {
@@ -77,7 +93,9 @@ namespace BleakwindBuffet.DataTests
             }
 
         }
-
+        /// <summary>
+        /// If number of items are there
+        /// </summary>
         [Fact]
         public void CheckingNumbersOfSides()
         {
@@ -85,7 +103,9 @@ namespace BleakwindBuffet.DataTests
             List<IOrderItem> sides = (List<IOrderItem>)s;
             Assert.Equal(12, sides.Count);
         }
-
+        /// <summary>
+        /// Checking each side making sure the item is there and correct
+        /// </summary>
         [Fact]
         public void CheckingEachSideToMakeSureItIsThere()
         {

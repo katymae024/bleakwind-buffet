@@ -162,7 +162,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             SmokehouseSkeleton ss = new SmokehouseSkeleton();
             Assert.Equal("Smokehouse Skeleton", ss.ToString());
         }
-
+        /// <summary>
+        /// checks if entree is implemented in the IOrderItem Class
+        /// </summary>
         [Fact]
         public void SmokehouseSkeletonImplementsTheIOrderItemClass()
         {

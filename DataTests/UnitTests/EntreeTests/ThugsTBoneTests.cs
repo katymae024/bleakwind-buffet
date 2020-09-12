@@ -62,7 +62,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             ThugsTBone tb = new ThugsTBone();
             Assert.Equal("Thugs T-Bone", tb.ToString());
         }
-
+        /// <summary>
+        /// checks if entree is implemented in the IOrderItem Class
+        /// </summary>
         [Fact]
         public void ThugsTBoneImplementsTheIOrderItemClass()
         {

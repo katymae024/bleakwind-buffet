@@ -262,7 +262,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             DoubleDraugr dd = new DoubleDraugr();
             Assert.Equal("Double Draugr", dd.ToString());
         }
-
+        /// <summary>
+        /// checks if entree is implemented in the IOrderItem Class
+        /// </summary>
         [Fact]
         public void DoubleDraugrImplementsTheIOrderItemClass()
         {
