@@ -7,6 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataTests", "DataTests\DataTests.csproj", "{E94C4331-F7CD-47A7-9BA6-755C994710D1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{47913FB4-D792-48AF-921D-B4BBAEDE357B}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Desktop\BleakwindBuffetClassUML (1).pdf = ..\..\Desktop\BleakwindBuffetClassUML (1).pdf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
