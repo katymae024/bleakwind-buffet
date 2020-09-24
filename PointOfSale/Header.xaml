@@ -7,8 +7,17 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <DockPanel>
-        <Menu DockPanel.Dock="Top" TextAlignment="Center" FontSize="15">
+        <TextBlock DockPanel.Dock="Top" TextAlignment="Center" FontSize="15">
             Bleakwind Buffet Point of Sale
-        </Menu>
+            
+            <Button x:Name="Minimize" HorizontalAlignment="Right" VerticalAlignment="Top"  >
+            _
+        </Button>
+        </TextBlock>
+        
+        
+        
+
+
     </DockPanel>
 </UserControl>
