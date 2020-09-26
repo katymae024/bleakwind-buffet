@@ -22,5 +22,11 @@ namespace PointOfSale
         {
             InitializeComponent();
         }
+
+        private void BBdone_Click(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindRoot<OrderControl>();
+            orderControl.SwapScreen(new menuSelection());
+        }
     }
 }

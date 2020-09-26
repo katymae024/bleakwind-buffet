@@ -7,7 +7,22 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBlock HorizontalAlignment="Right" FontWeight="Bold">Order # </TextBlock>
-        <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Right" >Subtotal: </TextBlock>
+        <StackPanel>
+            
+        
+        <TextBlock HorizontalAlignment="Right" FontWeight="Bold">Order #</TextBlock>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions> 
+            </Grid>
+           
+        <TextBlock Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify" Margin="20,0,0,0" >Subtotal:</TextBlock>
+        <TextBlock Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify" Margin="20,0,0,0" > Tax:</TextBlock>
+        <TextBlock Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify" > Total: </TextBlock>
+        </StackPanel>
     </Grid>
 </UserControl>

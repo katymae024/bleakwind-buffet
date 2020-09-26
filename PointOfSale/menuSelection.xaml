@@ -13,9 +13,9 @@
             <ColumnDefinition/>
         
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" >
+        <StackPanel  Grid.Column="0" Orientation="Vertical"  >
            
-            <Button Name="BB" Click="BB_Click" FontSize="20">
+            <Button Name="BB" Click="BB_Click" FontSize="20" Margin="20" >
                 Briarheart Burger 
             </Button>
             <Button Name="DD" Click="DD_Click" FontSize="20">

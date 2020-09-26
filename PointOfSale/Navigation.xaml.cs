@@ -14,18 +14,13 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for OrderControl.xaml
+    /// Interaction logic for Navigation.xaml
     /// </summary>
-    public partial class OrderControl : UserControl
+    public partial class Navigation : UserControl
     {
-        public OrderControl()
+        public Navigation()
         {
             InitializeComponent();
-        }
-
-        public void SwapScreen(UIElement element)
-        {
-            menuS.Child = element;
         }
     }
 }
