@@ -14,19 +14,13 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for GardenOrcOmelette.xaml
+    /// Interaction logic for ThalmorTriple.xaml
     /// </summary>
-    public partial class GardenOrcOmelette : UserControl
+    public partial class ThalmorTriple : UserControl
     {
-        public GardenOrcOmelette()
+        public ThalmorTriple()
         {
             InitializeComponent();
-        }
-
-        private void GOdone_Click(object sender, RoutedEventArgs e)
-        {
-            var orderControl = this.FindRoot<OrderControl>();
-            orderControl.SwapScreen(new menuSelection());
         }
     }
 }

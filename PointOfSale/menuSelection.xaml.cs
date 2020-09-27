@@ -48,7 +48,8 @@ namespace PointOfSale
 
         private void GO_Click(object sender, RoutedEventArgs e)
         {
-
+            var orderControl = this.FindRoot<OrderControl>();
+            orderControl.SwapScreen(new GardenOrcOmelette());
         }
 
         private void TTB_Click(object sender, RoutedEventArgs e)
