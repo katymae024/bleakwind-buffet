@@ -7,19 +7,19 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <StackPanel>
-            <CheckBox>Ice</CheckBox>
-            <CheckBox>Small</CheckBox>
-            <CheckBox>Medium</CheckBox>
-            <CheckBox>Large</CheckBox>
-            <CheckBox>Peach</CheckBox>
-            <CheckBox>Cherry</CheckBox>
-            <CheckBox>Watermelon</CheckBox>
-            <CheckBox>Blackberry</CheckBox>
-            <CheckBox>Grapefruit</CheckBox>
-            <CheckBox>Lemon</CheckBox>
+        <StackPanel Background="Olive">
+            <CheckBox FontSize="15">Ice</CheckBox>
+            <CheckBox FontSize="15">Small</CheckBox>
+            <CheckBox FontSize="15">Medium</CheckBox>
+            <CheckBox FontSize="15">Large</CheckBox>
+            <CheckBox FontSize="15">Peach</CheckBox>
+            <CheckBox FontSize="15">Cherry</CheckBox>
+            <CheckBox FontSize="15">Watermelon</CheckBox>
+            <CheckBox FontSize="15">Blackberry</CheckBox>
+            <CheckBox FontSize="15">Grapefruit</CheckBox>
+            <CheckBox FontSize="15">Lemon</CheckBox>
         </StackPanel>
-        <Button Name="SSdone" Click="SSodadone_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40">
+        <Button Name="SSdone" Click="SSodadone_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40" FontSize="15" FontStyle="Italic" Background="Beige" FontWeight="Black">
             Done
         </Button>
     </Grid>

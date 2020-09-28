@@ -7,13 +7,13 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <StackPanel>
-            <CheckBox>Ice</CheckBox>
-            <CheckBox>Small</CheckBox>
-            <CheckBox>Medium</CheckBox>
-            <CheckBox>Large</CheckBox>
+        <StackPanel Background="Olive">
+            <CheckBox FontSize="15">Ice</CheckBox>
+            <CheckBox FontSize="15">Small</CheckBox>
+            <CheckBox FontSize="15">Medium</CheckBox>
+            <CheckBox FontSize="15">Large</CheckBox>
         </StackPanel>
-        <Button Name="MMdone" Click="MMdone_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40">
+        <Button Name="MMdone" Click="MMdone_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40" FontSize="15" FontStyle="Italic" Background="Beige" FontWeight="Black">
             Done
         </Button>
     </Grid>

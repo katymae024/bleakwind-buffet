@@ -12,62 +12,62 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         
-        </Grid.ColumnDefinitions>
-        <StackPanel  Grid.Column="0" Orientation="Vertical" VerticalAlignment="Bottom" Margin="0 0 0 55"  >
+        </Grid.ColumnDefinitions >
+        <StackPanel  Grid.Column="0" Orientation="Vertical"  Margin="0 0 0 0" Background="Olive" >
            
-            <Button Name="BB" Click="BB_Click" FontSize="20" Margin="0 20 0 0"  >
+            <Button Name="BB" Click="BB_Click"  FontSize="20" Margin="0 20 0 0" Background="Beige" FontStyle="Italic"  >
                 Briarheart Burger 
             </Button>
-            <Button Name="DD" Click="DD_Click" FontSize="20" Margin="0 20 0 0">
+            <Button Name="DD" Click="DD_Click" FontSize="20" Margin="0 20 0 0" Background="Beige" FontStyle="Italic">
                 Double Draugr
             </Button>
-            <Button Name="TT" Click="TT_Click" FontSize="20"  Margin="0 20 0 0">
+            <Button Name="TT" Click="TT_Click" FontSize="20"  Margin="0 20 0 0" Background="Beige" FontStyle="Italic">
                 Thalmor Triple
             </Button>
-            <Button Name="SS" Click="SS_Click" FontSize="20" Margin="0 20 0 0">
+            <Button Name="SS" Click="SS_Click" FontSize="20" Margin="0 20 0 0" Background="Beige" FontStyle="Italic">
                 Smokehouse Skeleton
             </Button>
-            <Button Name="GO" Click="GO_Click" FontSize="20" Margin="0 20 0 0">
+            <Button Name="GO" Click="GO_Click" FontSize="20" Margin="0 20 0 0" Background="Beige" FontStyle="Italic">
                 Garden Orc Omlette
             </Button>
-            <Button Name="TTB" Click="TTB_Click" FontSize="20" Margin="0 20 0 0">
+            <Button Name="TTB" Click="TTB_Click" FontSize="20" Margin="0 20 0 0" Background="Beige" FontStyle="Italic">
                 Thugs T-Bone
             </Button>
-            <Button Name="PP" Click="PP_Click" FontSize="20" Margin="0 20 0 0">
+            <Button Name="PP" Click="PP_Click" FontSize="20" Margin="0 20 0 0" Background="Beige" FontStyle="Italic">
                 Philly Poacher
             </Button>
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Margin="0 10 0 55"  >
+        <StackPanel Grid.Column="1" Margin="0 0 0 0" Background="Olive" >
             <TextBlock Name="AddToOrder" HorizontalAlignment="Center" FontSize="25" FontWeight="Bold"> Add To Order</TextBlock>
-            <Button Name="SSoda" Click="SSoda_Click" FontSize="20" Margin="10 20 5 0">
+            <Button Name="SSoda" Click="SSoda_Click" FontSize="20" Margin="10 20 5 0" Background="Beige" FontStyle="Italic">
                 Sailor Soda
             </Button>
-            <Button Name="MM" Click="MM_Click" FontSize="20" Margin="10 20 5 0">
+            <Button Name="MM" Click="MM_Click" FontSize="20" Margin="10 20 5 0" Background="Beige" FontStyle="Italic" >
                 Markath Milk
             </Button>
-            <Button Name="AA" Click="AA_Click" FontSize="20" Margin="10 20 5 0">
+            <Button Name="AA" Click="AA_Click" FontSize="20" Margin="10 20 5 0" Background="Beige" FontStyle="Italic">
                 Aretino Apple Juice 
             </Button>
-            <Button Name="CC" Click="CC_Click" FontSize="20" Margin="10 20 5 0">
+            <Button Name="CC" Click="CC_Click" FontSize="20" Margin="10 20 5 0" Background="Beige" FontStyle="Italic">
                 Candlehearth Coffee
             </Button>
-            <Button Name="WW" Click="WW_Click" FontSize="20" Margin="10 20 5 0">
+            <Button Name="WW" Click="WW_Click" FontSize="20" Margin="10 20 5 0" Background="Beige" FontStyle="Italic">
                 Warrior Water
             </Button>
         </StackPanel>
 
-        <StackPanel Grid.Column="2" Margin="0 43 0 55">
-            <Button Name="VS" Click="VS_Click" FontSize="20" Margin="10 20 5 0" >
+        <StackPanel Grid.Column="2" Margin="0 0 0 0" Background="Olive">
+            <Button Name="VS" Click="VS_Click" FontSize="20" Margin="10 20 5 0" Background="Beige" FontStyle="Italic" >
                 Vokun Salad
             </Button>
-            <Button Name="FM" Click="FM_Click" FontSize="20" Margin="10 20 5 0">
+            <Button Name="FM" Click="FM_Click" FontSize="20" Margin="10 20 5 0" Background="Beige" FontStyle="Italic">
                 Fried Miraak
             </Button>
-            <Button Name="MOG" Click="MOG_Click" FontSize="20" Margin="10 20 5 0">
+            <Button Name="MOG" Click="MOG_Click" FontSize="20" Margin="10 20 5 0" Background="Beige" FontStyle="Italic">
                 Mad Otar Grits
             </Button>
-            <Button Name="DWF" Click="DWF_Click" FontSize="20" Margin="5 20 0 0" >
+            <Button Name="DWF" Click="DWF_Click" FontSize="20" Margin="5 20 0 0" Background="Beige" FontStyle="Italic" >
                 Dragonborn Waffle Fries
             </Button>
         </StackPanel>

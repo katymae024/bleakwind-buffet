@@ -7,20 +7,20 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <StackPanel>
-            <CheckBox>Bun</CheckBox>
-            <CheckBox>Ketchup</CheckBox>
-            <CheckBox>Mustard</CheckBox>
-            <CheckBox>Cheese</CheckBox>
-            <CheckBox>Pickle</CheckBox>
-            <CheckBox>Tomato</CheckBox>
-            <CheckBox>Lettuce</CheckBox>
-            <CheckBox>Mayo</CheckBox>
-            <CheckBox>Bacon</CheckBox>
-            <CheckBox>Egg</CheckBox>
+        <StackPanel Background="Olive">
+            <CheckBox FontSize="15">Bun</CheckBox>
+            <CheckBox FontSize="15">Ketchup</CheckBox>
+            <CheckBox FontSize="15">Mustard</CheckBox>
+            <CheckBox FontSize="15">Cheese</CheckBox>
+            <CheckBox FontSize="15">Pickle</CheckBox>
+            <CheckBox FontSize="15">Tomato</CheckBox>
+            <CheckBox FontSize="15">Lettuce</CheckBox>
+            <CheckBox FontSize="15">Mayo</CheckBox>
+            <CheckBox FontSize="15">Bacon</CheckBox>
+            <CheckBox FontSize="15">Egg</CheckBox>
 
         </StackPanel>
-        <Button Name="TTdone" Click="TTdone_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40">
+        <Button Name="TTdone" Click="TTdone_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40" FontSize="15" FontStyle="Italic" Background="Beige" FontWeight="Black">
             Done
         </Button>
     </Grid>
