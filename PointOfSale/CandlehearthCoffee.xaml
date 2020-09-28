@@ -9,15 +9,12 @@
     <Grid>
         <StackPanel>
             <CheckBox>Ice</CheckBox>
-            <CheckBox>No Ice</CheckBox>
             <CheckBox>Small</CheckBox>
             <CheckBox>Medium</CheckBox>
             <CheckBox>Large</CheckBox>
             <CheckBox>Decaf</CheckBox>
-            <CheckBox>No Decaf</CheckBox>
             <CheckBox>Room for Cream</CheckBox>
-            <CheckBox>No Room for Cream</CheckBox>
-           
+
         </StackPanel>
         <Button Name="CCdone" Click="CCdone_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40">
             Done

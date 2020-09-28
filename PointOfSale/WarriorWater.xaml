@@ -9,12 +9,10 @@
     <Grid>
         <StackPanel>
             <CheckBox>Ice</CheckBox>
-            <CheckBox>No Ice</CheckBox>
             <CheckBox>Small</CheckBox>
             <CheckBox>Medium</CheckBox>
             <CheckBox>Large</CheckBox>
             <CheckBox>Lemon</CheckBox>
-            <CheckBox>No Lemon</CheckBox>
         </StackPanel>
         <Button Name="WWdone" Click="WWdone_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40">
             Done

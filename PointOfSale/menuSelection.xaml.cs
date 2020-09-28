@@ -91,17 +91,20 @@ namespace PointOfSale
 
         private void VS_Click(object sender, RoutedEventArgs e)
         {
-
+            var orderControl = this.FindRoot<OrderControl>();
+            orderControl.SwapScreen(new VokunSalad());
         }
 
         private void FM_Click(object sender, RoutedEventArgs e)
         {
-
+            var orderControl = this.FindRoot<OrderControl>();
+            orderControl.SwapScreen(new FriedMiraak());
         }
 
         private void MOG_Click(object sender, RoutedEventArgs e)
         {
-
+            var orderControl = this.FindRoot<OrderControl>();
+            orderControl.SwapScreen(new MadOtarGrits());
         }
 
         private void DWF_Click(object sender, RoutedEventArgs e)
