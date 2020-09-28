@@ -7,10 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <StackPanel Background="O">
+        <StackPanel Background="Black">
             
         
-        <TextBlock HorizontalAlignment="Center" FontWeight="Bold">Order #</TextBlock>
+        <TextBlock HorizontalAlignment="Center" FontWeight="Bold" FontStyle="Normal" FontSize="20" Foreground="LightGray">Order #</TextBlock>
             <Grid >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="300"/>
@@ -20,9 +20,9 @@
                 </Grid.RowDefinitions> 
             </Grid>
            
-        <TextBlock Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify" Margin="20,0,0,0" >Subtotal:</TextBlock>
-        <TextBlock Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify" Margin="20,0,0,0" > Tax:</TextBlock>
-        <TextBlock Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify" Margin ="20"> Total: </TextBlock>
+        <TextBlock Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify" Margin="20 0 0 0" Foreground="LightGray" FontSize="15" FontStyle="Normal" >Subtotal:</TextBlock>
+            <TextBlock Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify" Margin="20 0 0 0" Foreground="LightGray" FontSize="15" FontStyle="Normal" > Tax:</TextBlock>
+            <TextBlock Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify" Margin ="20 0 0 0" Foreground="LightGray" FontSize="15" FontStyle="Normal"> Total: </TextBlock>
         </StackPanel>
     </Grid>
 </UserControl>
