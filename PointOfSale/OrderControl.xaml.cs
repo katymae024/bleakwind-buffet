@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Katayoun Katy Davoudi
+* Class name: OrderControl.xaml.cs
+* Purpose: this class contains the swap screen method to swap between menu and customization screen
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,11 +23,17 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderControl : UserControl
     {
+        /// <summary>
+        /// contructor for the order control class
+        /// </summary>
         public OrderControl()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// method made for swapping screens
+        /// </summary>
+        /// <param name="element"></param>
         public void SwapScreen(UIElement element)
         {
             menuS.Child = element;

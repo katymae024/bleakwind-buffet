@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Katayoun Katy Davoudi
+* Class name: Navigation.xaml.cs
+* Purpose: class made for navigation
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,6 +23,9 @@ namespace PointOfSale
     /// </summary>
     public partial class Navigation : UserControl
     {
+        /// <summary>
+        /// Constructor for the navigation class
+        /// </summary>
         public Navigation()
         {
             InitializeComponent();

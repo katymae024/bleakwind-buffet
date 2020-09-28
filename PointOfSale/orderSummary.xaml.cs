@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+* Author: Katayoun Katy Davoudi
+* Class name: orderSummary.xaml.cs
+* Purpose: class made for the order summary or the receipt of the order made
+*/
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,6 +22,9 @@ namespace PointOfSale
     /// </summary>
     public partial class orderSummary : UserControl
     {
+        /// <summary>
+        /// Constructor for the order summary class
+        /// </summary>
         public orderSummary()
         {
             InitializeComponent();

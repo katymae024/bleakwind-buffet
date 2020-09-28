@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Katayoun Katy Davoudi
+* Class name: MainWindow.xaml.cs
+* Purpose: Controls the whole main window, has all the components that should display in the main window
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +25,9 @@ namespace PointOfSale
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// Contructor of the main window class
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
