@@ -14,16 +14,16 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for ThalmorTriple.xaml
+    /// Interaction logic for DragonbornWaffleFries.xaml
     /// </summary>
-    public partial class ThalmorTriple : UserControl
+    public partial class DragonbornWaffleFries : UserControl
     {
-        public ThalmorTriple()
+        public DragonbornWaffleFries()
         {
             InitializeComponent();
         }
 
-        private void TTdone_Click(object sender, RoutedEventArgs e)
+        private void DWFdone_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindRoot<OrderControl>();
             orderControl.SwapScreen(new menuSelection());

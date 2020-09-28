@@ -14,16 +14,16 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for ThalmorTriple.xaml
+    /// Interaction logic for MarkathMilk.xaml
     /// </summary>
-    public partial class ThalmorTriple : UserControl
+    public partial class MarkathMilk : UserControl
     {
-        public ThalmorTriple()
+        public MarkathMilk()
         {
             InitializeComponent();
         }
 
-        private void TTdone_Click(object sender, RoutedEventArgs e)
+        private void MMdone_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindRoot<OrderControl>();
             orderControl.SwapScreen(new menuSelection());

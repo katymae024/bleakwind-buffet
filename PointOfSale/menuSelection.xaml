@@ -13,7 +13,7 @@
             <ColumnDefinition/>
         
         </Grid.ColumnDefinitions>
-        <StackPanel  Grid.Column="0" Orientation="Vertical" Margin="30" >
+        <StackPanel  Grid.Column="0" Orientation="Vertical" Margin="19" >
            
             <Button Name="BB" Click="BB_Click" FontSize="20" Margin="15" >
                 Briarheart Burger 
@@ -32,6 +32,9 @@
             </Button>
             <Button Name="TTB" Click="TTB_Click" FontSize="20" Margin="15">
                 Thugs T-Bone
+            </Button>
+            <Button Name="PP" Click="PP_Click" FontSize="20" Margin="15">
+                Philly Poacher
             </Button>
         </StackPanel>
 
