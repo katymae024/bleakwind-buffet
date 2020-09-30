@@ -8,14 +8,17 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Drinks;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
     /// Containing a specific drink with its properties
     /// </summary>
-    public class AretinoAppleJuice : Drink  
+    public class AretinoAppleJuice : Drink, INotifyPropertyChanged 
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// private property for ice
         /// </summary>
@@ -36,6 +39,7 @@ namespace BleakwindBuffet.Data.Drinks
             set
             {
                 ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
             }
         }
         

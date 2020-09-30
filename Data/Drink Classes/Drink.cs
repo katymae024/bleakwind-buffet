@@ -9,6 +9,7 @@ using System.Text;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Interfaces;
 
+
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
@@ -36,7 +37,6 @@ namespace BleakwindBuffet.Data.Drinks
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
 
-
-
+        
     }
 }
