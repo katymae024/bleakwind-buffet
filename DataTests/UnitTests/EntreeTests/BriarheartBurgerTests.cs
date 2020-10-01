@@ -199,5 +199,20 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             var BriarheartBurger = new BriarheartBurger();
             Assert.IsAssignableFrom<IOrderItem>(BriarheartBurger);
         }
+        [Fact]
+        public void ChangingIceNotifiesIceProperty()
+        {
+            var BB = new BriarheartBurger();
+
+            Assert.PropertyChanged(BB, "Ketchup", () =>
+            {
+                BB.Ketchup = true;
+            });
+
+            Assert.PropertyChanged(BB, "Ketchup", () =>
+            {
+                BB.Ketchup = false;
+            });
+        }
     }
 }
