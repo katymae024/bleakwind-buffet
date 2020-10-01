@@ -8,19 +8,39 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Side_Classes;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Sides
 {
     /// <summary>
     /// Containing a specific side with its properties
     /// </summary>
-    public class MadOtarGrits : Side
+    public class MadOtarGrits : Side, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// private property for size
         /// </summary>
         private Size size = Size.Small;
-        
+        /// <summary>
+        /// The size of the drink
+        /// </summary>
+        public override Size Size
+        {
+            get
+            {
+                return size;
+
+            }
+            set
+            {
+                size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+
+            }
+        }
         /// <summary>
         /// gets price
         /// </summary>

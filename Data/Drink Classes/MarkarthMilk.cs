@@ -42,7 +42,26 @@ namespace BleakwindBuffet.Data.Drinks
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
             }
         }
-        
+
+        /// <summary>
+        /// The size of the drink
+        /// </summary>
+        public override Size Size
+        {
+            get
+            {
+                return size;
+
+            }
+            set
+            {
+                size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+
+            }
+        }
         /// <summary>
         /// property for price depending of size
         /// 

@@ -23,7 +23,25 @@ namespace BleakwindBuffet.Data.Sides
         /// private property for size
         /// </summary>
         private Size size = Size.Small;
-        
+        /// <summary>
+        /// The size of the drink
+        /// </summary>
+        public override Size Size
+        {
+            get
+            {
+                return size;
+
+            }
+            set
+            {
+                size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+
+            }
+        }
         /// <summary>
         /// gets price
         /// </summary>
