@@ -9,7 +9,6 @@ using System.Text;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Interfaces;
 
-
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
@@ -17,10 +16,25 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public abstract class Drink : IOrderItem
     {
+        
+
+        private Size size = Size.Small;
         /// <summary>
         /// The size of the drink
         /// </summary>
-        public virtual Size Size { get; set; }
+        public virtual Size Size 
+        {
+            get
+            {
+                return size;
+
+            }
+            set
+            {
+                size = value;
+                
+            }
+        }
         /// <summary>
         /// Price of the drink
         /// </summary>
