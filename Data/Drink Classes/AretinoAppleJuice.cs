@@ -35,6 +35,7 @@ namespace BleakwindBuffet.Data.Drinks
             get
             {
                 return ice;
+                
             }
             set
             {
@@ -62,7 +63,9 @@ namespace BleakwindBuffet.Data.Drinks
                 {
                     return 1.01;
                 }
+
             }
+            
         }
         /// <summary>
         /// boolean property for calories as far as sizes

@@ -8,14 +8,18 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Drinks;
+using System.ComponentModel;
+
 
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
     /// Containing a specific drink with its properties
     /// </summary>
-    public class CandlehearthCoffee : Drink
+    public class CandlehearthCoffee : Drink, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// private property for ice
         /// </summary>
@@ -44,6 +48,7 @@ namespace BleakwindBuffet.Data.Drinks
             set
             {
                 ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
             }
         }
         /// <summary>
@@ -58,6 +63,7 @@ namespace BleakwindBuffet.Data.Drinks
             set
             {
                 decaf = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Decaf"));
             }
         }
         /// <summary>
@@ -72,6 +78,7 @@ namespace BleakwindBuffet.Data.Drinks
             set
             {
                 roomForCream = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Room For Cream"));
             }
         }
         
@@ -85,6 +92,7 @@ namespace BleakwindBuffet.Data.Drinks
                 if (Size == Size.Small)
                 {
                     return 0.75;
+
                 }
                 else if (Size == Size.Medium)
                 {
@@ -94,7 +102,9 @@ namespace BleakwindBuffet.Data.Drinks
                 {
                     return 1.75;
                 }
+
             }
+
         }
         /// <summary>
         ///  boolean property for calories
