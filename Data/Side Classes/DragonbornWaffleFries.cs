@@ -8,14 +8,17 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Side_Classes;
+using System.ComponentModel;
+
 
 namespace BleakwindBuffet.Data.Sides
 {
     /// <summary>
     /// Containing a specific side with its properties
     /// </summary>
-    public class DragonbornWaffleFries : Side
+    public class DragonbornWaffleFries : Side, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// private property for size
         /// </summary>

@@ -9,6 +9,7 @@ using System.Text;
 using BleakwindBuffet.Data.Entrée_classes;
 
 
+
 namespace BleakwindBuffet.Data.Entrees
 {
     /// <summary>
@@ -16,6 +17,7 @@ namespace BleakwindBuffet.Data.Entrees
     /// </summary>
     public class ThugsTBone : Entree
     {
+        
         /// <summary>
         /// gets price
         /// </summary>

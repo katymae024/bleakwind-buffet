@@ -7,14 +7,17 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Entrée_classes;
+using System.ComponentModel;
+
 
 namespace BleakwindBuffet.Data.Entrees
 {
     /// <summary>
     /// Containing a specific entree with its properties
     /// </summary>
-    public class BriarheartBurger : Entree
+    public class BriarheartBurger : Entree, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// private property for ketchup
         /// </summary>
@@ -58,6 +61,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
                 
                 ketchup = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ketchup"));
             }
         }
 
@@ -73,6 +77,7 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 bun = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bun"));
             }
         }
 
@@ -88,6 +93,7 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 mustard = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Mustard"));
             }
         }
         /// <summary>
@@ -103,6 +109,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
 
                 pickle = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pickle"));
             }
         }
         /// <summary>
@@ -118,6 +125,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
 
                 cheese = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Cheese"));
             }
         }
 

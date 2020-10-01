@@ -7,14 +7,17 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Entrée_classes;
+using System.ComponentModel;
+
 
 namespace BleakwindBuffet.Data.Entrees
 {
     /// <summary>
     /// Containing a specific entree with its properties
     /// </summary>
-    public class GardenOrcOmelette : Entree
+    public class GardenOrcOmelette : Entree, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// private property broccoli
         /// </summary>
@@ -52,6 +55,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
 
                 broccoli = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Broccoli"));
             }
         }
         /// <summary>
@@ -66,7 +70,9 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
 
+
                 mushrooms = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Mushrooms"));
             }
         }
 
@@ -83,6 +89,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
 
                 tomato = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tomato"));
             }
         }
         /// <summary>
@@ -98,6 +105,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
 
                 cheddar = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Cheddar"));
             }
         }
         /// <summary>

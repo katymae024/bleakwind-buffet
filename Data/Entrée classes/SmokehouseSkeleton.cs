@@ -7,14 +7,17 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Entrée_classes;
+using System.ComponentModel;
+
 
 namespace BleakwindBuffet.Data.Entrees
 {
     /// <summary>
     /// Containing a specific entree with its properties
     /// </summary>
-    public class SmokehouseSkeleton : Entree
+    public class SmokehouseSkeleton : Entree, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// private property for sausage links
         /// </summary>
@@ -52,6 +55,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
 
                 sausageLink = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Sausage Link"));
             }
         }
         /// <summary>
@@ -67,6 +71,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
 
                 egg = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Egg"));
             }
         }
         /// <summary>
@@ -82,6 +87,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
 
                 hashBrowns = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Hashbrowns"));
             }
         }
         /// <summary>
@@ -97,6 +103,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
 
                 pancake = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pancake"));
             }
         }
         /// <summary>
