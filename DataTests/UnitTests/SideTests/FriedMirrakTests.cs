@@ -103,5 +103,83 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             fm.Size = size;
             Assert.Equal(name, fm.ToString());
         }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingSizeNotifiesSizeProperties()
+        {
+            var FM = new FriedMiraak();
+            Assert.PropertyChanged(FM, "Size", () =>
+            {
+                FM.Size = Size.Small;
+
+            });
+
+            Assert.PropertyChanged(FM, "Size", () =>
+            {
+                FM.Size = Size.Medium;
+
+            });
+
+            Assert.PropertyChanged(FM, "Size", () =>
+            {
+                FM.Size = Size.Large;
+
+            });
+
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingPriceNotifiesPriceProperties()
+        {
+            var FM = new FriedMiraak();
+            Assert.PropertyChanged(FM, "Price", () =>
+            {
+                FM.Size = Size.Small;
+
+            });
+
+            Assert.PropertyChanged(FM, "Price", () =>
+            {
+                FM.Size = Size.Medium;
+
+            });
+
+            Assert.PropertyChanged(FM, "Price", () =>
+            {
+                FM.Size = Size.Large;
+
+            });
+
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingCaloriesNotifiesCaloriesProperties()
+        {
+            var FM = new FriedMiraak();
+            Assert.PropertyChanged(FM, "Calories", () =>
+            {
+                FM.Size = Size.Small;
+
+            });
+
+            Assert.PropertyChanged(FM, "Calories", () =>
+            {
+                FM.Size = Size.Medium;
+
+            });
+
+            Assert.PropertyChanged(FM, "Calories", () =>
+            {
+                FM.Size = Size.Large;
+
+            });
+
+        }
     }
 }

@@ -151,7 +151,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         /// making sure properties are changed correctly
         /// </summary>
         [Fact]
-        public void ChangingPropertiesNotifiesEntreeProperties()
+        public void ChangingSirloinNotifiesSirloinProperties()
         {
             var PP = new PhillyPoacher();
 
@@ -163,6 +163,16 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             {
                 PP.Sirloin = false;
             });
+            
+            
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingOnionNotifiesOnionProperties()
+        {
+            var PP = new PhillyPoacher();
             Assert.PropertyChanged(PP, "Onion", () =>
             {
                 PP.Onion = true;
@@ -171,6 +181,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             {
                 PP.Onion = false;
             });
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingRollNotifiesRollProperties()
+        {
+            var PP = new PhillyPoacher();
             Assert.PropertyChanged(PP, "Roll", () =>
             {
                 PP.Roll = true;

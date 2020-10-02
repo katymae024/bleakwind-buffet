@@ -175,7 +175,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         /// making sure properties are changed correctly
         /// </summary>
         [Fact]
-        public void ChangingPropertiesNotifiesEntreeProperties()
+        public void ChangingBroccoliNotifiesEntreeProperties()
         {
             var GO = new GardenOrcOmelette();
 
@@ -189,6 +189,15 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
                 GO.Broccoli = false;
             });
 
+
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingCheddarNotifiesCheddarProperties()
+        {
+            var GO = new GardenOrcOmelette();
             Assert.PropertyChanged(GO, "Cheddar", () =>
             {
                 GO.Cheddar = true;
@@ -200,7 +209,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
                 GO.Cheddar = false;
 
             });
-
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingTomatoNotifiesTomatoProperties()
+        {
+            var GO = new GardenOrcOmelette();
             Assert.PropertyChanged(GO, "Tomato", () =>
             {
                 GO.Tomato = true;
@@ -209,6 +225,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             {
                 GO.Tomato = true;
             });
+        }
+        public void ChangingMushroomsNotifiesMushroomsProperties()
+        {
+            var GO = new GardenOrcOmelette();
             Assert.PropertyChanged(GO, "Mushrooms", () =>
             {
                 GO.Mushrooms = true;
@@ -217,10 +237,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             {
                 GO.Mushrooms = false;
             });
-            
-
-
 
         }
     }
-}
+    }

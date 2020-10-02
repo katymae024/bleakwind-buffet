@@ -8,15 +8,16 @@ using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Interfaces;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
     /// a base class representing the common properties of drinks
     /// </summary>
-    public abstract class Drink : IOrderItem
+    public abstract class Drink : IOrderItem, INotifyPropertyChanged
     {
-        
+        public event PropertyChangedEventHandler PropertyChanged;
 
         private Size size = Size.Small;
         /// <summary>
@@ -32,9 +33,76 @@ namespace BleakwindBuffet.Data.Drinks
             set
             {
                 size = value;
-                
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Small"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Medium"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Large"));
+
             }
         }
+        public bool Small
+        {
+            get
+            {
+                if(Size == Size.Small)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            set
+            {
+                if(value ==true)
+                {
+                    Size = Size.Small;
+                }
+            }
+        }
+        public bool Medium
+        {
+            get
+            {
+                if (Size == Size.Medium)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            set
+            {
+                if (value == true)
+                {
+                    Size = Size.Medium;
+                }
+            }
+        }
+        public bool Large
+        {
+            get
+            {
+                if (Size == Size.Large)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            set
+            {
+                if (value == true)
+                {
+                    Size = Size.Large;
+                }
+            }
+        }
+
         /// <summary>
         /// Price of the drink
         /// </summary>

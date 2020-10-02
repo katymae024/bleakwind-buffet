@@ -103,5 +103,84 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             mg.Size = size;
             Assert.Equal(name, mg.ToString());
         }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingSizeNotifiesSizeProperties()
+        {
+            var MOG = new MadOtarGrits();
+            Assert.PropertyChanged(MOG, "Size", () =>
+            {
+                MOG.Size = Size.Small;
+
+            });
+
+            Assert.PropertyChanged(MOG, "Size", () =>
+            {
+                MOG.Size = Size.Medium;
+
+            });
+
+            Assert.PropertyChanged(MOG, "Size", () =>
+            {
+                MOG.Size = Size.Large;
+
+            });
+
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingPriceNotifiesPriceProperties()
+        {
+            var MOG = new MadOtarGrits();
+            Assert.PropertyChanged(MOG, "Price", () =>
+            {
+                MOG.Size = Size.Small;
+
+            });
+
+            Assert.PropertyChanged(MOG, "Price", () =>
+            {
+                MOG.Size = Size.Medium;
+
+            });
+
+            Assert.PropertyChanged(MOG, "Price", () =>
+            {
+                MOG.Size = Size.Large;
+
+            });
+
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingCaloriesNotifiesCaloriesProperties()
+        {
+            var MOG = new MadOtarGrits();
+            Assert.PropertyChanged(MOG, "Calories", () =>
+            {
+                MOG.Size = Size.Small;
+
+            });
+
+            Assert.PropertyChanged(MOG, "Calories", () =>
+            {
+                MOG.Size = Size.Medium;
+
+            });
+
+            Assert.PropertyChanged(MOG, "Calories", () =>
+            {
+                MOG.Size = Size.Large;
+
+            });
+
+        }
+
     }
 }

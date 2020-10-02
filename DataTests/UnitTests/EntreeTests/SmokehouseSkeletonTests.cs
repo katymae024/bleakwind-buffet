@@ -171,5 +171,72 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             var SmokehouseSkeleton = new SmokehouseSkeleton();
             Assert.IsAssignableFrom<IOrderItem>(SmokehouseSkeleton);
         }
-    }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingSausageLinkNotifiesSausageLinkProperties()
+        {
+            var SS = new SmokehouseSkeleton();
+
+            Assert.PropertyChanged(SS, "SausageLink", () =>
+            {
+                SS.SausageLink = true;
+            });
+            Assert.PropertyChanged(SS, "SausageLink", () =>
+            {
+                SS.SausageLink = false;
+            });
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingEggNotifiesEggProperties()
+        {
+            var SS = new SmokehouseSkeleton();
+            Assert.PropertyChanged(SS, "Egg", () =>
+            {
+                SS.Egg = true;
+            });
+            Assert.PropertyChanged(SS, "Egg", () =>
+            {
+                SS.Egg = false;
+            });
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingHashbrownsNotifiesHashbrownsProperties()
+        {
+            var SS = new SmokehouseSkeleton();
+            Assert.PropertyChanged(SS, "Hashbrowns", () =>
+            {
+                SS.HashBrowns = true;
+            });
+            Assert.PropertyChanged(SS, "Hashbrowns", () =>
+            {
+                SS.HashBrowns = false;
+            });
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingPancakeNotifiesPancakeProperties()
+        {
+            var SS = new SmokehouseSkeleton();
+            Assert.PropertyChanged(SS, "Pancake", () =>
+            {
+                SS.Pancake = true;
+            });
+            Assert.PropertyChanged(SS, "Pancake", () =>
+            {
+                SS.Pancake = false;
+            });
+
+        }
+
+        }
 }

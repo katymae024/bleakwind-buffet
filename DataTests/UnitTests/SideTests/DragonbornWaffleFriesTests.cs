@@ -103,5 +103,77 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             dw.Size = size;
             Assert.Equal(name, dw.ToString());
         }
-    }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingSizeNotifiesSizeProperties()
+        {
+            var DWF = new DragonbornWaffleFries();
+            Assert.PropertyChanged(DWF, "Size", () =>
+            {
+                DWF.Size = Size.Small;
+
+            });
+
+            Assert.PropertyChanged(DWF, "Size", () =>
+            {
+                DWF.Size = Size.Medium;
+
+            });
+
+            Assert.PropertyChanged(DWF, "Size", () =>
+            {
+                DWF.Size = Size.Large;
+
+            });
+
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingPriceNotifiesPriceProperties()
+        {
+            var DWF = new DragonbornWaffleFries();
+            Assert.PropertyChanged(DWF, "Price", () =>
+            {
+                DWF.Size = Size.Small;
+
+            });
+            Assert.PropertyChanged(DWF, "Price", () =>
+            {
+                DWF.Size = Size.Medium;
+
+            });
+            Assert.PropertyChanged(DWF, "Price", () =>
+            {
+                DWF.Size = Size.Large;
+
+            });
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingCaloriesNotifiesCaloriesProperties()
+        {
+            var DWF = new DragonbornWaffleFries();
+            Assert.PropertyChanged(DWF, "Calories", () =>
+            {
+                DWF.Size = Size.Small;
+
+            });
+            Assert.PropertyChanged(DWF, "Calories", () =>
+            {
+                DWF.Size = Size.Medium;
+
+            });
+            Assert.PropertyChanged(DWF, "Calories", () =>
+            {
+                DWF.Size = Size.Large;
+
+            });
+        }
+        }
 }

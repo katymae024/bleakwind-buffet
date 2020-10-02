@@ -104,5 +104,83 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             vs.Size = size;
             Assert.Equal(name, vs.ToString());
         }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingSizeNotifiesSizeProperties()
+        {
+            var VS = new VokunSalad();
+            Assert.PropertyChanged(VS, "Size", () =>
+            {
+                VS.Size = Size.Small;
+
+            });
+
+            Assert.PropertyChanged(VS, "Size", () =>
+            {
+                VS.Size = Size.Medium;
+
+            });
+
+            Assert.PropertyChanged(VS, "Size", () =>
+            {
+                VS.Size = Size.Large;
+
+            });
+
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingPriceNotifiesPriceProperties()
+        {
+            var VS = new VokunSalad();
+            Assert.PropertyChanged(VS, "Price", () =>
+            {
+                VS.Size = Size.Small;
+
+            });
+
+            Assert.PropertyChanged(VS, "Price", () =>
+            {
+                VS.Size = Size.Medium;
+
+            });
+
+            Assert.PropertyChanged(VS, "Price", () =>
+            {
+                VS.Size = Size.Large;
+
+            });
+
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingCaloriesNotifiesCaloriesProperties()
+        {
+            var VS = new VokunSalad();
+            Assert.PropertyChanged(VS, "Calories", () =>
+            {
+                VS.Size = Size.Small;
+
+            });
+
+            Assert.PropertyChanged(VS, "Calories", () =>
+            {
+                VS.Size = Size.Medium;
+
+            });
+
+            Assert.PropertyChanged(VS, "Calories", () =>
+            {
+                VS.Size = Size.Large;
+
+            });
+
+        }
     }
 }

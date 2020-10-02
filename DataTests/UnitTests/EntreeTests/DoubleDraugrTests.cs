@@ -275,7 +275,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         /// making sure properties are changed correctly
         /// </summary>
         [Fact]
-        public void ChangingPropertiesNotifiesEntreeProperties()
+        public void ChangingBunNotifiesBunProperties()
         {
             var DD = new DoubleDraugr();
 
@@ -287,47 +287,6 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.PropertyChanged(DD, "Bun", () =>
             {
                 DD.Bun = false;
-            });
-
-            Assert.PropertyChanged(DD, "Pickle", () =>
-            {
-                DD.Pickle = true;
-            });
-            Assert.PropertyChanged(DD, "Pickle", () =>
-            {
-                DD.Pickle = false;
-            });
-            Assert.PropertyChanged(DD, "Cheese", () =>
-            {
-                DD.Cheese = true;
-            });
-            Assert.PropertyChanged(DD, "Cheese", () =>
-            {
-                DD.Cheese = false;
-            });
-            Assert.PropertyChanged(DD, "Tomato", () =>
-            {
-                DD.Tomato = true;
-            });
-            Assert.PropertyChanged(DD, "Tomato", () =>
-            {
-                DD.Tomato = false;
-            });
-            Assert.PropertyChanged(DD, "Lettuce", () =>
-            {
-                DD.Lettuce = true;
-            });
-            Assert.PropertyChanged(DD, "Lettuce", () =>
-            {
-                DD.Lettuce = false;
-            });
-            Assert.PropertyChanged(DD, "Mayo", () =>
-            {
-                DD.Mayo = true;
-            });
-            Assert.PropertyChanged(DD, "Mayo", () =>
-            {
-                DD.Mayo = false;
             });
 
         }
@@ -366,6 +325,91 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
                 DD.Mustard = false;
             });
         }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingPickleNotifiesPickleProperties()
+        {
+            var DD = new DoubleDraugr();
+            Assert.PropertyChanged(DD, "Pickle", () =>
+            {
+                DD.Pickle = true;
+            });
+            Assert.PropertyChanged(DD, "Pickle", () =>
+            {
+                DD.Pickle = false;
+            });
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingCheeseNotifiesCheeseProperties()
+        {
+            var DD = new DoubleDraugr();
+            Assert.PropertyChanged(DD, "Cheese", () =>
+            {
+                DD.Cheese = true;
+            });
+            Assert.PropertyChanged(DD, "Cheese", () =>
+            {
+                DD.Cheese = false;
+            });
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingTomatoNotifiesTomatoProperties()
+        {
+            var DD = new DoubleDraugr();
+            Assert.PropertyChanged(DD, "Tomato", () =>
+            {
+                DD.Tomato = true;
+            });
+            Assert.PropertyChanged(DD, "Tomato", () =>
+            {
+                DD.Tomato = false;
+            });
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingLettuceNotifiesLettuceProperties()
+        {
+            var DD = new DoubleDraugr();
+            Assert.PropertyChanged(DD, "Lettuce", () =>
+            {
+                DD.Lettuce = true;
+            });
+            Assert.PropertyChanged(DD, "Lettuce", () =>
+            {
+                DD.Lettuce = false;
+            });
+            
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingMayoNotifiesMayoProperties()
+        {
+            var DD = new DoubleDraugr();
+            Assert.PropertyChanged(DD, "Mayo", () =>
+            {
+                DD.Mayo = true;
+            });
+            Assert.PropertyChanged(DD, "Mayo", () =>
+            {
+                DD.Mayo = false;
+            });
+
+        }
+
+
+
 
         }
 }

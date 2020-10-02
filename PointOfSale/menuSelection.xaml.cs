@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data;
 
 namespace PointOfSale
 {
@@ -38,7 +39,10 @@ namespace PointOfSale
         private void BB_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindRoot<OrderControl>();
-            orderControl.SwapScreen(new BriarheartBurger());
+            var screen = new BriarheartBurger();
+            screen.DataContext = new BleakwindBuffet.Data.Entrees.BriarheartBurger();
+            orderControl.SwapScreen(screen);
+
 
         }
         /// <summary>
@@ -49,7 +53,9 @@ namespace PointOfSale
         private void DD_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindRoot<OrderControl>();
-            orderControl.SwapScreen(new DoubleDraugr());
+            var screen = new DoubleDraugr();
+            screen.DataContext = new BleakwindBuffet.Data.Entrees.DoubleDraugr();
+            orderControl.SwapScreen(screen);
         }
         /// <summary>
         /// Swaps screen from menu
@@ -59,7 +65,9 @@ namespace PointOfSale
         private void TT_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindRoot<OrderControl>();
-            orderControl.SwapScreen(new ThalmorTriple());
+            var screen = new ThalmorTriple();
+            screen.DataContext = new BleakwindBuffet.Data.Entrees.ThalmorTriple();
+            orderControl.SwapScreen(screen);
         }
         /// <summary>
         /// Swaps screen from menu
@@ -69,7 +77,9 @@ namespace PointOfSale
         private void SS_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindRoot<OrderControl>();
-            orderControl.SwapScreen(new SmokehouseSkeleton());
+            var screen = new SmokehouseSkeleton();
+            screen.DataContext = new BleakwindBuffet.Data.Entrees.SmokehouseSkeleton();
+            orderControl.SwapScreen(screen);
         }
         /// <summary>
         /// Swaps screen from menu
@@ -79,7 +89,9 @@ namespace PointOfSale
         private void GO_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindRoot<OrderControl>();
-            orderControl.SwapScreen(new GardenOrcOmelette());
+            var screen = new GardenOrcOmelette();
+            screen.DataContext = new BleakwindBuffet.Data.Entrees.GardenOrcOmelette();
+            orderControl.SwapScreen(screen);
         }
         /// <summary>
         /// doesn't do anything since thugs t-bone doesn't have special instructions
@@ -98,7 +110,9 @@ namespace PointOfSale
         private void SSoda_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindRoot<OrderControl>();
-            orderControl.SwapScreen(new SailorSoda());
+            var screen = new SailorSoda();
+            screen.DataContext = new BleakwindBuffet.Data.Drinks.SailorSoda();
+            orderControl.SwapScreen(screen);
         }
         /// <summary>
         /// Swaps screen from menu
@@ -108,7 +122,9 @@ namespace PointOfSale
         private void MM_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindRoot<OrderControl>();
-            orderControl.SwapScreen(new MarkathMilk());
+            var screen = new MarkathMilk();
+            screen.DataContext = new BleakwindBuffet.Data.Drinks.MarkarthMilk();
+            orderControl.SwapScreen(screen);
         }
         /// <summary>
         /// Swaps screen from menu
@@ -117,8 +133,12 @@ namespace PointOfSale
         /// <param name="e"> routed evet args called e</param>
         private void AA_Click(object sender, RoutedEventArgs e)
         {
+
             var orderControl = this.FindRoot<OrderControl>();
-            orderControl.SwapScreen(new AretinoAppleJuice());
+            var screen = new AretinoAppleJuice();
+            screen.DataContext = new BleakwindBuffet.Data.Drinks.AretinoAppleJuice();
+            orderControl.SwapScreen(screen);
+            
         }
         /// <summary>
         /// Swaps screen from menu
@@ -128,7 +148,9 @@ namespace PointOfSale
         private void CC_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindRoot<OrderControl>();
-            orderControl.SwapScreen(new CandlehearthCoffee());
+            var screen = new CandlehearthCoffee();
+            screen.DataContext = new BleakwindBuffet.Data.Drinks.CandlehearthCoffee();
+            orderControl.SwapScreen(screen);
         }
         /// <summary>
         /// Swaps screen from menu
@@ -138,7 +160,9 @@ namespace PointOfSale
         private void WW_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindRoot<OrderControl>();
-            orderControl.SwapScreen(new WarriorWater());
+            var screen = new WarriorWater();
+            screen.DataContext = new BleakwindBuffet.Data.Drinks.WarriorWater();
+            orderControl.SwapScreen(screen);
         }
         /// <summary>
         /// Swaps screen from menu
@@ -148,7 +172,9 @@ namespace PointOfSale
         private void VS_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindRoot<OrderControl>();
-            orderControl.SwapScreen(new VokunSalad());
+            var screen = new VokunSalad();
+            screen.DataContext = new BleakwindBuffet.Data.Sides.VokunSalad();
+            orderControl.SwapScreen(screen);
         }
         /// <summary>
         /// Swaps screen from menu
@@ -158,7 +184,9 @@ namespace PointOfSale
         private void FM_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindRoot<OrderControl>();
-            orderControl.SwapScreen(new FriedMiraak());
+            var screen = new FriedMiraak();
+            screen.DataContext = new BleakwindBuffet.Data.Sides.FriedMiraak();
+            orderControl.SwapScreen(screen);
         }
         /// <summary>
         /// Swaps screen from menu
@@ -168,7 +196,9 @@ namespace PointOfSale
         private void MOG_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindRoot<OrderControl>();
-            orderControl.SwapScreen(new MadOtarGrits());
+            var screen = new MadOtarGrits();
+            screen.DataContext = new BleakwindBuffet.Data.Sides.MadOtarGrits();
+            orderControl.SwapScreen(screen);
         }
         /// <summary>
         /// Swaps screen from menu
@@ -178,7 +208,9 @@ namespace PointOfSale
         private void DWF_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindRoot<OrderControl>();
-            orderControl.SwapScreen(new DragonbornWaffleFries());
+            var screen = new DragonbornWaffleFries();
+            screen.DataContext = new BleakwindBuffet.Data.Sides.DragonbornWaffleFries();
+            orderControl.SwapScreen(screen);
         }
         /// <summary>
         /// Swaps screen from menu
@@ -188,7 +220,9 @@ namespace PointOfSale
         private void PP_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindRoot<OrderControl>();
-            orderControl.SwapScreen(new PhillyPoacher());
+            var screen = new PhillyPoacher();
+            screen.DataContext = new BleakwindBuffet.Data.Entrees.PhillyPoacher();
+            orderControl.SwapScreen(screen);
         }
     }
 }
