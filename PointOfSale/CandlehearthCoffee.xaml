@@ -8,12 +8,12 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <StackPanel Background="Olive">
-            <CheckBox FontSize="15">Ice</CheckBox>
-            <CheckBox FontSize="15">Small</CheckBox>
-            <CheckBox FontSize="15">Medium</CheckBox>
-            <CheckBox FontSize="15">Large</CheckBox>
-            <CheckBox FontSize="15">Decaf</CheckBox>
-            <CheckBox FontSize="15">Room for Cream</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Ice}">Ice</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Small}">Small</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Medium}">Medium</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Large}">Large</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Decaf}">Decaf</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = RoomForCream}">Room for Cream</CheckBox>
 
         </StackPanel>
         <Button Name="CCdone" Click="CCdone_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40" FontSize="15" FontStyle="Italic" Background="Beige" FontWeight="Black">
