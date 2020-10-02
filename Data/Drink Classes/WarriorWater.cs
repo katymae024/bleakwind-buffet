@@ -76,7 +76,7 @@ namespace BleakwindBuffet.Data.Drinks
             set
             {
                 lemon = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Lemon"));
             }
         }
         /// <summary>

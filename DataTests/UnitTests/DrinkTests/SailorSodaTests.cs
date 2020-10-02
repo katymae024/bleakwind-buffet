@@ -188,5 +188,66 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
            
 
         }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingPropertiesNotifiesDrinkProperties()
+        {
+            var SS = new SailorSoda();
+
+            Assert.PropertyChanged(SS, "Ice", () =>
+            {
+                SS.Ice = true;
+            });
+
+            Assert.PropertyChanged(SS, "Ice", () =>
+            {
+                SS.Ice = false;
+            });
+
+            Assert.PropertyChanged(SS, "Size", () =>
+            {
+                SS.Size = Size.Small;
+
+            });
+
+            Assert.PropertyChanged(SS, "Size", () =>
+            {
+                SS.Size = Size.Medium;
+            });
+
+            Assert.PropertyChanged(SS, "Size", () =>
+            {
+                SS.Size = Size.Large;
+            });
+            Assert.PropertyChanged(SS, "Flavor", () =>
+            {
+                SS.Flavor = SodaFlavor.Cherry;
+            });
+            Assert.PropertyChanged(SS, "Flavor", () =>
+            {
+                SS.Flavor = SodaFlavor.Watermelon;
+            });
+            Assert.PropertyChanged(SS, "Flavor", () =>
+            {
+                SS.Flavor = SodaFlavor.Blackberry;
+            });
+            Assert.PropertyChanged(SS, "Flavor", () =>
+            {
+                SS.Flavor = SodaFlavor.Lemon;
+            });
+            Assert.PropertyChanged(SS, "Flavor", () =>
+            {
+                SS.Flavor = SodaFlavor.Peach;
+            });
+            Assert.PropertyChanged(SS, "Flavor", () =>
+            {
+                SS.Flavor = SodaFlavor.Grapefruit;
+            });
+
+
+
+        }
     }
 }

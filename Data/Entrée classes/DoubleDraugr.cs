@@ -170,6 +170,7 @@ namespace BleakwindBuffet.Data.Entrees
             {
 
                 lettuce = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Lettuce"));
             }
         }
         /// <summary>

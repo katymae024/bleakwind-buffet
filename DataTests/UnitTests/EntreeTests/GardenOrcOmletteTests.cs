@@ -171,5 +171,56 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             var GardenOrcOmelette = new GardenOrcOmelette();
             Assert.IsAssignableFrom<IOrderItem>(GardenOrcOmelette);
         }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingPropertiesNotifiesEntreeProperties()
+        {
+            var GO = new GardenOrcOmelette();
+
+            Assert.PropertyChanged(GO, "Broccoli", () =>
+            {
+                GO.Broccoli = true;
+            });
+
+            Assert.PropertyChanged(GO, "Broccoli", () =>
+            {
+                GO.Broccoli = false;
+            });
+
+            Assert.PropertyChanged(GO, "Cheddar", () =>
+            {
+                GO.Cheddar = true;
+
+            });
+
+            Assert.PropertyChanged(GO, "Cheddar", () =>
+            {
+                GO.Cheddar = false;
+
+            });
+
+            Assert.PropertyChanged(GO, "Tomato", () =>
+            {
+                GO.Tomato = true;
+            });
+            Assert.PropertyChanged(GO, "Tomato", () =>
+            {
+                GO.Tomato = true;
+            });
+            Assert.PropertyChanged(GO, "Mushrooms", () =>
+            {
+                GO.Mushrooms = true;
+            });
+            Assert.PropertyChanged(GO, "Mushrooms", () =>
+            {
+                GO.Mushrooms = false;
+            });
+            
+
+
+
+        }
     }
 }

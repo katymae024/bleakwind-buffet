@@ -137,8 +137,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             aj.Size = size;
             Assert.Equal(name, aj.ToString()); 
         }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
         [Fact]
-        public void ChangingIceNotifiesIceProperty()
+        public void ChangingPropertiesNotifiesDrinkProperties()
         {
             var AJ = new AretinoAppleJuice();
 
@@ -151,6 +154,24 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             {
                 AJ.Ice = false;
             });
+
+            Assert.PropertyChanged(AJ, "Size", () =>
+            {
+                AJ.Size = Size.Small;
+                
+            });
+
+            Assert.PropertyChanged(AJ, "Size", () =>
+            {
+                AJ.Size = Size.Medium;
+            });
+
+            Assert.PropertyChanged(AJ, "Size", () =>
+            {
+                AJ.Size = Size.Large;
+            });
+
+            
         }
     }
 }

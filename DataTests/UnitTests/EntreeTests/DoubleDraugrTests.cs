@@ -271,5 +271,87 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             var DoubleDraugr = new DoubleDraugr();
             Assert.IsAssignableFrom<IOrderItem>(DoubleDraugr);
         }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingPropertiesNotifiesEntreeProperties()
+        {
+            var DD = new DoubleDraugr();
+
+            Assert.PropertyChanged(DD, "Bun", () =>
+            {
+                DD.Bun = true;
+            });
+
+            Assert.PropertyChanged(DD, "Bun", () =>
+            {
+                DD.Bun = false;
+            });
+
+            Assert.PropertyChanged(DD, "Ketchup", () =>
+            {
+                DD.Ketchup = true;
+
+            });
+
+            Assert.PropertyChanged(DD, "Ketchup", () =>
+            {
+                DD.Ketchup = false;
+            });
+
+            Assert.PropertyChanged(DD, "Mustard", () =>
+            {
+                DD.Mustard = true;
+            });
+            Assert.PropertyChanged(DD, "Mustard", () =>
+            {
+                DD.Mustard = false;
+            });
+            Assert.PropertyChanged(DD, "Pickle", () =>
+            {
+                DD.Pickle = true;
+            });
+            Assert.PropertyChanged(DD, "Pickle", () =>
+            {
+                DD.Pickle = false;
+            });
+            Assert.PropertyChanged(DD, "Cheese", () =>
+            {
+                DD.Cheese = true;
+            });
+            Assert.PropertyChanged(DD, "Cheese", () =>
+            {
+                DD.Cheese = false;
+            });
+            Assert.PropertyChanged(DD, "Tomato", () =>
+            {
+                DD.Tomato = true;
+            });
+            Assert.PropertyChanged(DD, "Tomato", () =>
+            {
+                DD.Tomato = false;
+            });
+            Assert.PropertyChanged(DD, "Lettuce", () =>
+            {
+                DD.Lettuce = true;
+            });
+            Assert.PropertyChanged(DD, "Lettuce", () =>
+            {
+                DD.Lettuce = false;
+            });
+            Assert.PropertyChanged(DD, "Mayo", () =>
+            {
+                DD.Mayo = true;
+            });
+            Assert.PropertyChanged(DD, "Mayo", () =>
+            {
+                DD.Mayo = false;
+            });
+
+
+
+
+        }
     }
 }
