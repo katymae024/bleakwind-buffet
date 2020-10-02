@@ -18,6 +18,9 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class CandlehearthCoffee : Drink, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Eventhandler for property change
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>

@@ -8,9 +8,9 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <StackPanel Background="Olive">
-            <CheckBox FontSize="15">Sirloin</CheckBox>
-            <CheckBox FontSize="15">Onion</CheckBox>
-            <CheckBox FontSize="15">Roll</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Sirloin}">Sirloin</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Onion}">Onion</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Roll}">Roll</CheckBox>
         </StackPanel>
         <Button Name="PPdone" Click="PPdone_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40" FontSize="15" FontStyle="Italic" Background="Beige" FontWeight="Black">
             Done

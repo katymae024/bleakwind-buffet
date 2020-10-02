@@ -8,10 +8,10 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <StackPanel Background="Olive">
-            <CheckBox FontSize="15">Broccoli</CheckBox>
-            <CheckBox FontSize="15">Mushrooms</CheckBox>
-            <CheckBox FontSize="15">Tomato</CheckBox>
-            <CheckBox FontSize="15">Cheddar</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Broccoli}">Broccoli</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Mushrooms}">Mushrooms</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Tomato}">Tomato</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Cheddar}">Cheddar</CheckBox>
             
         </StackPanel>
         <Button Name="GOdone" Click="GOdone_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40" FontSize="15" FontStyle="Italic" Background="Beige" FontWeight="Black">

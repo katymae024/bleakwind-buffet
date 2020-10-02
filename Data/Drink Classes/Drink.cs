@@ -17,6 +17,9 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public abstract class Drink : IOrderItem, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Eventhandler for property change
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
         private Size size = Size.Small;
@@ -39,6 +42,9 @@ namespace BleakwindBuffet.Data.Drinks
 
             }
         }
+        /// <summary>
+        /// method for checking size small
+        /// </summary>
         public bool Small
         {
             get
@@ -60,6 +66,9 @@ namespace BleakwindBuffet.Data.Drinks
                 }
             }
         }
+        /// <summary>
+        /// method for checking size medium
+        /// </summary>
         public bool Medium
         {
             get
@@ -81,6 +90,9 @@ namespace BleakwindBuffet.Data.Drinks
                 }
             }
         }
+        /// <summary>
+        /// method for checking size large
+        /// </summary>
         public bool Large
         {
             get

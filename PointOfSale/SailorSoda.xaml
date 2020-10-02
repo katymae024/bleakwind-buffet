@@ -8,16 +8,16 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <StackPanel Background="Olive">
-            <CheckBox FontSize="15">Ice</CheckBox>
-            <CheckBox FontSize="15">Small</CheckBox>
-            <CheckBox FontSize="15">Medium</CheckBox>
-            <CheckBox FontSize="15">Large</CheckBox>
-            <CheckBox FontSize="15">Peach</CheckBox>
-            <CheckBox FontSize="15">Cherry</CheckBox>
-            <CheckBox FontSize="15">Watermelon</CheckBox>
-            <CheckBox FontSize="15">Blackberry</CheckBox>
-            <CheckBox FontSize="15">Grapefruit</CheckBox>
-            <CheckBox FontSize="15">Lemon</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Ice}">Ice</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Small}">Small</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Medium}">Medium</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Large}">Large</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Flavor}">Peach</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Flavor}">Cherry</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Flavor}">Watermelon</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Flavor}">Blackberry</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Flavor}">Grapefruit</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Flavor}">Lemon</CheckBox>
         </StackPanel>
         <Button Name="SSdone" Click="SSodadone_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40" FontSize="15" FontStyle="Italic" Background="Beige" FontWeight="Black">
             Done

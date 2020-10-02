@@ -16,6 +16,9 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class WarriorWater : Drink, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Eventhandler for property change
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// private property for ice

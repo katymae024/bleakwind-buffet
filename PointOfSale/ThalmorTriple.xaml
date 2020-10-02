@@ -8,16 +8,16 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <StackPanel Background="Olive">
-            <CheckBox FontSize="15">Bun</CheckBox>
-            <CheckBox FontSize="15">Ketchup</CheckBox>
-            <CheckBox FontSize="15">Mustard</CheckBox>
-            <CheckBox FontSize="15">Cheese</CheckBox>
-            <CheckBox FontSize="15">Pickle</CheckBox>
-            <CheckBox FontSize="15">Tomato</CheckBox>
-            <CheckBox FontSize="15">Lettuce</CheckBox>
-            <CheckBox FontSize="15">Mayo</CheckBox>
-            <CheckBox FontSize="15">Bacon</CheckBox>
-            <CheckBox FontSize="15">Egg</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Bun}">Bun</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Ketchup}">Ketchup</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Mustard}">Mustard</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Cheese}">Cheese</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Pickle}">Pickle</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Tomato}">Tomato</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Lettuce}">Lettuce</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Mayo}">Mayo</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Bacon}">Bacon</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Egg}">Egg</CheckBox>
 
         </StackPanel>
         <Button Name="TTdone" Click="TTdone_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40" FontSize="15" FontStyle="Italic" Background="Beige" FontWeight="Black">

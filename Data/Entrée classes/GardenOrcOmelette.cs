@@ -17,6 +17,9 @@ namespace BleakwindBuffet.Data.Entrees
     /// </summary>
     public class GardenOrcOmelette : Entree, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Eventhandler for property change
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// private property broccoli

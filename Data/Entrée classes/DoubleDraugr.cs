@@ -18,6 +18,9 @@ namespace BleakwindBuffet.Data.Entrees
     /// </summary>
     public class DoubleDraugr : Entree, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Eventhandler for property change
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// private property of ketchup

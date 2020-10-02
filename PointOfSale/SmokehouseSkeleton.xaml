@@ -8,10 +8,10 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <StackPanel Background="Olive">
-            <CheckBox FontSize="15">Sausage Link</CheckBox>
-            <CheckBox FontSize="15">Hashbrowns</CheckBox>
-            <CheckBox FontSize="15">Egg</CheckBox>
-            <CheckBox FontSize="15">Pancake</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = SausageLink}">Sausage Link</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = HashBrowns}">Hashbrowns</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Egg}">Egg</CheckBox>
+            <CheckBox FontSize="15" IsChecked="{Binding Path = Pancake}">Pancake</CheckBox>
             
         </StackPanel>
         <Button Name="SSdone" Click="SSdone_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40" FontSize="15" FontStyle="Italic" Background="Beige" FontWeight="Black">

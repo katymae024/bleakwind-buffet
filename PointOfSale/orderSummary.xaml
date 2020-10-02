@@ -20,6 +20,7 @@
                 </Grid.RowDefinitions> 
             </Grid>
             <Button Name="OrderComplete" HorizontalAlignment="Center" Background="LightGray" Foreground="Black" FontSize="15" FontStyle="Normal" Margin="0 0 0 20">Order Complete</Button>
+            <Button Name="CancelOrder" HorizontalAlignment="Center" Background="LightGray" Foreground="Black" FontSize="15" FontStyle="Normal" Margin="0 0 0 20">Cancel Order</Button>
             <TextBlock Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify" Margin="20 0 0 0" Foreground="LightGray" FontSize="15" FontStyle="Normal" >Subtotal:</TextBlock>
             <TextBlock Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify" Margin="20 0 0 0" Foreground="LightGray" FontSize="15" FontStyle="Normal" > Tax:</TextBlock>
             <TextBlock Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify" Margin ="20 0 0 0" Foreground="LightGray" FontSize="15" FontStyle="Normal"> Total: </TextBlock>
