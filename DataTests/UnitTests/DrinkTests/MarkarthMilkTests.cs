@@ -148,6 +148,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
                 MM.Ice = false;
             });
 
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingSizeNotifiesSizeProperties()
+        {
+            var MM = new MarkarthMilk();
             Assert.PropertyChanged(MM, "Size", () =>
             {
                 MM.Size = Size.Small;
@@ -163,8 +171,47 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             {
                 MM.Size = Size.Large;
             });
-
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingPriceNotifiesPriceProperties()
+        {
+            var MM = new MarkarthMilk();
+            Assert.PropertyChanged(MM, "Price", () =>
+            {
+                MM.Size = Size.Small;
+            });
+            Assert.PropertyChanged(MM, "Price", () =>
+            {
+                MM.Size = Size.Medium;
+            });
+            Assert.PropertyChanged(MM, "Price", () =>
+            {
+                MM.Size = Size.Large;
+            });
 
         }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingCaloriesNotifiesCaloriesProperties()
+        {
+            var MM = new MarkarthMilk();
+            Assert.PropertyChanged(MM, "Calories", () =>
+            {
+                MM.Size = Size.Small;
+            });
+            Assert.PropertyChanged(MM, "Calories", () =>
+            {
+                MM.Size = Size.Medium;
+            });
+            Assert.PropertyChanged(MM, "Calories", () =>
+            {
+                MM.Size = Size.Large;
+            });
+        }
+        }
     }
-}

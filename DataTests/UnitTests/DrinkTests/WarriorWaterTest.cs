@@ -158,7 +158,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         /// making sure properties are changed correctly
         /// </summary>
         [Fact]
-        public void ChangingPropertiesNotifiesDrinkProperties()
+        public void ChangingIceNotifiesIceProperties()
         {
             var WW = new WarriorWater();
 
@@ -172,6 +172,18 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
                 WW.Ice = false;
             });
 
+            
+            
+
+
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingLemonNotifiesLemonProperties()
+        {
+            var WW = new WarriorWater();
             Assert.PropertyChanged(WW, "Lemon", () =>
             {
                 WW.Lemon = true;
@@ -180,6 +192,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             {
                 WW.Lemon = false;
             });
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingSizeNotifiesSizeProperties()
+        {
+            var WW = new WarriorWater();
             Assert.PropertyChanged(WW, "Size", () =>
             {
                 WW.Size = Size.Small;
@@ -195,8 +215,50 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             {
                 WW.Size = Size.Large;
             });
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingPriceNotifiesPriceProperties()
+        {
+            var WW = new WarriorWater();
+            Assert.PropertyChanged(WW, "Price", () =>
+            {
+                WW.Size = Size.Small;
+            });
+            Assert.PropertyChanged(WW, "Price", () =>
+            {
+                WW.Size = Size.Medium;
+            });
+            Assert.PropertyChanged(WW, "Price", () =>
+            {
+                WW.Size = Size.Large;
+            });
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingCaloriesNotifiesCaloriesProperties()
+        {
+            var WW = new WarriorWater();
+            Assert.PropertyChanged(WW, "Calories", () =>
+            {
+                WW.Size = Size.Small;
+            });
+            Assert.PropertyChanged(WW, "Calories", () =>
+            {
+                WW.Size = Size.Medium;
+            });
+            Assert.PropertyChanged(WW, "Calories", () =>
+            {
+                WW.Size = Size.Large;
+            });
+
 
 
         }
+
     }
 }

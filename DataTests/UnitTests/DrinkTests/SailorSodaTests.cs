@@ -192,7 +192,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         /// making sure properties are changed correctly
         /// </summary>
         [Fact]
-        public void ChangingPropertiesNotifiesDrinkProperties()
+        public void ChangingIceNotifiesIceProperties()
         {
             var SS = new SailorSoda();
 
@@ -206,21 +206,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
                 SS.Ice = false;
             });
 
-            Assert.PropertyChanged(SS, "Size", () =>
-            {
-                SS.Size = Size.Small;
-
-            });
-
-            Assert.PropertyChanged(SS, "Size", () =>
-            {
-                SS.Size = Size.Medium;
-            });
-
-            Assert.PropertyChanged(SS, "Size", () =>
-            {
-                SS.Size = Size.Large;
-            });
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingFlavorNotifiesFlavorProperties()
+        {
+            var SS = new SailorSoda();
             Assert.PropertyChanged(SS, "Flavor", () =>
             {
                 SS.Flavor = SodaFlavor.Cherry;
@@ -246,8 +239,72 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
                 SS.Flavor = SodaFlavor.Grapefruit;
             });
 
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingSizeNotifiesSizeProperties()
+        {
+            var SS = new SailorSoda();
+            Assert.PropertyChanged(SS, "Size", () =>
+            {
+                SS.Size = Size.Small;
 
+            });
+
+            Assert.PropertyChanged(SS, "Size", () =>
+            {
+                SS.Size = Size.Medium;
+            });
+
+            Assert.PropertyChanged(SS, "Size", () =>
+            {
+                SS.Size = Size.Large;
+            });
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingPriceNotifiesPriceProperties()
+        {
+            var SS = new SailorSoda();
+            Assert.PropertyChanged(SS, "Price", () =>
+            {
+                SS.Size = Size.Small;
+            });
+            Assert.PropertyChanged(SS, "Price", () =>
+            {
+                SS.Size = Size.Medium;
+            });
+            Assert.PropertyChanged(SS, "Price", () =>
+            {
+                SS.Size = Size.Large;
+            });
+
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingCaloriesNotifiesCaloriesProperties()
+        {
+            var SS = new SailorSoda();
+            Assert.PropertyChanged(SS, "Calories", () =>
+            {
+                SS.Size = Size.Small;
+            });
+            Assert.PropertyChanged(SS, "Calories", () =>
+            {
+                SS.Size = Size.Medium;
+            });
+            Assert.PropertyChanged(SS, "Calories", () =>
+            {
+                SS.Size = Size.Large;
+            });
+
+        }
 
         }
     }
-}

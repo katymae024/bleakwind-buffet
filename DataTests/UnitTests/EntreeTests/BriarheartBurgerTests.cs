@@ -218,7 +218,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         /// making sure properties are changed correctly
         /// </summary>
         [Fact]
-        public void ChangingPropertiesNotifiesEntreeProperties()
+        public void ChangingBunNotifiesBunProperties()
         {
             var BB = new BriarheartBurger();
 
@@ -231,7 +231,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             {
                 BB.Bun = false;
             });
-
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingKetchupNotifiesKetchupProperties()
+        {
+            var BB = new BriarheartBurger();
             Assert.PropertyChanged(BB, "Ketchup", () =>
             {
                 BB.Ketchup = true;
@@ -243,6 +250,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
                 BB.Ketchup = false;
             });
 
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingMustardNotifiesMustardProperties()
+        {
+            var BB = new BriarheartBurger();
             Assert.PropertyChanged(BB, "Mustard", () =>
             {
                 BB.Mustard = true;
@@ -251,6 +266,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             {
                 BB.Mustard = false;
             });
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingPickleNotifiesPickleProperties()
+        {
+            var BB = new BriarheartBurger();
             Assert.PropertyChanged(BB, "Pickle", () =>
             {
                 BB.Pickle = true;
@@ -259,6 +282,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             {
                 BB.Pickle = false;
             });
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingCheeseNotifiesCheeseProperties()
+        {
+            var BB = new BriarheartBurger();
             Assert.PropertyChanged(BB, "Cheese", () =>
             {
                 BB.Cheese = true;
@@ -268,8 +299,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
                 BB.Cheese = false;
             });
 
-
-
         }
+
+
+
+
+
     }
 }

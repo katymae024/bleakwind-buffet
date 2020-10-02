@@ -289,25 +289,6 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
                 DD.Bun = false;
             });
 
-            Assert.PropertyChanged(DD, "Ketchup", () =>
-            {
-                DD.Ketchup = true;
-
-            });
-
-            Assert.PropertyChanged(DD, "Ketchup", () =>
-            {
-                DD.Ketchup = false;
-            });
-
-            Assert.PropertyChanged(DD, "Mustard", () =>
-            {
-                DD.Mustard = true;
-            });
-            Assert.PropertyChanged(DD, "Mustard", () =>
-            {
-                DD.Mustard = false;
-            });
             Assert.PropertyChanged(DD, "Pickle", () =>
             {
                 DD.Pickle = true;
@@ -349,9 +330,42 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
                 DD.Mayo = false;
             });
 
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingKetchupNotifiesKetchupProperties()
+        {
+            var DD = new DoubleDraugr();
+            Assert.PropertyChanged(DD, "Ketchup", () =>
+            {
+                DD.Ketchup = true;
 
+            });
 
+            Assert.PropertyChanged(DD, "Ketchup", () =>
+            {
+                DD.Ketchup = false;
+            });
 
         }
-    }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingMustardNotifiesMustardProperties()
+        {
+            var DD = new DoubleDraugr();
+            Assert.PropertyChanged(DD, "Mustard", () =>
+            {
+                DD.Mustard = true;
+            });
+            Assert.PropertyChanged(DD, "Mustard", () =>
+            {
+                DD.Mustard = false;
+            });
+        }
+
+        }
 }

@@ -141,7 +141,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         /// making sure properties are changed correctly
         /// </summary>
         [Fact]
-        public void ChangingPropertiesNotifiesDrinkProperties()
+        public void ChangingIceNotifiesIceProperties()
         {
             var AJ = new AretinoAppleJuice();
 
@@ -155,10 +155,21 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
                 AJ.Ice = false;
             });
 
+            
+
+            
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingSizeNotifiesSizeProperties()
+        {
+            var AJ = new AretinoAppleJuice();
             Assert.PropertyChanged(AJ, "Size", () =>
             {
                 AJ.Size = Size.Small;
-                
+
             });
 
             Assert.PropertyChanged(AJ, "Size", () =>
@@ -171,7 +182,50 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
                 AJ.Size = Size.Large;
             });
 
-            
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingPriceNotifiesPriceProperties()
+        {
+            var AJ = new AretinoAppleJuice();
+            Assert.PropertyChanged(AJ, "Price", () =>
+            {
+                AJ.Size = Size.Small;
+            });
+            Assert.PropertyChanged(AJ, "Price", () =>
+            {
+                AJ.Size = Size.Medium;
+            });
+            Assert.PropertyChanged(AJ, "Price", () =>
+            {
+                AJ.Size = Size.Large;
+            });
+
+
+        }
+        /// <summary>
+        /// making sure properties are changed correctly
+        /// </summary>
+        [Fact]
+        public void ChangingCaloriesNotifiesCaloriesProperties()
+        {
+            var AJ = new AretinoAppleJuice();
+            Assert.PropertyChanged(AJ, "Calories", () =>
+            {
+                AJ.Size = Size.Small;
+            });
+            Assert.PropertyChanged(AJ, "Calories", () =>
+            {
+                AJ.Size = Size.Medium;
+            });
+            Assert.PropertyChanged(AJ, "Calories", () =>
+            {
+                AJ.Size = Size.Large;
+            });
+        }
+
+
         }
     }
-}
