@@ -15,7 +15,7 @@ namespace BleakwindBuffet.Data.Sides
     /// <summary>
     /// Containing a specific side with its properties
     /// </summary>
-    public class VokunSalad : Side,INotifyPropertyChanged
+    public class VokunSalad : Side, INotifyPropertyChanged
     {
         /// <summary>
         /// Eventhandler for property change
