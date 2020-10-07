@@ -26,7 +26,7 @@ namespace BleakwindBuffet.Data
 
         }
         
-        //eventlister and attach them to entree property drink and side
+        //eventlistener and attach them to entree property drink and side
 
         public double Price => (entree.Price + drink.Price + side.Price) - 1;
 
