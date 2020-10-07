@@ -17,17 +17,25 @@ namespace BleakwindBuffet.Data
         private Entree entree;
         private Drink drink;
         private Side side;
+        //create constructor 
+        public ImplementFunctionalityCombo(Entree e, Drink d, Side s)
+        {
+            entree = e;
+            drink = d;
+            side = s;
+
+        }
 
 
-        public double Price => throw new NotImplementedException();
+        public double Price => (entree.Price + drink.Price + side.Price) -1;
 
-        public uint Calories => throw new NotImplementedException();
+        public uint Calories => entree.Calories + drink.Calories + side.Calories;
 
         public List<string> SpecialInstructions
         {
             get
             {
-                throw new NotImplementedException();
+                
 
                 List<string> list = new List<string>();
                 list.Add(entree.ToString());
@@ -37,9 +45,11 @@ namespace BleakwindBuffet.Data
                 list.Add(side.ToString());
                 list.AddRange(side.SpecialInstructions);
                 return list;
+                throw new NotImplementedException();
             }
             
         }
+        //allow 
 
 
         
