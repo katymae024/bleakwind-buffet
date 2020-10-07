@@ -17,7 +17,7 @@ namespace BleakwindBuffet.Data
         private Entree entree;
         private Drink drink;
         private Side side;
-        //create constructor 
+        
         public ImplementFunctionalityCombo(Entree e, Drink d, Side s)
         {
             entree = e;
@@ -25,9 +25,10 @@ namespace BleakwindBuffet.Data
             side = s;
 
         }
+        
+        //eventlister and attach them to entree property drink and side
 
-
-        public double Price => (entree.Price + drink.Price + side.Price) -1;
+        public double Price => (entree.Price + drink.Price + side.Price) - 1;
 
         public uint Calories => entree.Calories + drink.Calories + side.Calories;
 
@@ -49,7 +50,7 @@ namespace BleakwindBuffet.Data
             }
             
         }
-        //allow 
+        
 
 
         
