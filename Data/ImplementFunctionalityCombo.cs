@@ -46,7 +46,7 @@ namespace BleakwindBuffet.Data
                     }
                     break;
                 case NotifyCollectionChangedAction.Remove:
-                    foreach (ToDoItem item in e.OldItems)
+                    foreach (IOrderItem item in e.OldItems)
                     {
                         item.PropertyChanged -= CollectionItemChangedListener;
                     }
