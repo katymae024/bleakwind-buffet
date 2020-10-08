@@ -7,10 +7,13 @@ using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Entrée_classes;
 using BleakwindBuffet.Data.Drinks;
 using BleakwindBuffet.Data.Side_Classes;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+
 
 namespace BleakwindBuffet.Data
 {
-    public class ImplementFunctionalityCombo : IOrderItem, INotifyPropertyChanged
+    public class ImplementFunctionalityCombo : ObservableCollection<IOrderItem>, IOrderItem, INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -24,9 +27,35 @@ namespace BleakwindBuffet.Data
             drink = d;
             side = s;
 
+            CollectionChanged += CollectionChangedListener;
+
         }
-        
+
+       
         //eventlistener and attach them to entree property drink and side
+        void CollectionChangedListener(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            OnPropertyChanged(new PropertyChangedEventArgs("SpecialInstructions"));
+           
+            switch (e.Action)
+            {
+                case NotifyCollectionChangedAction.Add:
+                    foreach (IOrderItem item in e.NewItems)
+                    {
+                        item.PropertyChanged += CollectionItemChangedListener;
+                    }
+                    break;
+                case NotifyCollectionChangedAction.Remove:
+                    foreach (ToDoItem item in e.OldItems)
+                    {
+                        item.PropertyChanged -= CollectionItemChangedListener;
+                    }
+                    break;
+                case NotifyCollectionChangedAction.Reset:
+                    throw new NotImplementedException("NotifyCollectionChangedAction.Reset not supported");
+            }
+
+        }
 
         public double Price => (entree.Price + drink.Price + side.Price) - 1;
 
