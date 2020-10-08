@@ -18,6 +18,8 @@ namespace BleakwindBuffet.Data
         {
             this.numOrder = nextOrderNum;
             nextOrderNum++;
+
+            CollectionChanged += CollectionChangedListener;
         }
 
         public double SalesTaxRate { get; set; } = 0.12;
@@ -55,6 +57,50 @@ namespace BleakwindBuffet.Data
         }
 
         //add and remove methods
+        //eventlistener attach them to entree property drink and side
+        void CollectionChangedListener(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            OnPropertyChanged(new PropertyChangedEventArgs("SpecialInstructions"));
+
+            switch (e.Action)
+            {
+                case NotifyCollectionChangedAction.Add:
+                    foreach (IOrderItem item in e.NewItems)
+                    {
+                        item.PropertyChanged += CollectionItemChangedListener;
+                    }
+                    break;
+                case NotifyCollectionChangedAction.Remove:
+                    foreach (IOrderItem item in e.OldItems)
+                    {
+                        item.PropertyChanged -= CollectionItemChangedListener;
+                    }
+                    break;
+                case NotifyCollectionChangedAction.Reset:
+                    throw new NotImplementedException("NotifyCollectionChangedAction.Reset not supported");
+            }
+
+        }
+
+        void CollectionItemChangedListener(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == "Price")
+            {
+                OnPropertyChanged(new PropertyChangedEventArgs("Price"));
+
+            }
+            if (e.PropertyName == "Calories")
+            {
+                OnPropertyChanged(new PropertyChangedEventArgs("Calories"));
+
+            }
+            if (e.PropertyName == "SpecialInstructions")
+            {
+                OnPropertyChanged(new PropertyChangedEventArgs("SpecialInstructions"));
+
+            }
+
+        }
 
     }
 }
