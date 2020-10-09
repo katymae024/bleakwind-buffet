@@ -38,10 +38,16 @@ namespace PointOfSale
         /// <param name="e"> routed evet args called e</param>
         private void BB_Click(object sender, RoutedEventArgs e)
         {
-            var orderControl = this.FindRoot<OrderControl>();
-            var screen = new BriarheartBurger();
-            screen.DataContext = new BleakwindBuffet.Data.Entrees.BriarheartBurger();
-            orderControl.SwapScreen(screen);
+            if (DataContext is BleakwindBuffet.Data.OrderClass order)
+            {
+
+                var bb = new BleakwindBuffet.Data.Entrees.BriarheartBurger();
+                var orderControl = this.FindRoot<OrderControl>();
+                var screen = new BriarheartBurger();
+                screen.DataContext = bb;
+                orderControl.SwapScreen(screen);
+                order.Add(bb);
+            }
 
 
         }
@@ -52,10 +58,16 @@ namespace PointOfSale
         /// <param name="e"> routed evet args called e</param>
         private void DD_Click(object sender, RoutedEventArgs e)
         {
-            var orderControl = this.FindRoot<OrderControl>();
-            var screen = new DoubleDraugr();
-            screen.DataContext = new BleakwindBuffet.Data.Entrees.DoubleDraugr();
-            orderControl.SwapScreen(screen);
+            if (DataContext is BleakwindBuffet.Data.OrderClass order)
+            {
+
+                var dd = new BleakwindBuffet.Data.Entrees.DoubleDraugr();
+                var orderControl = this.FindRoot<OrderControl>();
+                var screen = new DoubleDraugr();
+                screen.DataContext = dd;
+                orderControl.SwapScreen(screen);
+                order.Add(dd);
+            }
         }
         /// <summary>
         /// Swaps screen from menu

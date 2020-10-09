@@ -3,6 +3,7 @@
 * Class name: OrderControl.xaml.cs
 * Purpose: this class contains the swap screen method to swap between menu and customization screen
 */
+using BleakwindBuffet.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -29,6 +30,8 @@ namespace PointOfSale
         public OrderControl()
         {
             InitializeComponent();
+            this.DataContext = new OrderClass();
+
         }
         /// <summary>
         /// method made for swapping screens
@@ -38,5 +41,8 @@ namespace PointOfSale
         {
             menuS.Child = element;
         }
+
+
+
     }
 }

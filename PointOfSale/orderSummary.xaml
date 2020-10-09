@@ -11,6 +11,9 @@
             
         
         <TextBlock HorizontalAlignment="Center" FontWeight="Bold" FontStyle="Normal" FontSize="20" Foreground="LightGray">Order #</TextBlock>
+            <ListBox ItemsSource="{Binding}" >
+                
+            </ListBox>
             <Grid >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="300"/>
@@ -19,12 +22,23 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions> 
             </Grid>
-            <Button Name="OrderComplete" HorizontalAlignment="Center" Background="LightGray" Foreground="Black" FontSize="15" FontStyle="Normal" Margin="0 0 0 20">Order Complete</Button>
+            <Button Name="OrderComplete"  HorizontalAlignment="Center" Background="LightGray" Foreground="Black" FontSize="15" FontStyle="Normal" Margin="0 0 0 20">Order Complete</Button>
             <Button Name="CancelOrder" HorizontalAlignment="Center" Background="LightGray" Foreground="Black" FontSize="15" FontStyle="Normal" Margin="0 0 0 20">Cancel Order</Button>
-            <TextBlock Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify" Margin="20 0 0 0" Foreground="LightGray" FontSize="15" FontStyle="Normal" >Subtotal:</TextBlock>
-            <TextBlock Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify" Margin="20 0 0 0" Foreground="LightGray" FontSize="15" FontStyle="Normal" > Tax:</TextBlock>
-            <TextBlock Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify" Margin ="20 0 0 0" Foreground="LightGray" FontSize="15" FontStyle="Normal"> Total: </TextBlock>
+            <StackPanel Orientation="Horizontal" Grid.Row="1">
+                
+                <TextBlock Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify"  Margin="20 0 0 0" Foreground="LightGray" FontSize="15" FontStyle="Normal" >Subtotal:</TextBlock>
+                <TextBlock Foreground="LightGray"  Text="{Binding Path=Subtotal}"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="2">
+                <TextBlock Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify" Margin="20 0 0 0" Foreground="LightGray" FontSize="15" FontStyle="Normal" > Tax:</TextBlock>
+                <TextBlock Foreground="LightGray"  Text="{Binding Path=Tax}"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="3">
+                <TextBlock Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify" Margin ="20 0 0 0" Foreground="LightGray" FontSize="15" FontStyle="Normal"> Total:</TextBlock>
+                <TextBlock Foreground="LightGray"  Text="{Binding Path=Total}"></TextBlock>
+            </StackPanel>
             
         </StackPanel>
+        
     </Grid>
 </UserControl>
