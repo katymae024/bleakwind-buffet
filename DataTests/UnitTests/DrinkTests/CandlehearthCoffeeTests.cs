@@ -233,11 +233,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             var CC = new CandlehearthCoffee();
 
 
-            Assert.PropertyChanged(CC, "Room For Cream", () =>
+            Assert.PropertyChanged(CC, "RoomForCream", () =>
             {
                 CC.RoomForCream = true;
             });
-            Assert.PropertyChanged(CC, "Room For Cream", () =>
+            Assert.PropertyChanged(CC, "RoomForCream", () =>
             {
                 CC.RoomForCream = false;
             });
