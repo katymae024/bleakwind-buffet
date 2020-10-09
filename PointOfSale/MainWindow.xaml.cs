@@ -32,5 +32,7 @@ namespace PointOfSale
         {
             InitializeComponent();
         }
+
+        
     }
 }

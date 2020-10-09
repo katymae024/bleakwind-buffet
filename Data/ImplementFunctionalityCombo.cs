@@ -16,7 +16,7 @@ namespace BleakwindBuffet.Data
     public class ImplementFunctionalityCombo : ObservableCollection<IOrderItem>, IOrderItem, INotifyPropertyChanged
     {
         //public event PropertyChangedEventHandler PropertyChanged;
-
+       
         private Entree entree;
         private Drink drink;
         private Side side;

@@ -12,6 +12,7 @@ namespace BleakwindBuffet.Data
     public class OrderClass: ObservableCollection<IOrderItem>, ICollection, INotifyCollectionChanged, INotifyPropertyChanged
     {
         //provide a property Calories which is a unsigned integer, and the sum of all the calories of the item sin the order.
+        private int calories;
         int numOrder;
         int nextOrderNum = 1;
         public OrderClass()
@@ -55,12 +56,18 @@ namespace BleakwindBuffet.Data
                 return total;
             } 
         }
-
-        //add and remove methods
-        //eventlistener attach them to entree property drink and side
+        
+        
+        
+        
+        
         void CollectionChangedListener(object sender, NotifyCollectionChangedEventArgs e)
         {
-            OnPropertyChanged(new PropertyChangedEventArgs("SpecialInstructions"));
+            OnPropertyChanged(new PropertyChangedEventArgs("Calories"));
+            OnPropertyChanged(new PropertyChangedEventArgs("Subtotal"));
+            OnPropertyChanged(new PropertyChangedEventArgs("Tax"));
+            OnPropertyChanged(new PropertyChangedEventArgs("Total"));
+
 
             switch (e.Action)
             {
@@ -82,23 +89,25 @@ namespace BleakwindBuffet.Data
 
         }
 
-        void CollectionItemChangedListener(object sender, PropertyChangedEventArgs e)
+        private void CollectionItemChangedListener(object sender, PropertyChangedEventArgs e)
         {
+            
+
             if (e.PropertyName == "Price")
             {
-                OnPropertyChanged(new PropertyChangedEventArgs("Price"));
+                OnPropertyChanged(new PropertyChangedEventArgs("Total"));
+                OnPropertyChanged(new PropertyChangedEventArgs("Subtotal"));
+                OnPropertyChanged(new PropertyChangedEventArgs("Tax"));
+                
+
 
             }
             if (e.PropertyName == "Calories")
             {
                 OnPropertyChanged(new PropertyChangedEventArgs("Calories"));
-
+                
             }
-            if (e.PropertyName == "SpecialInstructions")
-            {
-                OnPropertyChanged(new PropertyChangedEventArgs("SpecialInstructions"));
-
-            }
+            
 
         }
 
