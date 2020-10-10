@@ -13,14 +13,20 @@ namespace BleakwindBuffet.Data
     {
         //provide a property Calories which is a unsigned integer, and the sum of all the calories of the item sin the order.
         private int calories;
-        int numOrder;
-        int nextOrderNum = 1;
+        private int numOrder = 0;
+        private int nextOrderNum = 1;
         public OrderClass()
         {
-            this.numOrder = nextOrderNum;
-            nextOrderNum++;
-
-            CollectionChanged += CollectionChangedListener;
+             numOrder = nextOrderNum;
+             nextOrderNum++;
+             CollectionChanged += CollectionChangedListener;
+        }
+        public int OrderNumber 
+        {
+            get
+            {
+                return numOrder;
+            } 
         }
 
         public double SalesTaxRate { get; set; } = 0.12;

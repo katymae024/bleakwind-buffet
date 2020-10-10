@@ -3,6 +3,7 @@
 * Class name: orderSummary.xaml.cs
 * Purpose: class made for the order summary or the receipt of the order made
 */
+using BleakwindBuffet.Data;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -28,6 +29,17 @@ namespace PointOfSale
         public orderSummary()
         {
             InitializeComponent();
+            //DataContext = new OrderClass();
+        }
+
+        private void OrderComplete_Click(object sender, RoutedEventArgs e)
+        {
+           // DataContext = new OrderClass();
+        }
+
+        private void CancelOrder_Click(object sender, RoutedEventArgs e)
+        {
+           // DataContext = new OrderClass();
         }
     }
 }

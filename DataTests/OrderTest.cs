@@ -6,6 +6,12 @@ namespace BleakwindBuffet.DataTests
 {
     public class OrderTest
     {
+        //tax is correct
+        //all the properties
 
+        public void CheckingSubtotal()
+        {
+
+        }
     }
 }

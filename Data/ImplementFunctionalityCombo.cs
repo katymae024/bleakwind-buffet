@@ -26,14 +26,7 @@ namespace BleakwindBuffet.Data
             entree = e;
             drink = d;
             side = s;
-
-           
-
         }
-
-       
-        
-
         public double Price => (entree.Price + drink.Price + side.Price) - 1;
 
         public uint Calories => entree.Calories + drink.Calories + side.Calories;
@@ -42,8 +35,6 @@ namespace BleakwindBuffet.Data
         {
             get
             {
-                
-
                 List<string> list = new List<string>();
                 list.Add(entree.ToString());
                 list.AddRange(entree.SpecialInstructions);
@@ -57,11 +48,5 @@ namespace BleakwindBuffet.Data
             
         }
         
-
-
-        
-
-
-
     }
 }
