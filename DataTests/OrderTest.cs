@@ -1,6 +1,8 @@
-﻿using System;
+﻿using BleakwindBuffet.Data;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using Xunit;
 
 namespace BleakwindBuffet.DataTests
 {
@@ -9,9 +11,11 @@ namespace BleakwindBuffet.DataTests
         //tax is correct
         //all the properties
 
+        [Fact]
         public void CheckingSubtotal()
         {
-
+            OrderClass order = new OrderClass();
+            Assert.Equal(order.Subtotal);
         }
     }
 }
