@@ -13,6 +13,7 @@ namespace BleakwindBuffet.DataTests
 {
     public class ComboTests
     {
+        [Fact]
         public void IfPricePropertyIsCorrect()
         {
             BriarheartBurger b = new BriarheartBurger();
@@ -24,16 +25,30 @@ namespace BleakwindBuffet.DataTests
 
 
         }
+        [Fact]
         public void IfCaloriesPropertyIsCorrect()
         {
             BriarheartBurger b = new BriarheartBurger();
             AretinoAppleJuice a = new AretinoAppleJuice();
             VokunSalad v = new VokunSalad();
             ImplementFunctionalityCombo combo = new ImplementFunctionalityCombo(b, a, v);
-            //similar 
+         
             double cal = (b.Calories + a.Calories + v.Calories);
             Assert.Equal(cal, combo.Calories);
         }
+        [Fact]
+        public void IfSpecialInstructionsPropertyIsCorrect()
+        {
+            BriarheartBurger b = new BriarheartBurger();
+            AretinoAppleJuice a = new AretinoAppleJuice();
+            VokunSalad v = new VokunSalad();
+            ImplementFunctionalityCombo combo = new ImplementFunctionalityCombo(b, a, v);
+           
+            List<string> list = new List<string>();
+            Assert.Equal(list, combo.SpecialInstructions);
+            //not correct fix
+        }
+
 
     }
 }
