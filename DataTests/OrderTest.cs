@@ -4,7 +4,8 @@ using System.Text;
 
 namespace BleakwindBuffet.DataTests
 {
-    class OrderTest
+    public class OrderTest
     {
+
     }
 }
