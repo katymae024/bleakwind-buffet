@@ -26,9 +26,10 @@ namespace PointOfSale
         /// <summary>
         /// Constructor for the order summary class
         /// </summary>
-        public orderSummary()
+        public orderSummary(object DC)
         {
             InitializeComponent();
+            DataContext = DC;
             //DataContext = new OrderClass();
         }
 

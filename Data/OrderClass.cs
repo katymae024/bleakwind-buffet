@@ -12,13 +12,15 @@ namespace BleakwindBuffet.Data
     public class OrderClass: ObservableCollection<IOrderItem>, ICollection, INotifyCollectionChanged, INotifyPropertyChanged
     {
         //provide a property Calories which is a unsigned integer, and the sum of all the calories of the item sin the order.
-        private int calories;
+        //private uint calories;
         private int numOrder = 0;
-        private int nextOrderNum = 1;
-        public OrderClass()
+        //private int nextOrderNum = 1;
+        public OrderClass(int orderNum)
         {
-             numOrder = nextOrderNum;
-             nextOrderNum++;
+             numOrder = orderNum;
+            // nextOrderNum++;
+
+
              CollectionChanged += CollectionChangedListener;
         }
         public int OrderNumber 
@@ -29,6 +31,18 @@ namespace BleakwindBuffet.Data
             } 
         }
 
+        public uint Calories
+        {
+            get
+            {
+                uint calories = 0;
+                foreach(IOrderItem item in this)
+                {
+                    calories += item.Calories;
+                }
+                return calories;
+            }
+        }
         public double SalesTaxRate { get; set; } = 0.12;
 
         public double Subtotal 

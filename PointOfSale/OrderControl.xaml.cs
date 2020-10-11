@@ -30,7 +30,12 @@ namespace PointOfSale
         public OrderControl()
         {
             InitializeComponent();
-            this.DataContext = new OrderClass();
+            object order = new OrderClass(1);
+            this.DataContext = order;
+            orderSummary os = new orderSummary(order);
+            orderS.Child = os;
+            //((orderSummary)orderS.Child).DataContext = this.DataContext;
+
 
         }
         /// <summary>

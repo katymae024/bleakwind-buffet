@@ -8,9 +8,9 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <StackPanel Background="Black">
-            
-        
-        <TextBlock Text="{Binding Path= OrderNumber}" HorizontalAlignment="Center" FontWeight="Bold" FontStyle="Normal" FontSize="20" Foreground="LightGray">Order #</TextBlock>
+
+            <TextBlock HorizontalAlignment="Center" FontWeight="Bold" FontStyle="Normal" FontSize="20" Foreground="LightGray"> Order #</TextBlock>
+            <TextBlock Text="{Binding Path= OrderNumber}" HorizontalAlignment="Center" FontWeight="Bold" FontStyle="Normal" FontSize="20" Foreground="LightGray"></TextBlock>
             <ListBox ItemsSource="{Binding}" >
                 
             </ListBox>
