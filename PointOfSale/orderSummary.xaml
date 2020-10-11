@@ -27,15 +27,15 @@
             <StackPanel Orientation="Horizontal" Grid.Row="1">
                 
                 <TextBlock Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify"  Margin="20 0 0 0" Foreground="LightGray" FontSize="15" FontStyle="Normal" >Subtotal:</TextBlock>
-                <TextBlock Foreground="LightGray"  Text="{Binding Path=Subtotal}"></TextBlock>
+                <TextBlock Foreground="LightGray"  Text="{Binding Path=Subtotal, StringFormat=c}"></TextBlock>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Grid.Row="2">
                 <TextBlock Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify" Margin="20 0 0 0" Foreground="LightGray" FontSize="15" FontStyle="Normal" > Tax:</TextBlock>
-                <TextBlock Foreground="LightGray"  Text="{Binding Path=Tax}"></TextBlock>
+                <TextBlock Foreground="LightGray"  Text="{Binding Path=Tax, StringFormat=c}"></TextBlock>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Grid.Row="3">
                 <TextBlock Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify" Margin ="20 0 0 0" Foreground="LightGray" FontSize="15" FontStyle="Normal"> Total:</TextBlock>
-                <TextBlock Foreground="LightGray"  Text="{Binding Path=Total}"></TextBlock>
+                <TextBlock Foreground="LightGray"   Text="{Binding Path=Total, StringFormat=c}"></TextBlock>
             </StackPanel>
             
         </StackPanel>

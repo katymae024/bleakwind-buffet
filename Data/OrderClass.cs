@@ -45,6 +45,13 @@ namespace BleakwindBuffet.Data
         }
         public double SalesTaxRate { get; set; } = 0.12;
 
+        public IEnumerable<IOrderItem> ItemList
+        {
+            get
+            {
+                return (IEnumerable<IOrderItem>)this;
+            }
+        }
         public double Subtotal 
         {
             get
