@@ -34,7 +34,7 @@ namespace PointOfSale
             this.DataContext = order;
             orderSummary os = new orderSummary(order);
             orderS.Child = os;
-            //((orderSummary)orderS.Child).DataContext = this.DataContext;
+            
 
 
         }

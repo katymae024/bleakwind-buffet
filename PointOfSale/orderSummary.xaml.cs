@@ -32,12 +32,20 @@ namespace PointOfSale
             DataContext = DC;
             //DataContext = new OrderClass();
         }
-
+        /// <summary>
+        /// method for when order is complete
+        /// </summary>
+        /// <param name="sender">parameter object sender</param>
+        /// <param name="e">parameter routed event args</param>
         private void OrderComplete_Click(object sender, RoutedEventArgs e)
         {
            // DataContext = new OrderClass();
         }
-
+        /// <summary>
+        /// method for when want to cancel order 
+        /// </summary>
+        /// <param name="sender">parameter object sender</param>
+        /// <param name="e">parameter routed event args</param>
         private void CancelOrder_Click(object sender, RoutedEventArgs e)
         {
            // DataContext = new OrderClass();

@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*Author: Katayoun Katy Davoudi
+ * Class: Order.cs
+ * Purpose: Class for having the properties and different methods for order class
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Collections.ObjectModel;
@@ -9,20 +13,27 @@ using System.Collections;
 
 namespace BleakwindBuffet.Data
 {
+    /// <summary>
+    /// containing all the methods/private fields for order class
+    /// </summary>
     public class OrderClass: ObservableCollection<IOrderItem>, ICollection, INotifyCollectionChanged, INotifyPropertyChanged
     {
-        //provide a property Calories which is a unsigned integer, and the sum of all the calories of the item sin the order.
-        //private uint calories;
+        /// <summary>
+        /// private backing variable for order constructor
+        /// </summary>
         private int numOrder = 0;
-        //private int nextOrderNum = 1;
+        /// <summary>
+        /// constructor of the class
+        /// </summary>
+        /// <param name="orderNum">integer parameter</param>
         public OrderClass(int orderNum)
         {
              numOrder = orderNum;
-            // nextOrderNum++;
-
-
              CollectionChanged += CollectionChangedListener;
         }
+        /// <summary>
+        /// managin order number returning the variable
+        /// </summary>
         public int OrderNumber 
         {
             get
@@ -30,7 +41,9 @@ namespace BleakwindBuffet.Data
                 return numOrder;
             } 
         }
-
+        /// <summary>
+        /// public getter for calories
+        /// </summary>
         public uint Calories
         {
             get
@@ -43,6 +56,9 @@ namespace BleakwindBuffet.Data
                 return calories;
             }
         }
+        /// <summary>
+        /// public property for sales tax rate
+        /// </summary>
         public double SalesTaxRate { get; set; } = 0.12;
 
         public IEnumerable<IOrderItem> ItemList
@@ -52,6 +68,9 @@ namespace BleakwindBuffet.Data
                 return (IEnumerable<IOrderItem>)this;
             }
         }
+        /// <summary>
+        /// public property for subtotal
+        /// </summary>
         public double Subtotal 
         {
             get
@@ -64,7 +83,9 @@ namespace BleakwindBuffet.Data
                 return subT;
             }
         }
-
+        /// <summary>
+        /// public property for tax
+        /// </summary>
         public double Tax 
         {
             get
@@ -74,7 +95,9 @@ namespace BleakwindBuffet.Data
             }
 
         }
-
+        /// <summary>
+        /// public property for total
+        /// </summary>
         public double Total 
         {
             get
@@ -83,11 +106,11 @@ namespace BleakwindBuffet.Data
                 return total;
             } 
         }
-        
-        
-        
-        
-        
+        /// <summary>
+        /// method for collection changed listener dealing with calories, subtotal, tax and total
+        /// </summary>
+        /// <param name="sender">parameter object type</param>
+        /// <param name="e">parameter notify property changed event args</param>
         void CollectionChangedListener(object sender, NotifyCollectionChangedEventArgs e)
         {
             OnPropertyChanged(new PropertyChangedEventArgs("Calories"));
@@ -115,7 +138,11 @@ namespace BleakwindBuffet.Data
             }
 
         }
-
+        /// <summary>
+        /// method for collection item changed listener dealing with calories, subtotal, tax and total
+        /// </summary>
+        /// <param name="sender">parameter object type</param>
+        /// <param name="e">parameter notify property changed event args</param>
         private void CollectionItemChangedListener(object sender, PropertyChangedEventArgs e)
         {
             
