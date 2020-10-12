@@ -47,6 +47,7 @@ namespace BleakwindBuffet.DataTests
             List<string> list = new List<string>();
             Assert.Equal(list, combo.SpecialInstructions);
             //not correct fix
+            //contains whatever specialInstructions
         }
 
 

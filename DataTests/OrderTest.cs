@@ -16,6 +16,7 @@ namespace BleakwindBuffet.DataTests
         {
             OrderClass order = new OrderClass();
             Assert.Equal(order.Subtotal);
+            //what is expected
         }
     }
 }
