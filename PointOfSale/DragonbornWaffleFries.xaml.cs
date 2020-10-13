@@ -59,15 +59,18 @@ namespace PointOfSale
                     }
                 }
 
+            }
+        }
 
+        private void MediumDWF_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
 
+        private void LargeDWF_Click(object sender, RoutedEventArgs e)
+        {
 
-
-
-
-                    }
-                }
+        }
         //make a method
 
     }
