@@ -3,6 +3,7 @@
 * Class name: DragonbornWaffleFries.xaml.cs
 * Purpose: Controls the screen swap between customization screen and the actual menu
 */
+using BleakwindBuffet.Data.Side_Classes;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -40,5 +41,34 @@ namespace PointOfSale
             var orderControl = this.FindRoot<OrderControl>();
             orderControl.SwapScreen(new menuSelection());
         }
+
+       
+
+        private void RadioButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is Side d)
+            {
+                if (sender is RadioButton rb)
+                {
+                    switch (rb.Name)
+                    {
+                        //case 
+                        //which button is pressed
+                        //assign the size of the side 
+                        //set size equal to small
+                    }
+                }
+
+
+
+
+
+
+
+
+                    }
+                }
+        //make a method
+
     }
 }

@@ -35,6 +35,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             DragonbornWaffleFries dw = new DragonbornWaffleFries();
             Assert.Equal(Size.Small, dw.Size);
         }
+
         /// <summary>
         /// Sets size, checks if size statement is true  
         /// </summary>

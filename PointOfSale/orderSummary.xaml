@@ -12,7 +12,7 @@
             <TextBlock HorizontalAlignment="Center" FontWeight="Bold" FontStyle="Normal" FontSize="20" Foreground="LightGray"> Order #</TextBlock>
             <TextBlock Text="{Binding Path= OrderNumber}" HorizontalAlignment="Center" FontWeight="Bold" FontStyle="Normal" FontSize="20" Foreground="LightGray"></TextBlock>
             <ListBox ItemsSource="{Binding}" >
-                
+                
             </ListBox>
             <Grid >
                 <Grid.RowDefinitions>
