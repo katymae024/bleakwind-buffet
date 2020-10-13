@@ -49,18 +49,15 @@ namespace PointOfSale
         }
 
         private void IceAA_Click(object sender, RoutedEventArgs e)
-        {
-            SmallAA.IsChecked = false;
-            MediumAA.IsChecked = false;
-            LargeAA.IsChecked = false;
+        { 
             if (IceAA.IsChecked == false)
             {
 
-                drag.Ice = true;
+                drag.Ice = false;
             }
             if(IceAA.IsChecked == true)
             {
-                drag.Ice = false;
+                drag.Ice = true;
             }
 
 
