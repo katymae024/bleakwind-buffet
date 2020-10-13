@@ -23,6 +23,7 @@ namespace PointOfSale
     /// </summary>
     public partial class orderSummary : UserControl
     {
+        
         /// <summary>
         /// Constructor for the order summary class
         /// </summary>
@@ -39,6 +40,7 @@ namespace PointOfSale
         /// <param name="e">parameter routed event args</param>
         private void OrderComplete_Click(object sender, RoutedEventArgs e)
         {
+            
            // DataContext = new OrderClass();
         }
         /// <summary>
@@ -48,7 +50,8 @@ namespace PointOfSale
         /// <param name="e">parameter routed event args</param>
         private void CancelOrder_Click(object sender, RoutedEventArgs e)
         {
-           // DataContext = new OrderClass();
+           
+         
         }
     }
 }

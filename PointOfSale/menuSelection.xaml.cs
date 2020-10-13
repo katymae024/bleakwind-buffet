@@ -181,10 +181,10 @@ namespace PointOfSale
             {
                 var aa = new BleakwindBuffet.Data.Drinks.AretinoAppleJuice();
                 var orderControl = this.FindRoot<OrderControl>();
-                var screen = new AretinoAppleJuice();
+                var screen = new AretinoAppleJuice(order);
                 screen.DataContext = aa;
                 orderControl.SwapScreen(screen);
-                order.Add(aa);
+                //order.Add(aa);
             }
             
         }
@@ -286,10 +286,11 @@ namespace PointOfSale
             {
                 var dwf = new BleakwindBuffet.Data.Sides.DragonbornWaffleFries();
                 var orderControl = this.FindRoot<OrderControl>();
-                var screen = new DragonbornWaffleFries();
+                var screen = new DragonbornWaffleFries(order);
                 screen.DataContext = dwf;
                 orderControl.SwapScreen(screen);
-                order.Add(dwf);
+
+                //order.Add(dwf);
             }
         }
         /// <summary>

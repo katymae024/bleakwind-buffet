@@ -6,12 +6,21 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <StackPanel Background="Olive">
-            <RadioButton x:Name="SmallDWF" FontSize="15" Click="RadioButton_Click_1" IsChecked="{Binding Path = Small}">Small</RadioButton>
-            <RadioButton x:Name="MediumDWF" Click="MediumDWF_Click" FontSize="15" IsChecked="{Binding Path = Medium}">Medium</RadioButton>
-            <RadioButton x:Name="LargeDWF" Click="LargeDWF_Click"  FontSize="15" IsChecked="{Binding Path = Large}">Large</RadioButton>
-        </StackPanel>
+    <Grid> 
+        <ListView Name="DWFListView" Background="Olive">
+            <ListViewItem>
+                <CheckBox x:Name="SmallDWF" FontSize="15" Click="RadioButton_Click_1" IsChecked="{Binding Path = Size}">Small</CheckBox>
+            </ListViewItem>
+            <ListViewItem>
+            <CheckBox x:Name="MediumDWF" Click="MediumDWF_Click" FontSize="15" IsChecked="{Binding Path = Size}">Medium</CheckBox>
+            </ListViewItem>
+            <ListViewItem>
+            <CheckBox x:Name="LargeDWF" Click="LargeDWF_Click"  FontSize="15" IsChecked="{Binding Path = Size}">Large</CheckBox>
+            </ListViewItem>
+            <!--<CheckBox x:Name="SmallDWF" FontSize="15" Click="RadioButton_Click_1" IsChecked="{Binding Path = Small}">Small</CheckBox>
+            <CheckBox x:Name="MediumDWF" Click="MediumDWF_Click" FontSize="15" IsChecked="{Binding Path = Medium}">Medium</CheckBox>
+            <CheckBox x:Name="LargeDWF" Click="LargeDWF_Click"  FontSize="15" IsChecked="{Binding Path = Large}">Large</CheckBox>-->
+        </ListView>
         <Button Name="DWFdone" Click="DWFdone_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40" FontSize="15" FontStyle="Italic" Background="Beige" FontWeight="Black">
             Done
         </Button>    

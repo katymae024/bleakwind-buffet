@@ -35,9 +35,9 @@ namespace BleakwindBuffet.Data.Side_Classes
             set
             {
                 size = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Small"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Medium"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Large"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Medium"));
+                //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Large"));
             }
         }
 
@@ -62,7 +62,9 @@ namespace BleakwindBuffet.Data.Side_Classes
                 if (value == true)
                 {
                     Size = Size.Small;
+
                 }
+
             }
         }
         /// <summary>

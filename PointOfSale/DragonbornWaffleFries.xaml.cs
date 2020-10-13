@@ -17,6 +17,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using BleakwindBuffet.Data.Sides;
+
+using Size = BleakwindBuffet.Data.Enums.Size;
+using BleakwindBuffet.Data;
+
 namespace PointOfSale
 {
     /// <summary>
@@ -24,12 +29,15 @@ namespace PointOfSale
     /// </summary>
     public partial class DragonbornWaffleFries : UserControl
     {
+        OrderClass order ; 
+        BleakwindBuffet.Data.Sides.DragonbornWaffleFries drag = new BleakwindBuffet.Data.Sides.DragonbornWaffleFries();
         /// <summary>
         /// Constructor for dragon born waffle fries
         /// </summary>
-        public DragonbornWaffleFries()
+        public DragonbornWaffleFries(OrderClass o)
         {
             InitializeComponent();
+            order = o;
         }
         /// <summary>
         /// Swaps screen from from customization
@@ -39,6 +47,7 @@ namespace PointOfSale
         private void DWFdone_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindRoot<OrderControl>();
+            order.Add(drag);
             orderControl.SwapScreen(new menuSelection());
         }
 
@@ -46,30 +55,23 @@ namespace PointOfSale
 
         private void RadioButton_Click_1(object sender, RoutedEventArgs e)
         {
-            if (DataContext is Side d)
-            {
-                if (sender is RadioButton rb)
-                {
-                    switch (rb.Name)
-                    {
-                        //case 
-                        //which button is pressed
-                        //assign the size of the side 
-                        //set size equal to small
-                    }
-                }
-
-            }
+            MediumDWF.IsChecked = false;
+            LargeDWF.IsChecked = false;
+            drag.Size = Size.Small;
         }
 
         private void MediumDWF_Click(object sender, RoutedEventArgs e)
         {
-
+            SmallDWF.IsChecked = false;
+            LargeDWF.IsChecked = false;
+            drag.Size = Size.Medium;
         }
 
         private void LargeDWF_Click(object sender, RoutedEventArgs e)
         {
-
+            SmallDWF.IsChecked = false;
+            MediumDWF.IsChecked = false;
+            drag.Size = Size.Large;
         }
         //make a method
 
