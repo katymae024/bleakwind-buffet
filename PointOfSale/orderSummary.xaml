@@ -11,11 +11,16 @@
 
             <TextBlock HorizontalAlignment="Center" FontWeight="Bold" FontStyle="Normal" FontSize="20" Foreground="LightGray"> Order #</TextBlock>
             <TextBlock Text="{Binding Path= OrderNumber}" HorizontalAlignment="Center" FontWeight="Bold" FontStyle="Normal" FontSize="20" Foreground="LightGray"></TextBlock>
-            <ListBox x:Name="orderView" ItemsSource="{Binding}" >
+            <ListBox x:Name="orderView"  ItemsSource="{Binding}" >
                 <!-->
-                <ListBox.ItemTemplate> 
-                    <DataTemplate> 
-                        <TextBlock Text="{Binding Path= SpecialInstructions}"                     </DataTemplate>                 </ListBox.ItemTemplate> -->  
+                <ListBox.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <TextBlock Text="{Binding Path= SpecialInstructions}"
+                    </DataTemplate>
+                </ListBox.ItemTemplate> --> 
+
             </ListBox>
             <Grid >
                 <Grid.RowDefinitions>

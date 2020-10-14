@@ -36,6 +36,10 @@ namespace PointOfSale
             order = o;
         }
 
+        public string DisplayName
+        {
+            get => ToString();
+        }
         /// <summary>
         /// Swaps screen from customization to the main menu
         /// </summary>
