@@ -7,15 +7,26 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <StackPanel Background="Olive">
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Ice}">Ice</CheckBox>
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Small}">Small</CheckBox>
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Medium}">Medium</CheckBox>
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Large}">Large</CheckBox>
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Decaf}">Decaf</CheckBox>
-            <CheckBox FontSize="15" IsChecked="{Binding Path = RoomForCream}">Room for Cream</CheckBox>
-
-        </StackPanel>
+        <ListView Name="CCListView" Background="Olive">
+            <ListViewItem>
+                <CheckBox x:Name="IceCC" Click="IceCC_Click" FontSize="15" IsChecked="{Binding Path = Ice}">Ice</CheckBox>
+            </ListViewItem>
+            <ListViewItem>
+                <CheckBox x:Name="SmallCC" Click="SmallCC_Click" FontSize="15" IsChecked="{Binding Path = Size}">Small</CheckBox>
+            </ListViewItem>
+            <ListViewItem>
+                <CheckBox x:Name="MediumCC" Click="MediumCC_Click" FontSize="15" IsChecked="{Binding Path = Size}">Medium</CheckBox>
+            </ListViewItem>
+            <ListViewItem>
+                <CheckBox x:Name="LargeCC" Click="LargeCC_Click" FontSize="15" IsChecked="{Binding Path = Size}">Large</CheckBox>
+            </ListViewItem>
+            <ListViewItem>
+                <CheckBox x:Name="DecafCC" Click="DecafCC_Click" FontSize="15" IsChecked="{Binding Path = Decaf}">Decaf</CheckBox>
+            </ListViewItem>
+            <ListViewItem>
+                <CheckBox x:Name="RoomForCreamCC" Click="RoomForCreamCC_Click" FontSize="15" IsChecked="{Binding Path = RoomForCream}">Room for Cream</CheckBox>
+            </ListViewItem>
+        </ListView>
         <Button Name="CCdone" Click="CCdone_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40" FontSize="15" FontStyle="Italic" Background="Beige" FontWeight="Black">
             Done
         </Button>    

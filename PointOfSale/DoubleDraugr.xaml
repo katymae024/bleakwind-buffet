@@ -7,17 +7,34 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <StackPanel Background="Olive">
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Bun}">Bun</CheckBox>
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Ketchup}">Ketchup</CheckBox>
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Mustard}">Mustard</CheckBox>
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Cheese}">Cheese</CheckBox>
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Pickle}">Pickle</CheckBox>
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Tomato}">Tomato</CheckBox>
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Lettuce}">Lettuce</CheckBox>
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Mayo}">Mayo</CheckBox>
+        <ListView Name="DDListView" Background="Olive">
+            <ListViewItem>
+                <CheckBox x:Name="BunDD" Click="BunDD_Click" FontSize="15" IsChecked="{Binding Path = Bun}">Bun</CheckBox>
+            </ListViewItem>
+            <ListViewItem>
+                <CheckBox x:Name="KetchupDD" Click="KetchupDD_Click" FontSize="15" IsChecked="{Binding Path = Ketchup}">Ketchup</CheckBox>
+            </ListViewItem>
+            <ListViewItem>
+                <CheckBox x:Name="MustardDD" Click="MustardDD_Click" FontSize="15" IsChecked="{Binding Path = Mustard}">Mustard</CheckBox>
+            </ListViewItem>
+            <ListViewItem>
+                <CheckBox x:Name="CheeseDD" Click="CheeseDD_Click" FontSize="15" IsChecked="{Binding Path = Cheese}">Cheese</CheckBox>
+            </ListViewItem>
+            <ListViewItem>
+                <CheckBox x:Name="PickleDD" Click="PickleDD_Click" FontSize="15" IsChecked="{Binding Path = Pickle}">Pickle</CheckBox>
+            </ListViewItem>
+            <ListViewItem>
+                <CheckBox x:Name="TomatoDD" Click="TomatoDD_Click" FontSize="15" IsChecked="{Binding Path = Tomato}">Tomato</CheckBox>
+            </ListViewItem>
+            <ListViewItem>
+                <CheckBox x:Name="LettuceDD" Click="LettuceDD_Click" FontSize="15" IsChecked="{Binding Path = Lettuce}">Lettuce</CheckBox>
+            </ListViewItem>
+            <ListViewItem>
+                <CheckBox x:Name="MayoDD" Click="MayoDD_Click" FontSize="15" IsChecked="{Binding Path = Mayo}">Mayo</CheckBox>
+            </ListViewItem>
             
-        </StackPanel>
+            
+        </ListView>
         <Button Name="DDdone" Click="DDdone_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40" FontSize="15" FontStyle="Italic" Background="Beige" FontWeight="Black">
             Done
         </Button>

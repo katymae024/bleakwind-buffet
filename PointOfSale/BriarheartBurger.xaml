@@ -7,13 +7,23 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <StackPanel Background="Olive">
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Bun}">Bun</CheckBox>
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Ketchup}">Ketchup</CheckBox>
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Mustard}">Mustard</CheckBox>
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Cheese}">Cheese</CheckBox>
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Pickle}">Pickle</CheckBox>
-        </StackPanel>
+        <ListView Name="BBListView" Background="Olive">
+            <ListViewItem>
+                <CheckBox x:Name="BunBB" Click="BunBB_Click" FontSize="15" IsChecked="{Binding Path = Bun}">Bun</CheckBox>
+            </ListViewItem>
+            <ListViewItem>
+                <CheckBox x:Name="KetchupBB" Click="KetchupBB_Click" FontSize="15" IsChecked="{Binding Path = Ketchup}">Ketchup</CheckBox>
+            </ListViewItem>
+            <ListViewItem>
+                <CheckBox x:Name="MustardBB" Click="MustardBB_Click" FontSize="15" IsChecked="{Binding Path = Mustard}">Mustard</CheckBox>
+            </ListViewItem>
+            <ListViewItem>
+                <CheckBox x:Name="CheeseBB" Click="CheeseBB_Click" FontSize="15" IsChecked="{Binding Path = Cheese}">Cheese</CheckBox>
+            </ListViewItem>
+            <ListViewItem>
+                <CheckBox x:Name="PickleBB" Click="PickleBB_Click" FontSize="15" IsChecked="{Binding Path = Pickle}">Pickle</CheckBox>
+            </ListViewItem>
+        </ListView>
         <Button Name="BBdone" Click="BBdone_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40" FontSize="15" FontStyle="Italic" Background="Beige" FontWeight="Black">
             Done
         </Button>

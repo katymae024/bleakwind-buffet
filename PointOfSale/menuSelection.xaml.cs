@@ -43,10 +43,10 @@ namespace PointOfSale
 
                 var bb = new BleakwindBuffet.Data.Entrees.BriarheartBurger();
                 var orderControl = this.FindRoot<OrderControl>();
-                var screen = new BriarheartBurger();
+                var screen = new BriarheartBurger(order);
                 screen.DataContext = bb;
                 orderControl.SwapScreen(screen);
-                order.Add(bb);
+                //order.Add(bb);
             }
 
 
@@ -63,10 +63,10 @@ namespace PointOfSale
 
                 var dd = new BleakwindBuffet.Data.Entrees.DoubleDraugr();
                 var orderControl = this.FindRoot<OrderControl>();
-                var screen = new DoubleDraugr();
+                var screen = new DoubleDraugr(order);
                 screen.DataContext = dd;
                 orderControl.SwapScreen(screen);
-                order.Add(dd);
+                //order.Add(dd);
             }
         }
         /// <summary>
@@ -199,10 +199,10 @@ namespace PointOfSale
             {
                 var cc = new BleakwindBuffet.Data.Drinks.CandlehearthCoffee();
                 var orderControl = this.FindRoot<OrderControl>();
-                var screen = new CandlehearthCoffee();
+                var screen = new CandlehearthCoffee(order);
                 screen.DataContext = cc;
                 orderControl.SwapScreen(screen);
-                order.Add(cc);
+                //order.Add(cc);
 
             }
         }
