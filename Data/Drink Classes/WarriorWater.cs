@@ -149,6 +149,13 @@ namespace BleakwindBuffet.Data.Drinks
         {
             return Size.ToString() + " Warrior Water";
         }
+        /// <summary>
+        /// Display name property
+        /// </summary>
+        public string DisplayName
+        {
+            get => ToString();
+        }
 
 
     }

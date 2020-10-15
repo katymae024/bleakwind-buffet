@@ -106,5 +106,12 @@ namespace BleakwindBuffet.Data.Sides
         {
             return Size.ToString() + " Fried Miraak";
         }
+        /// <summary>
+        /// Display name property
+        /// </summary>
+        public string DisplayName
+        {
+            get => ToString();
+        }
     }
 }

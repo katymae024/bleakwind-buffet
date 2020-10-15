@@ -106,6 +106,13 @@ namespace BleakwindBuffet.Data.Sides
         {
             return Size.ToString() + " Vokun Salad";
         }
+        /// <summary>
+        /// Display name property
+        /// </summary>
+        public string DisplayName
+        {
+            get => ToString();
+        }
 
 
     }

@@ -106,5 +106,12 @@ namespace BleakwindBuffet.Data.Sides
         {
             return Size.ToString() + " Mad Otar Grits";
         }
+        /// <summary>
+        /// Display name property
+        /// </summary>
+        public string DisplayName
+        {
+            get => ToString();
+        }
     }
 }

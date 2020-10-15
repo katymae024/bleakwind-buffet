@@ -230,6 +230,13 @@ namespace BleakwindBuffet.Data.Entrees
         {
             return "Double Draugr";
         }
+        /// <summary>
+        /// Display name property
+        /// </summary>
+        public string DisplayName
+        {
+            get => ToString();
+        }
 
 
     }

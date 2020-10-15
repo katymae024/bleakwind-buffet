@@ -65,28 +65,28 @@ namespace PointOfSale
 
         private void KetchupBB_Click(object sender, RoutedEventArgs e)
         {
-            if (BunBB.IsChecked == false)
+            if (KetchupBB.IsChecked == false)
             {
 
-                drag.Bun = false;
+                drag.Ketchup = false;
             }
-            if (BunBB.IsChecked == true)
+            if (KetchupBB.IsChecked == true)
             {
-                drag.Bun = true;
+                drag.Ketchup = true;
             }
 
         }
 
         private void MustardBB_Click(object sender, RoutedEventArgs e)
         {
-            if (BunBB.IsChecked == false)
+            if (MustardBB.IsChecked == false)
             {
 
-                drag.Bun = false;
+                drag.Mustard = false;
             }
-            if (BunBB.IsChecked == true)
+            if (MustardBB.IsChecked == true)
             {
-                drag.Bun = true;
+                drag.Mustard = true;
             }
 
         }

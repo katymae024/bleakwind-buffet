@@ -273,6 +273,13 @@ namespace BleakwindBuffet.Data.Entrees
         {
             return "Thalmor Triple";
         }
+        /// <summary>
+        /// Display name property
+        /// </summary>
+        public string DisplayName
+        {
+            get => ToString();
+        }
 
     }
 }

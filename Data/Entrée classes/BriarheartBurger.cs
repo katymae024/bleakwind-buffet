@@ -50,7 +50,13 @@ namespace BleakwindBuffet.Data.Entrees
         /// //gets calories of the burger
         /// </summary>
         public override uint Calories => 743;
-
+        /// <summary>
+        /// Display name property
+        /// </summary>
+        public string DisplayName
+        {
+            get => ToString();
+        }
         /// <summary>
         /// boolean property of ketchup
         /// </summary>

@@ -14,16 +14,23 @@
             <TextBlock Text="{Binding Path= OrderNumber}" HorizontalAlignment="Center" FontWeight="Bold" FontStyle="Normal" FontSize="20" Foreground="LightGray"></TextBlock>
             <ListBox x:Name="orderView"  ItemsSource="{Binding}" >
 
-                <!-- <ListBox.ItemTemplate>
+               <ListBox.ItemTemplate>
 
                     <DataTemplate>
                         <StackPanel>
                             <TextBlock Text="{Binding Path= DisplayName}"></TextBlock>
-                            <ListView ItemsSource="{Binding Path= SpecialInstructions}"></ListView>
+                            <ListView ItemsSource="{Binding Path= SpecialInstructions}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding}"></TextBlock>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                            
                         </StackPanel>
 
                     </DataTemplate>
-                </ListBox.ItemTemplate> -->
+                </ListBox.ItemTemplate> 
 
             </ListBox>
             

@@ -134,6 +134,13 @@ namespace BleakwindBuffet.Data.Drinks
         {
             return Size.ToString() + " Aretino Apple Juice";
         }
+        /// <summary>
+        /// Display name property
+        /// </summary>
+        public string DisplayName
+        {
+            get => ToString();
+        }
 
     }
 }

@@ -45,6 +45,10 @@ namespace BleakwindBuffet.Data.Sides
 
             }
         }
+        public string DisplayName
+        {
+            get => ToString();
+        }
         /// <summary>
         /// gets price
         /// </summary>

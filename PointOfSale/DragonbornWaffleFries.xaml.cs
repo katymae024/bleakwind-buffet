@@ -39,6 +39,10 @@ namespace PointOfSale
             InitializeComponent();
             order = o;
         }
+        public string DisplayName
+        {
+            get => ToString();
+        }
         /// <summary>
         /// Swaps screen from from customization
         /// </summary>
