@@ -15,19 +15,24 @@
             <ListBox x:Name="orderView"  ItemsSource="{Binding}" >
 
                <ListBox.ItemTemplate>
-
+                    
                     <DataTemplate>
                         <StackPanel>
-                            <TextBlock Text="{Binding Path= DisplayName}"></TextBlock>
-                            <ListView ItemsSource="{Binding Path= SpecialInstructions}">
-                                <ListView.ItemTemplate>
-                                    <DataTemplate>
-                                        <TextBlock Text="{Binding}"></TextBlock>
-                                    </DataTemplate>
-                                </ListView.ItemTemplate>
-                            </ListView>
-                            
+                            <Button x:Name="RemoveButton" Click="RemoveButton_Click">Remove</Button>
+                            <StackPanel>
+                                <TextBlock Text="{Binding Path= DisplayName}"></TextBlock>
+                                <ListView ItemsSource="{Binding Path= SpecialInstructions}">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding}"></TextBlock>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+
+                            </StackPanel>
                         </StackPanel>
+                        
+                        
 
                     </DataTemplate>
                 </ListBox.ItemTemplate> 

@@ -4,6 +4,7 @@
 * Purpose: class made for the order summary or the receipt of the order made
 */
 using BleakwindBuffet.Data;
+using BleakwindBuffet.Data.Interfaces;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -52,6 +53,15 @@ namespace PointOfSale
         {
            
          
+        }
+
+        private void RemoveButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(DataContext is OrderClass o)
+            {
+                IOrderItem item = (IOrderItem)((Button)sender).DataContext;
+                o.Remove(item);
+            }
         }
     }
 }
