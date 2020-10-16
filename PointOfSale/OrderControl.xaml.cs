@@ -32,7 +32,7 @@ namespace PointOfSale
             InitializeComponent();
             object order = new OrderClass(1);
             this.DataContext = order;
-            orderSummary os = new orderSummary(order);
+            orderSummary os = new orderSummary(order, this);
             orderS.Child = os;
             
 

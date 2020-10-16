@@ -28,11 +28,20 @@ namespace PointOfSale
         /// <summary>
         /// Constructor for the order summary class
         /// </summary>
-        public orderSummary(object DC)
+        public orderSummary(object DC, OrderControl orderC)
         {
             InitializeComponent();
             DataContext = DC;
             //DataContext = new OrderClass();
+            orderControl = orderC;
+
+
+        }
+        private OrderControl orderControl
+        {
+            get;
+            set;
+            
         }
         /// <summary>
         /// method for when order is complete
@@ -41,8 +50,9 @@ namespace PointOfSale
         /// <param name="e">parameter routed event args</param>
         private void OrderComplete_Click(object sender, RoutedEventArgs e)
         {
-            
-           // DataContext = new OrderClass();
+            //swap screen to cash register
+            orderControl.SwapScreen( new PaymentOptions());
+           
         }
         /// <summary>
         /// method for when want to cancel order 
@@ -51,7 +61,9 @@ namespace PointOfSale
         /// <param name="e">parameter routed event args</param>
         private void CancelOrder_Click(object sender, RoutedEventArgs e)
         {
-           
+
+            //DataContext = new OrderClass(CancelOrder); 
+            //check
          
         }
 
