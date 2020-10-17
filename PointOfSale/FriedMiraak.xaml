@@ -8,9 +8,9 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <StackPanel Background="Olive">
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Small}">Small</CheckBox>
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Medium}">Medium</CheckBox>
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Large}">Large</CheckBox>
+            <CheckBox x:Name="SmallFM" Click="SmallFM_Click" FontSize="15" IsChecked="{Binding Path = Size}">Small</CheckBox>
+            <CheckBox x:Name="MediumFM" Click="MediumFM_Click" FontSize="15" IsChecked="{Binding Path = Size}">Medium</CheckBox>
+            <CheckBox x:Name="LargeFM" Click="LargeFM_Click" FontSize="15" IsChecked="{Binding Path = Size}">Large</CheckBox>
         </StackPanel>
         <Button Name="FMdone" Click="FMdone_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40" FontSize="15" FontStyle="Italic" Background="Beige" FontWeight="Black">
             Done

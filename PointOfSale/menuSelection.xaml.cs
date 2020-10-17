@@ -117,10 +117,10 @@ namespace PointOfSale
 
                 var go = new BleakwindBuffet.Data.Entrees.GardenOrcOmelette();
                 var orderControl = this.FindRoot<OrderControl>();
-                var screen = new GardenOrcOmelette();
+                var screen = new GardenOrcOmelette(order);
                 screen.DataContext = go;
                 orderControl.SwapScreen(screen);
-                order.Add(go);
+                //order.Add(go);
             }
         }
         /// <summary>
@@ -251,10 +251,10 @@ namespace PointOfSale
             {
                 var fm = new BleakwindBuffet.Data.Sides.FriedMiraak();
                 var orderControl = this.FindRoot<OrderControl>();
-                var screen = new FriedMiraak();
+                var screen = new FriedMiraak(order);
                 screen.DataContext = fm;
                 orderControl.SwapScreen(screen);
-                order.Add(fm);
+                //order.Add(fm);
             }
 
         }
@@ -269,10 +269,10 @@ namespace PointOfSale
             {
                 var mog = new BleakwindBuffet.Data.Sides.MadOtarGrits();
                 var orderControl = this.FindRoot<OrderControl>();
-                var screen = new MadOtarGrits();
+                var screen = new MadOtarGrits(order);
                 screen.DataContext = mog;
                 orderControl.SwapScreen(screen);
-                order.Add(mog);
+                //order.Add(mog);
             }
         }
         /// <summary>

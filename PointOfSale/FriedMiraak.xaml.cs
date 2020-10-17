@@ -15,6 +15,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Size = BleakwindBuffet.Data.Enums.Size;
+using BleakwindBuffet.Data;
 
 namespace PointOfSale
 {
@@ -23,12 +25,22 @@ namespace PointOfSale
     /// </summary>
     public partial class FriedMiraak : UserControl
     {
+        OrderClass order;
+        BleakwindBuffet.Data.Sides.FriedMiraak drag = new BleakwindBuffet.Data.Sides.FriedMiraak();
         /// <summary>
         /// Constructor of fried miraak class
         /// </summary>
-        public FriedMiraak()
+        public FriedMiraak(OrderClass o)
         {
             InitializeComponent();
+            order = o;
+        }
+        /// <summary>
+        /// property for displaying name
+        /// </summary>
+        public string DisplayName
+        {
+            get => ToString();
         }
         /// <summary>
         /// Swaps screen from from customization
@@ -38,7 +50,29 @@ namespace PointOfSale
         private void FMdone_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindRoot<OrderControl>();
+            order.Add(drag);
             orderControl.SwapScreen(new menuSelection());
+        }
+
+        private void SmallFM_Click(object sender, RoutedEventArgs e)
+        {
+            MediumFM.IsChecked = false;
+            LargeFM.IsChecked = false;
+            drag.Size = Size.Small;
+        }
+
+        private void MediumFM_Click(object sender, RoutedEventArgs e)
+        {
+            SmallFM.IsChecked = false;
+            LargeFM.IsChecked = false;
+            drag.Size = Size.Medium;
+        }
+
+        private void LargeFM_Click(object sender, RoutedEventArgs e)
+        {
+            SmallFM.IsChecked = false;
+            MediumFM.IsChecked = false;
+            drag.Size = Size.Large;
         }
     }
 }

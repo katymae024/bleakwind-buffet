@@ -23,9 +23,6 @@ namespace PointOfSale
             InitializeComponent();
         }
 
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

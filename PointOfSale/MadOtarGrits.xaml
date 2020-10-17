@@ -8,9 +8,9 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <StackPanel Background="Olive">
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Small}">Small</CheckBox>
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Medium}">Medium</CheckBox>
-            <CheckBox FontSize="15" IsChecked="{Binding Path = Large}">Large</CheckBox>
+            <CheckBox x:Name="SmallMOG" Click="SmallMOG_Click" FontSize="15" IsChecked="{Binding Path = Size}">Small</CheckBox>
+            <CheckBox x:Name="MediumMOG" Click="MediumMOG_Click" FontSize="15" IsChecked="{Binding Path = Size}">Medium</CheckBox>
+            <CheckBox x:Name="LargeMOG" Click="LargeMOG_Click" FontSize="15" IsChecked="{Binding Path = Size}">Large</CheckBox>
         </StackPanel>
         <Button Name="MOGdone" Click="MOGdone_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="40" FontSize="15" FontStyle="Italic" Background="Beige" FontWeight="Black">
             Done

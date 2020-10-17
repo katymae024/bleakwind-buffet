@@ -15,6 +15,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Size = BleakwindBuffet.Data.Enums.Size;
+using BleakwindBuffet.Data;
 
 namespace PointOfSale
 {
@@ -23,12 +25,19 @@ namespace PointOfSale
     /// </summary>
     public partial class MadOtarGrits : UserControl
     {
+        OrderClass order;
+        BleakwindBuffet.Data.Sides.MadOtarGrits drag = new BleakwindBuffet.Data.Sides.MadOtarGrits();
         /// <summary>
         /// Contructor for mad otar grits class
         /// </summary>
-        public MadOtarGrits()
+        public MadOtarGrits(OrderClass o)
         {
             InitializeComponent();
+            order = o;
+        }
+        public string DisplayName
+        {
+            get => ToString();
         }
         /// <summary>
         /// Swaps screen from from customization
@@ -38,7 +47,29 @@ namespace PointOfSale
         private void MOGdone_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindRoot<OrderControl>();
+            order.Add(drag);
             orderControl.SwapScreen(new menuSelection());
+        }
+
+        private void SmallMOG_Click(object sender, RoutedEventArgs e)
+        {
+            MediumMOG.IsChecked = false;
+            LargeMOG.IsChecked = false;
+            drag.Size = Size.Small;
+        }
+
+        private void MediumMOG_Click(object sender, RoutedEventArgs e)
+        {
+            SmallMOG.IsChecked = false;
+            LargeMOG.IsChecked = false;
+            drag.Size = Size.Medium;
+        }
+
+        private void LargeMOG_Click(object sender, RoutedEventArgs e)
+        {
+            SmallMOG.IsChecked = false;
+            MediumMOG.IsChecked = false;
+            drag.Size = Size.Large;
         }
     }
 }

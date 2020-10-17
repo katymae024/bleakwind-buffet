@@ -50,8 +50,9 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions> 
             </Grid>
-            <Button Name="OrderComplete" Click="OrderComplete_Click" HorizontalAlignment="Center" Background="LightGray" Foreground="Black" FontSize="15" FontStyle="Normal" Margin="0 0 0 20">Order Complete</Button>
+            <Button Name="OrderComplete" Click="OrderComplete_Click" HorizontalAlignment="Center"  Background="LightGray" Foreground="Black" FontSize="15" FontStyle="Normal" Margin="0 0 0 20">Order Complete</Button>
             <Button Name="CancelOrder" Click="CancelOrder_Click" HorizontalAlignment="Center" Background="LightGray" Foreground="Black" FontSize="15" FontStyle="Normal" Margin="0 0 0 20">Cancel Order</Button>
+            
             <StackPanel Orientation="Horizontal" Grid.Row="1">
                 
                 <TextBlock Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" TextAlignment="Justify"  Margin="20 0 0 0" Foreground="LightGray" FontSize="15" FontStyle="Normal" >Subtotal:</TextBlock>
