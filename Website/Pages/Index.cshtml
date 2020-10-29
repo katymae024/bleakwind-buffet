@@ -1,4 +1,6 @@
-﻿@page
+﻿@BleakwindBuffet.Data;
+
+@page
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -6,5 +8,47 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <p>Bleakwind Buffet <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <h1>
+        We at Bleakwind Buffet are proud to bring you authentic fantasy meals straight from the world of Skyrim.
+        Shake the blood off your sword and sake your thirst with one of our old-fashioned sailor sodas. Hack into a
+        Smokehouse Skeleton with your dagger. Or vanquish the the mighty Thalmor Triple Burger! You’ve had a hard adventure
+        and earned your loot, so spend it with us!.
+    </h1>
+
+    <h2>
+        <ul class="menu-list">
+            @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in BleakwindBuffet.Data.Menu.Drinks())
+            {
+                <li>
+                    
+                    <div class="menu">
+                        @if (item is BleakwindBuffet.Data.Menu.Drinks())
+                        {
+                            <div class="drink">
+                                @BleakwindBuffet.Data.Menu.Drinks()
+                            </div>
+                        }
+                        @if (BleakwindBuffet.Data.Menu.Sides() != null)
+                        {
+                            <div class="side">
+                                @BleakwindBuffet.Data.Menu.Sides()
+                            </div>
+                        }
+                        @if (BleakwindBuffet.Data.Menu.Entrees() != null)
+                        {
+                            <div class="entree">
+                                @BleakwindBuffet.Data.Menu.Entrees()
+                            </div>
+                        }
+
+                    </div>
+                </li>
+            }
+
+        </ul>
+    </h2>
+
 </div>
