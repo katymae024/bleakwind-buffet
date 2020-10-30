@@ -11,7 +11,7 @@ using BleakwindBuffet.Data.Interfaces;
 using System.ComponentModel;
 
 
-namespace BleakwindBuffet.Data.Drinks
+namespace BleakwindBuffet.Data.Drink_Classes
 {
     /// <summary>
     /// Containing a specific drink with its properties

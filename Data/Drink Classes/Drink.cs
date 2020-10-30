@@ -10,7 +10,7 @@ using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Interfaces;
 using System.ComponentModel;
 
-namespace BleakwindBuffet.Data.Drinks
+namespace BleakwindBuffet.Data.Drink_Classes
 {
     /// <summary>
     /// a base class representing the common properties of drinks

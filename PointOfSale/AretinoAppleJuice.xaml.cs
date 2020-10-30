@@ -26,7 +26,7 @@ namespace PointOfSale
     public partial class AretinoAppleJuice : UserControl
     {
         OrderClass order;
-        BleakwindBuffet.Data.Drinks.AretinoAppleJuice drag = new BleakwindBuffet.Data.Drinks.AretinoAppleJuice();
+        BleakwindBuffet.Data.Drink_Classes.AretinoAppleJuice drag = new BleakwindBuffet.Data.Drink_Classes.AretinoAppleJuice();
         /// <summary>
         /// Constructor for aretino apple juice class
         /// </summary>

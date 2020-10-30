@@ -10,7 +10,7 @@ using BleakwindBuffet.Data.Interfaces;
 using BleakwindBuffet.Data;
 using Xunit;
 using BleakwindBuffet.Data.Entrees;
-using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data.Drink_Classes;
 using BleakwindBuffet.Data.Enums;
 
 

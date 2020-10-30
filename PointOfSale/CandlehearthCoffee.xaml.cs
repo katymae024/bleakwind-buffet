@@ -26,7 +26,7 @@ namespace PointOfSale
     public partial class CandlehearthCoffee : UserControl
     {
         OrderClass order;
-        BleakwindBuffet.Data.Drinks.CandlehearthCoffee drag = new BleakwindBuffet.Data.Drinks.CandlehearthCoffee();
+        BleakwindBuffet.Data.Drink_Classes.CandlehearthCoffee drag = new BleakwindBuffet.Data.Drink_Classes.CandlehearthCoffee();
         /// <summary>
         /// Constructor for candle hearth coffee class
         /// </summary>

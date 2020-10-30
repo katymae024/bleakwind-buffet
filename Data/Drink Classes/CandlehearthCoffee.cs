@@ -7,11 +7,11 @@ using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data.Drink_Classes;
 using System.ComponentModel;
 
 
-namespace BleakwindBuffet.Data.Drinks
+namespace BleakwindBuffet.Data.Drink_Classes
 {
     /// <summary>
     /// Containing a specific drink with its properties

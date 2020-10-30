@@ -145,7 +145,7 @@ namespace PointOfSale
         {
             if (DataContext is BleakwindBuffet.Data.OrderClass order)
             {
-                var ssoda = new BleakwindBuffet.Data.Drinks.SailorSoda();
+                var ssoda = new BleakwindBuffet.Data.Drink_Classes.SailorSoda();
                 var orderControl = this.FindRoot<OrderControl>();
                 var screen = new SailorSoda();
                 screen.DataContext = ssoda;
@@ -162,7 +162,7 @@ namespace PointOfSale
         {
             if (DataContext is BleakwindBuffet.Data.OrderClass order)
             {
-                var mm = new BleakwindBuffet.Data.Drinks.MarkarthMilk();
+                var mm = new BleakwindBuffet.Data.Drink_Classes.MarkarthMilk();
                 var orderControl = this.FindRoot<OrderControl>();
                 var screen = new MarkathMilk();
                 screen.DataContext = mm;
@@ -179,7 +179,7 @@ namespace PointOfSale
         {
             if (DataContext is BleakwindBuffet.Data.OrderClass order)
             {
-                var aa = new BleakwindBuffet.Data.Drinks.AretinoAppleJuice();
+                var aa = new BleakwindBuffet.Data.Drink_Classes.AretinoAppleJuice();
                 var orderControl = this.FindRoot<OrderControl>();
                 var screen = new AretinoAppleJuice(order);
                 screen.DataContext = aa;
@@ -197,7 +197,7 @@ namespace PointOfSale
         {
             if (DataContext is BleakwindBuffet.Data.OrderClass order)
             {
-                var cc = new BleakwindBuffet.Data.Drinks.CandlehearthCoffee();
+                var cc = new BleakwindBuffet.Data.Drink_Classes.CandlehearthCoffee();
                 var orderControl = this.FindRoot<OrderControl>();
                 var screen = new CandlehearthCoffee(order);
                 screen.DataContext = cc;
@@ -215,7 +215,7 @@ namespace PointOfSale
         {
             if (DataContext is BleakwindBuffet.Data.OrderClass order)
             {
-                var ww = new BleakwindBuffet.Data.Drinks.WarriorWater();
+                var ww = new BleakwindBuffet.Data.Drink_Classes.WarriorWater();
                 var orderControl = this.FindRoot<OrderControl>();
                 var screen = new WarriorWater();
                 screen.DataContext = ww;
