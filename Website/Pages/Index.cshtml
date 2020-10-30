@@ -6,65 +6,109 @@
     ViewData["Title"] = "Home page";
 }
 
-    <div class="text-center">
-        <h1 class="display-4">Welcome</h1>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
 
-        <p>Bleakwind Buffet <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>Bleakwind Buffet <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 
-        <h1>
-            We at Bleakwind Buffet are proud to bring you authentic fantasy meals straight from the world of Skyrim.
-            Shake the blood off your sword and sake your thirst with one of our old-fashioned sailor sodas. Hack into a
-            Smokehouse Skeleton with your dagger. Or vanquish the the mighty Thalmor Triple Burger! You’ve had a hard adventure
-            and earned your loot, so spend it with us!.
-        </h1>
+    <h1>
+        We at Bleakwind Buffet are proud to bring you authentic fantasy meals straight from the world of Skyrim.
+        Shake the blood off your sword and sake your thirst with one of our old-fashioned sailor sodas. Hack into a
+        Smokehouse Skeleton with your dagger. Or vanquish the the mighty Thalmor Triple Burger! You’ve had a hard adventure
+        and earned your loot, so spend it with us!.
+    </h1>
 
-        <h2>
-            <ul class="menu-list">
-                @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in BleakwindBuffet.Data.Menu.Drinks())
-                {
-                    <li>
+    <h2> Drinks Options:
+        <ul class="drink-list">
+            @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in BleakwindBuffet.Data.Menu.Drinks())
+            {
+                <li>
 
-                        <div class="menu">
-                            @if (item is BleakwindBuffet.Data.Drink_Classes.Drink)
-                            {
-                                <div class="drink">
-                                    @item
-                                    @item.Price
-                                    @item.Calories
-
-                                </div>
-                            }
-                            <!-- @if (BleakwindBuffet.Data.Menu.Sides() != null)
+                    <div class="drink">
+                        @if (item is BleakwindBuffet.Data.Drink_Classes.Drink)
                         {
-                            <div class="side">
-                                @BleakwindBuffet.Data.Menu.Sides()
+                            <div class="drink">
+                                
+                                @item
+                                
+                                <h2>Price: $@item.Price</h2>
+                                <h2>Calories: @item.Calories </h2>
+
                             </div>
                         }
-                        @if (BleakwindBuffet.Data.Menu.Entrees() != null)
-                        {
-                            <div class="entree">
-                                @BleakwindBuffet.Data.Menu.Entrees()
-                            </div>
-                        }-->
-
-                        </div>
-                    </li>
-                }
-
-            </ul>
-
-        </h2>
-        <h2>List of Sailor Soda Flavors:</h2>
-        <ul>
 
 
-
-            <li>Peach</li>
-            <li>Lemon</li>
-            <li>Watermelon</li>
-
-
+                    </div>
+                </li>
+            }
 
         </ul>
+    </h2>
+    <h2> Sides Options:
+        <ul class="side-list">
+            @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in BleakwindBuffet.Data.Menu.Sides())
+            {
+                <li>
 
-    </div>
+                    <div class="side">
+                        @if (item is BleakwindBuffet.Data.Side_Classes.Side)
+                        {
+                        <div class="side">
+                            @item
+                            <h2>Price: $@item.Price</h2>
+                            <h2>Calories: @item.Calories </h2>
+
+                        </div>
+                        }
+
+
+                    </div>
+                </li>
+            }
+
+        </ul>
+    </h2>
+    <h2> Entree Options:
+        <ul class="entree-list">
+            @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in BleakwindBuffet.Data.Menu.Entrees())
+            {
+                <li>
+
+                    <div class="entree">
+                        @if (item is BleakwindBuffet.Data.Entrée_classes.Entree)
+                        {
+                        <div class="entree">
+                            @item
+                            <h2>Price: $@item.Price</h2>
+                            <h2>Calories: @item.Calories </h2>
+
+                        </div>
+                        }
+
+
+                    </div>
+                </li>
+            }
+
+        </ul>
+    </h2>
+
+   
+    <h2>List of Sailor Soda Flavors:</h2>
+    <ul>
+
+
+
+        <li>Peach</li>
+        <li>Lemon</li>
+        <li>Watermelon</li>
+        <li>Grapefruit</li>
+        <li>Cherry</li>
+        <li>Watermelon</li>
+
+
+
+    </ul>
+    <!--paragraph tag display combo-->
+    <p>You can create a Combo with the choice of any Entree, Side, and Drink with a discount of $1!</p>
+</div>
