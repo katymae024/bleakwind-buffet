@@ -23,6 +23,7 @@ namespace BleakwindBuffet.Data
     /// </summary>
     public static class Menu
     {
+        
         /// <summary>
         /// method containing the entrees
         /// </summary>
@@ -138,9 +139,12 @@ namespace BleakwindBuffet.Data
         ///  contains all of the items in menu
         /// </summary>
         /// <returns>items on menu</returns>
-        public static IEnumerable<IOrderItem> FullMenu()
+        public static IEnumerable<IOrderItem> All()
         {
             List<IOrderItem> fullList = new List<IOrderItem>();
+            fullList.AddRange(Drinks());
+            fullList.AddRange(Entrees());
+            fullList.AddRange(Sides());
 
             return fullList;
         }

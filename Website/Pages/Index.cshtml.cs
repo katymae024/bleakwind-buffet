@@ -17,6 +17,8 @@ namespace Website.Pages
             _logger = logger;
         }
 
+        public string SearchTerms { get; set; }
+
         public void OnGet()
         {
 
