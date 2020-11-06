@@ -24,9 +24,10 @@ namespace Website.Pages
 
         public string SearchTerms { get; set; }
 
-        public void OnGet(string SearchTerms)
+        public void OnGet(string SearchTerms, string[] Type)
         {
             MenuItems = MenuDatabase.Search(SearchTerms);
+            MenuItems = MenuDatabase.FilterByTypes(MenuItems, Type);
         }
     }
 }

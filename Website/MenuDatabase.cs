@@ -6,6 +6,8 @@ using System.IO;
 using BleakwindBuffet.Data.Interfaces;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrée_classes;
+using BleakwindBuffet.Data.Drink_Classes;
+using BleakwindBuffet.Data.Side_Classes;
 
 namespace Website
 {
@@ -43,12 +45,21 @@ namespace Website
             List<IOrderItem> results = new List<IOrderItem>();
             foreach (IOrderItem i in fullList)
             {
-                if (i is Entree && type.Contains("Entree"))
+                if (i is Entree && type.Contains("Entrees"))
+                {
+                    results.Add(i);  //am I pulling the wrong entree, drink or side? showing error 
+                    //checkboxes
+                                      
+                }
+                else if(i is Drink && type.Contains("Drinks"))
                 {
                     results.Add(i);
                 }
-                //else if drinks
-                //sides
+                else if (i is Side && type.Contains("Sides"))
+                {
+                    results.Add(i);
+                }
+
             }
             return results;
 
