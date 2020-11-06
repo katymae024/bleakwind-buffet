@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BleakwindBuffet.Data.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
@@ -17,11 +18,15 @@ namespace Website.Pages
             _logger = logger;
         }
 
+        public IEnumerable<IOrderItem> MenuItems { get; set; }
+
+        public string[] Types { get; set; }
+
         public string SearchTerms { get; set; }
 
-        public void OnGet()
+        public void OnGet(string SearchTerms)
         {
-
+            MenuItems = MenuDatabase.Search(SearchTerms);
         }
     }
 }

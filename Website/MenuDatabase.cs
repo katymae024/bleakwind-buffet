@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.IO;
 using BleakwindBuffet.Data.Interfaces;
 using BleakwindBuffet.Data;
+using BleakwindBuffet.Data.Entrée_classes;
 
 namespace Website
 {
@@ -17,6 +18,41 @@ namespace Website
 
         public static IEnumerable<IOrderItem> All { get { return item; } }
 
+        public static string[] Types
+        {
+            get => new string[]
+            {
+            "Entrees",
+            "Drinks",
+            "Sides"
+            };
+        }
+
+        /// <summary>
+        /// Filters the provided collection of movies
+        /// </summary>
+        /// <param name="fullList">The collection of item to filter</param>
+        /// <param name="type">The type to include</param>
+        /// <returns>A collection containing only movies that match the filter</returns>
+        public static IEnumerable<IOrderItem> FilterByTypes(IEnumerable<IOrderItem> fullList, IEnumerable<string> type)
+        {
+
+            // If no filter is specified, just return the provided collection
+            if (type == null || type.Count() == 0) return fullList;
+            // Filter the supplied collection of movies
+            List<IOrderItem> results = new List<IOrderItem>();
+            foreach (IOrderItem i in fullList)
+            {
+                if (i is Entree && type.Contains("Entree"))
+                {
+                    results.Add(i);
+                }
+                //else if drinks
+                //sides
+            }
+            return results;
+
+        }
         /// <summary>
         /// Searches the items in the database  for matches 
         /// </summary>
@@ -30,8 +66,9 @@ namespace Website
 
             foreach (IOrderItem i in All)
             {
+
                 //adds the i if the title is a match
-                if (i.Title != null && i.Title.Contains(terms, StringComparison.CurrentCultureIgnoreCase))
+                if (i.ToString() != null && i.ToString().ToLower().Contains(terms.ToLower()))
                 {
                     results.Add(i);
                 }
@@ -41,7 +78,7 @@ namespace Website
         }
         static MenuDatabase()
         {
-            item = Menu.
+            item = (List<IOrderItem>)Menu.All();
         }
     }
 }

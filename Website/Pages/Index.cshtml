@@ -7,112 +7,158 @@
 }
 
     <form id="drink,side,entree">
-        <input type="text" name="SearchTerms" value="@Model.SearchTerms" />
-        <input type="submit" value="Search">
+
+        <div id="search">
+            <input type="text" name="SearchTerms" value="@Model.SearchTerms" />
+            <input type="submit" value="Search">
+        </div>
+        <div id="filters">
+            @foreach (String item in MenuDatabase.Types)
+            {
+                <label>
+                    <input type="checkbox" name="Types" value="@item" />
+                    @item
+                </label>
+            }
+
+            <h4>Calories</h4>
+            <div>
+                Between
+                <input name="CaloriesMin" type="number" min="0" max="1000" step="0.1" placeholder="min"  />
+                and
+                <input name="CaloriesMax" type="number" min="0" max="10" step="0.1" placeholder="min" />
+            </div>
+            <h4>Price</h4>
+            <div>
+                Between
+                <input name="PriceMin" type="number" min="0" max="100" step="0.1" placeholder="min" />
+                and
+                <input name="PriceMax" type="number" min="0" max="100" step="0.1" placeholder="min" />
+            </div>
+        </div>
+
     </form>
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
 
-    <p>Bleakwind Buffet <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        <p>Bleakwind Buffet <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 
-    <h1 >
-        We at Bleakwind Buffet are proud to bring you authentic fantasy meals straight from the world of Skyrim.
-        Shake the blood off your sword and sake your thirst with one of our old-fashioned sailor sodas. Hack into a
-        Smokehouse Skeleton with your dagger. Or vanquish the the mighty Thalmor Triple Burger! You’ve had a hard adventure
-        and earned your loot, so spend it with us!
-    </h1>
+        <h1>
+            We at Bleakwind Buffet are proud to bring you authentic fantasy meals straight from the world of Skyrim.
+            Shake the blood off your sword and sake your thirst with one of our old-fashioned sailor sodas. Hack into a
+            Smokehouse Skeleton with your dagger. Or vanquish the the mighty Thalmor Triple Burger! You’ve had a hard adventure
+            and earned your loot, so spend it with us!
+        </h1>
 
-    <h2> Drinks Options:
-        <ul class="drink-list">
-            @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in BleakwindBuffet.Data.Menu.Drinks())
+        <h2>
+            Drinks Options:
+        </h2>
+
+        @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in Model.MenuItems)
+        {
+            @if (item is BleakwindBuffet.Data.Drink_Classes.Drink)
             {
-                <li>
-
-                    <div class="drink">
-                        @if (item is BleakwindBuffet.Data.Drink_Classes.Drink)
-                        {
-                            <div class="drink">
-                                
-                                @item
-                                
-                                <h2>Price: $@item.Price</h2>
-                                <h2>Calories: @item.Calories </h2>
-
-                            </div>
-                        }
+                <ul class="drink-list">
+                    <li>
 
 
-                    </div>
-                </li>
+
+                        <div class="drink">
+
+                            @item
+
+                            <h2>Price: $@item.Price</h2>
+                            <h2>Calories: @item.Calories </h2>
+
+                        </div>
+
+
+
+
+                    </li>
+                </ul>
             }
+        }
 
-        </ul>
-    </h2>
-    <h2> Sides Options:
-        <ul class="side-list">
-            @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in BleakwindBuffet.Data.Menu.Sides())
+
+
+        <h2>
+            Sides Options:
+        </h2>
+
+        @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in Model.MenuItems)
+        {
+            @if (item is BleakwindBuffet.Data.Side_Classes.Side)
             {
-                <li>
+                <ul class="side-list">
+                    <li>
 
-                    <div class="side">
-                        @if (item is BleakwindBuffet.Data.Side_Classes.Side)
-                        {
+
+
                         <div class="side">
+
                             @item
+
                             <h2>Price: $@item.Price</h2>
                             <h2>Calories: @item.Calories </h2>
 
                         </div>
-                        }
 
 
-                    </div>
-                </li>
+
+
+                    </li>
+                </ul>
             }
+        }
 
-        </ul>
-    </h2>
-    <h2> Entree Options:
-        <ul class="entree-list">
-            @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in BleakwindBuffet.Data.Menu.Entrees())
+        <h2>
+            Entree Options:
+        </h2>
+
+        @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in Model.MenuItems)
+        {
+            @if (item is BleakwindBuffet.Data.Entrée_classes.Entree)
             {
-                <li>
+                <ul class="entree-list">
+                    <li>
 
-                    <div class="entree">
-                        @if (item is BleakwindBuffet.Data.Entrée_classes.Entree)
-                        {
+
+
                         <div class="entree">
+
                             @item
+
                             <h2>Price: $@item.Price</h2>
                             <h2>Calories: @item.Calories </h2>
 
                         </div>
-                        }
 
 
-                    </div>
-                </li>
+
+
+                    </li>
+                </ul>
             }
+        }
+
+
+
+        <h2>List of Sailor Soda Flavors:</h2>
+        <ul>
+
+
+
+            <li>Peach</li>
+            <li>Lemon</li>
+            <li>Watermelon</li>
+            <li>Grapefruit</li>
+            <li>Cherry</li>
+            <li>Watermelon</li>
+
+
 
         </ul>
-    </h2>
-
-   
-    <h2>List of Sailor Soda Flavors:</h2>
-    <ul>
-
-
-
-        <li>Peach</li>
-        <li>Lemon</li>
-        <li>Watermelon</li>
-        <li>Grapefruit</li>
-        <li>Cherry</li>
-        <li>Watermelon</li>
-
-
-
-    </ul>
-    <!--paragraph tag display combo-->
-    <p>You can create a Combo with the choice of any Entree, Side, and Drink with a discount of $1!</p>
-</div>
+        <!--paragraph tag display combo-->
+        <p>You can create a Combo with the choice of any Entree, Side, and Drink with a discount of $1!</p>
+    </div>
