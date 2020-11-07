@@ -87,9 +87,96 @@ namespace Website
             return results;
 
         }
+        //filter for cal
+        //filter for price
         static MenuDatabase()
         {
             item = (List<IOrderItem>)Menu.All();
         }
+        /// <summary>
+        /// Filters the provided collection of movies
+        /// to those with IMDB ratings falling within
+        /// the specified range
+        /// </summary>
+        /// <param name="items">The collection of movies to filter</param>
+        /// <param name="min">The minimum range value</param>
+        /// <param name="max">The maximum range value</param>
+        /// <returns>The filtered movie collection</returns>
+        public static IEnumerable<IOrderItem> FilterByCalories(IEnumerable<IOrderItem> items, int? min, int? max)
+        {
+
+            var results = new List<IOrderItem>();
+            if (min == null && max == null) return items;
+            // only a maximum specified
+            if (min == null)
+            {
+                foreach (IOrderItem item in items)
+                {
+                    if (item.Calories <= max) results.Add(item);
+                }
+                return results;
+            }
+            // only a minimum specified
+            if (max == null)
+            {
+                foreach (IOrderItem item in items)
+                {
+                    if (item.Calories >= min) results.Add(item);
+                }
+                return results;
+            }
+            // Both minimum and maximum specified
+            foreach (IOrderItem item in items)
+            {
+                if (item.Calories >= min && item.Calories <= max)
+                {
+                    results.Add(item);
+                }
+            }
+            return results;
+        }
+        /// <summary>
+        /// Filters the provided collection of movies
+        /// to those with IMDB ratings falling within
+        /// the specified range
+        /// </summary>
+        /// <param name="items">The collection of movies to filter</param>
+        /// <param name="min">The minimum range value</param>
+        /// <param name="max">The maximum range value</param>
+        /// <returns>The filtered movie collection</returns>
+        public static IEnumerable<IOrderItem> FilterByPrice(IEnumerable<IOrderItem> items, double? min, double? max)
+        {
+
+            var results = new List<IOrderItem>();
+            if (min == null && max == null) return items;
+            // only a maximum specified
+            if (min == null)
+            {
+                foreach (IOrderItem item in items)
+                {
+                    if (item.Price <= max) results.Add(item);
+                }
+                return results;
+            }
+            // only a minimum specified
+            if (max == null)
+            {
+                foreach (IOrderItem item in items)
+                {
+                    if (item.Price >= min) results.Add(item);
+                }
+                return results;
+            }
+            // Both minimum and maximum specified
+            foreach (IOrderItem item in items)
+            {
+                if (item.Price >= min && item.Price <= max)
+                {
+                    results.Add(item);
+                }
+            }
+            return results;
+        }
     }
+
 }
