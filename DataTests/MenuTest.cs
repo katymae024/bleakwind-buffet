@@ -14,6 +14,8 @@ using BleakwindBuffet.Data.Drink_Classes;
 using BleakwindBuffet.Data.Enums;
 
 
+
+
 namespace BleakwindBuffet.DataTests
 {
     /// <summary>
@@ -127,6 +129,20 @@ namespace BleakwindBuffet.DataTests
 
 
             }
+        }
+        /// <summary>
+        /// Test for seeing if the right type is being filtered
+        /// </summary>
+        /// <param name="t"> string to check</param>
+        [Theory]
+        [InlineData("Sides")]
+        [InlineData ("Drinks")]
+        [InlineData("Entrees")]
+        public void FilterByTypeTest(string t)
+        {
+            List<IOrderItem> typeAll = (List<IOrderItem>)Menu.All();
+            List<string> name = new List<string>();
+            name.Add(t);
         }
     }
 }

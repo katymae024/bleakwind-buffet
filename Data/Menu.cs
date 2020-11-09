@@ -24,12 +24,14 @@ namespace BleakwindBuffet.Data
     public static class Menu
     {
         
+        
         /// <summary>
         /// method containing the entrees
         /// </summary>
         /// <returns>the entree</returns>
         public static IEnumerable<IOrderItem> Entrees()
         {
+
             List<IOrderItem> entreeList = new List<IOrderItem>();
 
             BriarheartBurger b = new BriarheartBurger();
