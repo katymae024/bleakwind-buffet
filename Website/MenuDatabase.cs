@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Katayoun Katy Davoudi
+* Class name: MenuDatabase.cs
+* Purpose: provides methods, filters, types regarding menu classes
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,15 +16,27 @@ using BleakwindBuffet.Data.Side_Classes;
 
 namespace Website
 {
+    /// <summary>
+    /// provided the methods of menu database
+    /// </summary>
     public static class MenuDatabase
     {
+        /// <summary>
+        /// creating list of iorderitem 
+        /// </summary>
         private static List<IOrderItem> item = new List<IOrderItem>();
 
-
+        /// <summary>
+        /// string array for sides
+        /// </summary>
         public static string[] Sides { get; private set; } 
-
+        /// <summary>
+        /// returns item in all menu items
+        /// </summary>
         public static IEnumerable<IOrderItem> All { get { return item; } }
-
+        /// <summary>
+        /// Type options
+        /// </summary>
         public static string[] Types
         {
             get => new string[]
@@ -31,24 +48,23 @@ namespace Website
         }
 
         /// <summary>
-        /// Filters the provided collection of movies
+        /// Filters the provided collection of menu items
         /// </summary>
         /// <param name="fullList">The collection of item to filter</param>
         /// <param name="type">The type to include</param>
-        /// <returns>A collection containing only movies that match the filter</returns>
+        /// <returns>A collection containing only type that match the filter</returns>
         public static IEnumerable<IOrderItem> FilterByTypes(IEnumerable<IOrderItem> fullList, IEnumerable<string> type)
         {
 
             // If no filter is specified, just return the provided collection
             if (type == null || type.Count() == 0) return fullList;
-            // Filter the supplied collection of movies
+            // Filter the supplied collection of items
             List<IOrderItem> results = new List<IOrderItem>();
             foreach (IOrderItem i in fullList)
             {
                 if (i is Entree && type.Contains("Entrees"))
                 {
-                    results.Add(i);  //am I pulling the wrong entree, drink or side? showing error 
-                    //checkboxes
+                    results.Add(i);  
                                       
                 }
                 else if(i is Drink && type.Contains("Drinks"))
@@ -87,18 +103,19 @@ namespace Website
             return results;
 
         }
-        //filter for cal
-        //filter for price
+        /// <summary>
+        /// constructor of menu database class
+        /// </summary>
         static MenuDatabase()
         {
             item = (List<IOrderItem>)Menu.All();
         }
         /// <summary>
-        /// Filters the provided collection of movies
-        /// to those with IMDB ratings falling within
+        /// Filters the provided collection of menu items
+        /// to those with calorie ratings falling within
         /// the specified range
         /// </summary>
-        /// <param name="items">The collection of movies to filter</param>
+        /// <param name="items">The collection of items to filter</param>
         /// <param name="min">The minimum range value</param>
         /// <param name="max">The maximum range value</param>
         /// <returns>The filtered movie collection</returns>
@@ -136,14 +153,14 @@ namespace Website
             return results;
         }
         /// <summary>
-        /// Filters the provided collection of movies
-        /// to those with IMDB ratings falling within
+        /// Filters the provided collection of menu items
+        /// to those with price ranges falling within
         /// the specified range
         /// </summary>
-        /// <param name="items">The collection of movies to filter</param>
+        /// <param name="items">The collection of item to filter</param>
         /// <param name="min">The minimum range value</param>
         /// <param name="max">The maximum range value</param>
-        /// <returns>The filtered movie collection</returns>
+        /// <returns>The filtered item collection</returns>
         public static IEnumerable<IOrderItem> FilterByPrice(IEnumerable<IOrderItem> items, double? min, double? max)
         {
 

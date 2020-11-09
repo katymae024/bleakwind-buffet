@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Katayoun Katy Davoudi
+* Class name: Index.cshtml.cs
+* Purpose: Binds properties and also making the functionality of website
+*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
