@@ -34,6 +34,14 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         private bool roll = true;
         /// <summary>
+        /// private property for description
+        /// </summary>
+        private string description = "Cheesesteak sandwich made from grilled sirloin, topped with onions on a fried roll.";
+        /// <summary>
+        /// description for the menu item
+        /// </summary>
+        public override string Description { get { return description; } }
+        /// <summary>
         /// gets price
         /// </summary>
         public override double Price => 7.23;

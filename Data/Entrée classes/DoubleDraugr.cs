@@ -54,7 +54,14 @@ namespace BleakwindBuffet.Data.Entrees
         /// private property of mayo
         /// </summary>
         private bool mayo = true;
-
+        /// <summary>
+        /// private property for description
+        /// </summary>
+        private string description = "Double patty burger on a brioche bun. Comes with ketchup, mustard, pickle, cheese, tomato, lettuce, and mayo.";
+        /// <summary>
+        /// description for the menu item
+        /// </summary>
+        public override string Description { get { return description; } }
         /// <summary>
         /// gets price of the burger
         /// </summary>

@@ -61,6 +61,14 @@ namespace BleakwindBuffet.Data.Entrees
         /// private property for egg
         /// </summary>
         private bool egg = true;
+        /// <summary>
+        /// private property for description
+        /// </summary>
+        private string description = "Think you are strong enough to take on the Thalmor? Inlcudes two 1/4lb patties with a 1/2lb patty inbetween with ketchup, mustard, pickle, cheese, tomato, lettuce, mayo, bacon, and an egg.";
+        /// <summary>
+        /// description for the menu item
+        /// </summary>
+        public override string Description { get { return description; } }
 
         /// <summary>
         /// gets price

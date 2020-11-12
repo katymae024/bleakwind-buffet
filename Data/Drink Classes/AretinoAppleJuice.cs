@@ -27,6 +27,9 @@ namespace BleakwindBuffet.Data.Drink_Classes
         /// private property for ice
         /// </summary>
         private bool ice = false;
+
+        private string description = "Fresh squeezed apple juice.";
+
         /// <summary>
         /// private property for size of drink
         /// </summary>
@@ -126,6 +129,11 @@ namespace BleakwindBuffet.Data.Drink_Classes
                 return instruction;
             }
         }
+        /// <summary>
+        /// displays description of each menu item
+        /// </summary>
+        /// <returns></returns>
+        public override string Description { get { return description; } }
         /// <summary>
         /// converts to the name of the drink
         /// </summary>

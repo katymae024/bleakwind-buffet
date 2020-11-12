@@ -38,6 +38,14 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         private bool cheddar = true;
         /// <summary>
+        /// private property for description
+        /// </summary>
+        private string description = " Vegetarian. Two egg omelette packed with a mix of broccoli, mushrooms, and tomatoes. Topped with cheddar cheese.";
+        /// <summary>
+        /// description for the menu item
+        /// </summary>
+        public override string Description { get { return description; } }
+        /// <summary>
         /// gets the price
         /// </summary>
         public override double Price => 4.57;

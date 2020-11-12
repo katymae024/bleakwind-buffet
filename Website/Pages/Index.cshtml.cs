@@ -31,6 +31,9 @@ namespace Website.Pages
         public double? PriceMin { get; set; }
         [BindProperty]
         public double? PriceMax { get; set; }
+        [BindProperty]
+        public string Description { get; }
+      
 
 
         public IEnumerable<IOrderItem> MenuItems { get; set; }
@@ -39,7 +42,7 @@ namespace Website.Pages
 
         public string SearchTerms { get; set; }
 
-        public void OnGet(string SearchTerms, string[] Types, double? PriceMin, double? PriceMax, int? CaloriesMin, int? CaloriesMax)
+        public void OnGet(string SearchTerms,string Description, string[] Types, double? PriceMin, double? PriceMax, int? CaloriesMin, int? CaloriesMax)
         {
           
             MenuItems = MenuDatabase.Search(SearchTerms);
@@ -50,7 +53,7 @@ namespace Website.Pages
             this.PriceMin = PriceMin;
             MenuItems = MenuDatabase.FilterByCalories(MenuItems, CaloriesMin, CaloriesMax );
             MenuItems = MenuDatabase.FilterByPrice(MenuItems, PriceMin, PriceMax);
-
+           
         }
 
         public object PersistCheckbox(string type)

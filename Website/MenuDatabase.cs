@@ -46,7 +46,7 @@ namespace Website
             "Sides"
             };
         }
-
+        
         /// <summary>
         /// Filters the provided collection of menu items
         /// </summary>

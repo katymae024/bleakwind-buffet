@@ -31,5 +31,7 @@ namespace BleakwindBuffet.Data.Interfaces
         /// special instruction to prepare the drink, entree, sides
         /// </summary>
         List<string> SpecialInstructions { get; }
+
+        string Description { get; }
     }
 }

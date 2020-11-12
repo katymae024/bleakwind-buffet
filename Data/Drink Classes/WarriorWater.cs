@@ -25,6 +25,10 @@ namespace BleakwindBuffet.Data.Drink_Classes
         /// </summary>
         private bool ice = true;
         /// <summary>
+        /// private property for description
+        /// </summary>
+        private string description = "It’s water. Just water.";
+        /// <summary>
         /// private property for size
         /// </summary>
         private Size size = Size.Small;
@@ -48,7 +52,10 @@ namespace BleakwindBuffet.Data.Drink_Classes
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }
         }
-
+        /// <summary>
+        /// description for the menu item
+        /// </summary>
+        public override string Description { get { return description; } }
         /// <summary>
         /// The size of the drink
         /// </summary>

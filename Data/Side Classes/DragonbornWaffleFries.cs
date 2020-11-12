@@ -27,6 +27,14 @@ namespace BleakwindBuffet.Data.Sides
         /// </summary>
         private Size size = Size.Small;
         /// <summary>
+        /// private property for description
+        /// </summary>
+        private string description = "Crispy fried potato waffle fries.";
+        /// <summary>
+        /// description for the menu item
+        /// </summary>
+        public override string Description { get { return description; } }
+        /// <summary>
         /// The size of the drink
         /// </summary>
         public override Size Size

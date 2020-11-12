@@ -25,6 +25,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// private property for ketchup
         /// </summary>
         private bool ketchup = true;
+        
         /// <summary>
         /// private property for bun
         /// </summary>
@@ -41,7 +42,14 @@ namespace BleakwindBuffet.Data.Entrees
         /// private property for pickle
         /// </summary>
         private bool pickle = true;
-
+        /// <summary>
+        /// private property for description
+        /// </summary>
+        private string description = "Single patty burger on a brioche bun. Comes with ketchup, mustard, pickle, and cheese.";
+        /// <summary>
+        /// description for the menu item
+        /// </summary>
+        public override string Description { get { return description; } }
         /// <summary>
         ///gets price of the burger
         /// </summary>

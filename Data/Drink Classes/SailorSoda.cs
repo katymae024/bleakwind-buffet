@@ -26,6 +26,10 @@ namespace BleakwindBuffet.Data.Drink_Classes
         /// </summary>
         private bool ice = true;
         /// <summary>
+        /// private property for description
+        /// </summary>
+        private string description = "An old-fashioned jerked soda, carbonated water and flavored syrup poured over a bed of crushed ice.";
+        /// <summary>
         /// private property for size
         /// </summary>
         private Size size = Size.Small;
@@ -50,7 +54,10 @@ namespace BleakwindBuffet.Data.Drink_Classes
             }
 
         }
-
+        /// <summary>
+        /// description for the menu item
+        /// </summary>
+        public override string Description { get { return description; } }
         /// <summary>
         /// The size of the drink
         /// </summary>

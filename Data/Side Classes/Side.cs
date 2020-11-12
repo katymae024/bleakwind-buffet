@@ -130,5 +130,7 @@ namespace BleakwindBuffet.Data.Side_Classes
         /// special instruction to prepare the side
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
+
+        public abstract string Description { get; }
     }
 }

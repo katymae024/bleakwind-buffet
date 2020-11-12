@@ -38,6 +38,14 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         private bool pancake = true;
         /// <summary>
+        /// private property for description
+        /// </summary>
+        private string description = "Put some meat on those bones with a small stack of pancakes. Includes sausage links, eggs, and hash browns on the side. Topped with the syrup of your choice.";
+        /// <summary>
+        /// description for the menu item
+        /// </summary>
+        public override string Description { get { return description; } }
+        /// <summary>
         /// gets price
         /// </summary>
         public override double Price => 5.62;

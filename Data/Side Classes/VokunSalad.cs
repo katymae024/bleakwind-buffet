@@ -26,6 +26,14 @@ namespace BleakwindBuffet.Data.Sides
         /// </summary>
         private Size size = Size.Small;
         /// <summary>
+        /// private property for description
+        /// </summary>
+        private string description = "A seasonal fruit salad of mellons, berries, mango, grape, apple, and oranges.";
+        /// <summary>
+        /// description for the menu item
+        /// </summary>
+        public override string Description { get { return description; } }
+        /// <summary>
         /// The size of the drink
         /// </summary>
         public override Size Size

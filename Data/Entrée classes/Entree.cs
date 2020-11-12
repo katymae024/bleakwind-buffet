@@ -34,5 +34,7 @@ namespace BleakwindBuffet.Data.Entrée_classes
         /// special instruction to prepare the entree
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
+
+        public abstract string Description { get; }
     }
 }

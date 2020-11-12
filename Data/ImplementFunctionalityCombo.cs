@@ -47,6 +47,11 @@ namespace BleakwindBuffet.Data
             }
             
         }
+
+        public string Description
+        {
+            get;
+        }
         
     }
 }

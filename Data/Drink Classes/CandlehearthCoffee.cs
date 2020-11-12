@@ -28,6 +28,11 @@ namespace BleakwindBuffet.Data.Drink_Classes
         /// </summary>
         private bool ice = false;
         /// <summary>
+        /// private property for description
+        /// </summary>
+        private string description = "Fair trade, fresh ground dark roast coffee.";
+        
+        /// <summary>
         /// private property for decaf
         /// </summary>
         private bool decaf = false;
@@ -55,7 +60,10 @@ namespace BleakwindBuffet.Data.Drink_Classes
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }
         }
-
+        /// <summary>
+        /// description for the menu item
+        /// </summary>
+        public override string Description { get { return description; } }
         /// <summary>
         /// The size of the drink
         /// </summary>
