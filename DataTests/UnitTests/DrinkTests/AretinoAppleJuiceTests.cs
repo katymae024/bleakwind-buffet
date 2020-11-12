@@ -53,7 +53,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         public void ShouldBeAbleToSetIce()
         {
             AretinoAppleJuice aj = new AretinoAppleJuice();
-            aj.Ice = true; 
+            aj.Ice = true;
             Assert.True(aj.Ice);
             aj.Ice = false;
             Assert.False(aj.Ice);
@@ -135,7 +135,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         {
             AretinoAppleJuice aj = new AretinoAppleJuice();
             aj.Size = size;
-            Assert.Equal(name, aj.ToString()); 
+            Assert.Equal(name, aj.ToString());
         }
         /// <summary>
         /// making sure properties are changed correctly
@@ -155,9 +155,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
                 AJ.Ice = false;
             });
 
-            
 
-            
+
+
         }
         /// <summary>
         /// making sure properties are changed correctly
@@ -225,7 +225,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
                 AJ.Size = Size.Large;
             });
         }
-
-
+        
+        [Theory]
+        [InlineData("Fresh squeezed apple juice.")]
+        public void ShouldBeRightDescription(string description)
+        {
+            AretinoAppleJuice aj = new AretinoAppleJuice();
+        
+            Assert.Equal(description, aj.Description);
         }
     }
+}

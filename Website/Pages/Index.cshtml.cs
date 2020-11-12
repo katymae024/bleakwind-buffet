@@ -11,6 +11,7 @@ using BleakwindBuffet.Data.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using System.Linq;
 
 namespace Website.Pages
 {
@@ -45,15 +46,20 @@ namespace Website.Pages
         public void OnGet(string SearchTerms,string Description, string[] Types, double? PriceMin, double? PriceMax, int? CaloriesMin, int? CaloriesMax)
         {
           
-            MenuItems = MenuDatabase.Search(SearchTerms);
-            MenuItems = MenuDatabase.FilterByTypes(MenuItems, Types);
+            //MenuItems = MenuDatabase.Search(SearchTerms);
+            //MenuItems = MenuDatabase.FilterByTypes(MenuItems, Types);
             this.CaloriesMin = CaloriesMin;
             this.CaloriesMax = CaloriesMax;
             this.PriceMax = PriceMax;
             this.PriceMin = PriceMin;
-            MenuItems = MenuDatabase.FilterByCalories(MenuItems, CaloriesMin, CaloriesMax );
-            MenuItems = MenuDatabase.FilterByPrice(MenuItems, PriceMin, PriceMax);
-           
+            //MenuItems = MenuDatabase.FilterByCalories(MenuItems, CaloriesMin, CaloriesMax );
+            //MenuItems = MenuDatabase.FilterByPrice(MenuItems, PriceMin, PriceMax);
+            MenuItems = MenuDatabase.All;
+            // Search movie titles for the SearchTerms
+            if (SearchTerms != null)
+            {
+                MenuItems = MenuItems.Where(item => item.ToString() != null && item.ToString().Contains(SearchTerms, StringComparison.InvariantCultureIgnoreCase));
+            }
         }
 
         public object PersistCheckbox(string type)
