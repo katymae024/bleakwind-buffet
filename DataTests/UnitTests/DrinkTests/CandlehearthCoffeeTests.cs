@@ -307,6 +307,18 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             });
 
         }
+        /// <summary>
+        /// checking the description to see if correct
+        /// </summary>
+        /// <param name="description"></param>
+        [Theory]
+        [InlineData("Fair trade, fresh ground dark roast coffee.")]
+        public void ShouldBeRightDescription(string description)
+        {
+            CandlehearthCoffee cc = new CandlehearthCoffee();
 
+            Assert.Equal(description, cc.Description);
         }
+
     }
+}

@@ -16,14 +16,15 @@
             <input type="submit" value="Search">
         </div>
         <div id="filters">
-            @foreach (String item in MenuDatabase.Types)
-            {
-                <label>
-                    <input type="checkbox" name="Types" value="@item" checked="@Model.Types.Contains(item)" onclick="@Model.PersistCheckbox(@item)" />
-                    @item
-                </label>
-            }
-
+            
+                @foreach (String item in MenuDatabase.Types)
+                {
+                    <label>
+                        <input type="checkbox" name="Types" value="@item" checked="@Model.Types.Contains(item)" />
+                        @item
+                    </label>
+                }
+         
             <h4>Calories</h4>
             <div>
                 Between
@@ -39,38 +40,9 @@
                 <input name="PriceMax" type="number" min="0" max="100" step="0.01" placeholder="max" value="@Model.PriceMax" />
             </div>
         </div>
-        <div id="results">
-            <h1>Results</h1>
-
-            <ul class="menu-list">
-                @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in @Model.MenuItems)
-                {
-                    <li>
-                        <div class="details">
-                            <h3 class="title">@item.ToString()</h3>
-                            <h3 class="description">@item.Description</h3>
-
-                        </div>
-                        <div class="priceAndcal">
-
-                            <div class="calories">
-                                <h2 font="6">Calories: @item.Calories</h2>
-                            </div>
-
-
-
-                            <div class="price">
-
-                                <h2>Price: $@item.Price</h2>
-                            </div>
-
-                        </div>
-                    </li>
-                }
-            </ul>
-        </div>
-       
     </form>
+        
+
     <div class="text-center">
         <h1 class="display-4">Welcome</h1>
 
@@ -82,100 +54,102 @@
             Smokehouse Skeleton with your dagger. Or vanquish the the mighty Thalmor Triple Burger! You’ve had a hard adventure
             and earned your loot, so spend it with us!
         </h1>
+        <p>You can create a Combo with the choice of any Entree, Side, and Drink with a discount of $1!</p>
+        <div class="flex-column">
+            <h2>
+                Drinks Options:
+            </h2>
 
-        <h2>
-            Drinks Options:
-        </h2>
-
-        @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in Model.MenuItems)
-        {
-            @if (item is BleakwindBuffet.Data.Drink_Classes.Drink)
+            @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in Model.MenuItems)
             {
-                <ul class="drink-list">
-                    <li>
+                @if (item is BleakwindBuffet.Data.Drink_Classes.Drink)
+                {
+                    <ul class="drink-list">
+                        <li>
 
 
 
-                        <div class="drink">
+                            <div class="drink">
 
-                            @item
+                                <h2>@item</h2>
+                                <h2>Description: @item.Description</h2>
+                                <h2>Price: $@item.Price</h2>
+                                <h2>Calories: @item.Calories </h2>
 
-                            <h2>Price: $@item.Price</h2>
-                            <h2>Calories: @item.Calories </h2>
-
-                        </div>
-
-
+                            </div>
 
 
-                    </li>
-                </ul>
+
+
+                        </li>
+                    </ul>
+                }
             }
-        }
+        </div>
 
+        <div class="flex-column">
+            <h2>
+                Sides Options:
+            </h2>
 
-
-        <h2>
-            Sides Options:
-        </h2>
-
-        @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in Model.MenuItems)
-        {
-            @if (item is BleakwindBuffet.Data.Side_Classes.Side)
+            @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in Model.MenuItems)
             {
-                <ul class="side-list">
-                    <li>
+                @if (item is BleakwindBuffet.Data.Side_Classes.Side)
+                {
+                    <ul class="side-list">
+                        <li>
 
 
 
-                        <div class="side">
+                            <div class="side">
 
-                            @item
+                                <h2>@item</h2>
+                                <h2>Description: @item.Description</h2>
+                                <h2>Price: $@item.Price</h2>
+                                <h2>Calories: @item.Calories </h2>
 
-                            <h2>Price: $@item.Price</h2>
-                            <h2>Calories: @item.Calories </h2>
-
-                        </div>
-
-
+                            </div>
 
 
-                    </li>
-                </ul>
+
+
+                        </li>
+                    </ul>
+                }
             }
-        }
+        </div>
+        <div class="flex-column">
+            <h2>
+                Entree Options:
+            </h2>
 
-        <h2>
-            Entree Options:
-        </h2>
-
-        @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in Model.MenuItems)
-        {
-            @if (item is BleakwindBuffet.Data.Entrée_classes.Entree)
+            @foreach (BleakwindBuffet.Data.Interfaces.IOrderItem item in Model.MenuItems)
             {
-                <ul class="entree-list">
-                    <li>
+                @if (item is BleakwindBuffet.Data.Entrée_classes.Entree)
+                {
+                    <ul class="entree-list">
+                        <li>
 
 
 
-                        <div class="entree">
+                            <div class="entree">
 
-                            @item
+                                <h2>@item</h2>
+                                <h2>Description: @item.Description</h2>
+                                <h2>Price: $@item.Price</h2>
+                                <h2>Calories: @item.Calories </h2>
 
-                            <h2>Price: $@item.Price</h2>
-                            <h2>Calories: @item.Calories </h2>
-
-                        </div>
-
-
+                            </div>
 
 
-                    </li>
-                </ul>
+
+
+                        </li>
+                    </ul>
+                }
             }
-        }
 
-
+        </div>
 
         <h2>List of Sailor Soda Flavors:</h2>
         <ul>
@@ -192,6 +166,6 @@
 
 
         </ul>
-        <!--paragraph tag display combo-->
-        <p>You can create a Combo with the choice of any Entree, Side, and Drink with a discount of $1!</p>
+
+
     </div>

@@ -29,6 +29,7 @@ a {
 html {
   font-size: 14px;
 }
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -78,13 +79,31 @@ body {
 
 @media (orientation: landscape) {
     h1 {
-        color: green;
+        color: darkmagenta;
+        
+    }
+    h2{
+        color: black;
+    }
+    p{
+        font-size: medium;
+        color: deeppink;
     }
 }
 
 @media (orientation: portrait) {
     h1 {
         color: mediumpurple;
+        font-size: large;
+    }
+    h2{
+        color: black;
+        font-size: medium;
+    }
+    p{
+        color: aqua;
+        font-size: small;
+        
     }
 }
 aside {
@@ -96,6 +115,10 @@ aside {
     aside {
         border: 3px dashed gray;
     }
+    .flex-columns > div {
+        flex-direction: row;
+    }
+
 }
 
 .float-columns > div {
@@ -120,7 +143,7 @@ aside {
     flex-direction: row;
 }
 @media (max-width: 490px) {
-    .flex-columns {
+    .flex-columns > div {
         flex-direction: column;
     }
 }
