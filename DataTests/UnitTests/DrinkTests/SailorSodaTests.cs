@@ -305,6 +305,19 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             });
 
         }
+        /// <summary>
+        /// checking the description to see if correct
+        /// </summary>
+        /// <param name="description"></param>
+        [Theory]
+        [InlineData("An old-fashioned jerked soda, carbonated water and flavored syrup poured over a bed of crushed ice.")]
+        public void ShouldBeRightDescription(string description)
+        {
+            SailorSoda ss = new SailorSoda();
 
+            Assert.Equal(description, ss.Description);
         }
+
+
     }
+}

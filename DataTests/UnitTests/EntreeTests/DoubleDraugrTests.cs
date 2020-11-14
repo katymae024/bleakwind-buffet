@@ -407,9 +407,21 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             });
 
         }
+        /// <summary>
+        /// checking the description to see if correct
+        /// </summary>
+        /// <param name="description"></param>
+        [Theory]
+        [InlineData("Double patty burger on a brioche bun. Comes with ketchup, mustard, pickle, cheese, tomato, lettuce, and mayo.")]
+        public void ShouldBeRightDescription(string description)
+        {
+            DoubleDraugr dd = new DoubleDraugr();
 
-
-
-
+            Assert.Equal(description, dd.Description);
         }
+
+
+
+
+    }
 }

@@ -301,6 +301,18 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 
         }
 
+        /// <summary>
+        /// checking the description to see if correct
+        /// </summary>
+        /// <param name="description"></param>
+        [Theory]
+        [InlineData("Single patty burger on a brioche bun. Comes with ketchup, mustard, pickle, and cheese.")]
+        public void ShouldBeRightDescription(string description)
+        {
+            BriarheartBurger bb = new BriarheartBurger();
+
+            Assert.Equal(description, bb.Description);
+        }
 
 
 

@@ -181,6 +181,18 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             });
 
         }
+        /// <summary>
+        /// checking the description to see if correct
+        /// </summary>
+        /// <param name="description"></param>
+        [Theory]
+        [InlineData("Cheesey Grits.")]
+        public void ShouldBeRightDescription(string description)
+        {
+            MadOtarGrits mg = new MadOtarGrits();
+
+            Assert.Equal(description, mg.Description);
+        }
 
     }
 }

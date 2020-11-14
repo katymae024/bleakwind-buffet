@@ -226,6 +226,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
                 GO.Tomato = true;
             });
         }
+        [Fact]
         public void ChangingMushroomsNotifiesMushroomsProperties()
         {
             var GO = new GardenOrcOmelette();
@@ -238,6 +239,18 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
                 GO.Mushrooms = false;
             });
 
+        }
+        /// <summary>
+        /// checking the description to see if correct
+        /// </summary>
+        /// <param name="description"></param>
+        [Theory]
+        [InlineData(" Vegetarian. Two egg omelette packed with a mix of broccoli, mushrooms, and tomatoes. Topped with cheddar cheese.")]
+        public void ShouldBeRightDescription(string description)
+        {
+            GardenOrcOmelette go = new GardenOrcOmelette();
+
+            Assert.Equal(description, go.Description);
         }
     }
     }

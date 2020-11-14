@@ -182,5 +182,17 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             });
 
         }
+        /// <summary>
+        /// checking the description to see if correct
+        /// </summary>
+        /// <param name="description"></param>
+        [Theory]
+        [InlineData("A seasonal fruit salad of mellons, berries, mango, grape, apple, and oranges.")]
+        public void ShouldBeRightDescription(string description)
+        {
+            VokunSalad vs = new VokunSalad();
+
+            Assert.Equal(description, vs.Description);
+        }
     }
 }

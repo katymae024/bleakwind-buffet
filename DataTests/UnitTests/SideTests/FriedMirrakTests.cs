@@ -181,5 +181,17 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             });
 
         }
+        /// <summary>
+        /// checking the description to see if correct
+        /// </summary>
+        /// <param name="description"></param>
+        [Theory]
+        [InlineData("Perfectly prepared hash brown pancakes.")]
+        public void ShouldBeRightDescription(string description)
+        {
+            FriedMiraak fm = new FriedMiraak();
+
+            Assert.Equal(description, fm.Description);
+        }
     }
 }

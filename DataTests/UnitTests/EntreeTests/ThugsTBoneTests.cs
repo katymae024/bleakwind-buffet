@@ -71,5 +71,17 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             var ThugsTBone = new ThugsTBone();
             Assert.IsAssignableFrom<IOrderItem>(ThugsTBone);
         }
+        /// <summary>
+        /// checking the description to see if correct
+        /// </summary>
+        /// <param name="description"></param>
+        [Theory]
+        [InlineData("Juicy T-Bone, not much else to say.")]
+        public void ShouldBeRightDescription(string description)
+        {
+            ThugsTBone tb = new ThugsTBone();
+
+            Assert.Equal(description, tb.Description);
+        }
     }
 }

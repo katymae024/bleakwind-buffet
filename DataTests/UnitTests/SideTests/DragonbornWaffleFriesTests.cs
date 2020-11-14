@@ -176,5 +176,17 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 
             });
         }
+        /// <summary>
+        /// checking the description to see if correct
+        /// </summary>
+        /// <param name="description"></param>
+        [Theory]
+        [InlineData("Crispy fried potato waffle fries.")]
+        public void ShouldBeRightDescription(string description)
+        {
+            DragonbornWaffleFries dw = new DragonbornWaffleFries();
+
+            Assert.Equal(description, dw.Description);
         }
+    }
 }

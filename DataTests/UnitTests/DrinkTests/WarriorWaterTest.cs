@@ -259,6 +259,19 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 
 
         }
+        /// <summary>
+        /// checking the description to see if correct
+        /// </summary>
+        /// <param name="description"></param>
+        [Theory]
+        [InlineData("It’s water. Just water.")]
+        public void ShouldBeRightDescription(string description)
+        {
+            WarriorWater ww = new WarriorWater();
+
+            Assert.Equal(description, ww.Description);
+        }
+
 
     }
 }

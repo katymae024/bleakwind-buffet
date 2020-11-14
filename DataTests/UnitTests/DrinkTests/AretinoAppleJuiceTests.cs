@@ -225,7 +225,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
                 AJ.Size = Size.Large;
             });
         }
-        
+        /// <summary>
+        /// checking the description to see if correct
+        /// </summary>
+        /// <param name="description"></param>
         [Theory]
         [InlineData("Fresh squeezed apple juice.")]
         public void ShouldBeRightDescription(string description)
